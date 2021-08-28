@@ -1,4 +1,4 @@
-import { bilerp } from './bilerp'
+import { bilerp } from '..'
 
 describe('bilerp', () => {
   it('interpolates between vectors', () => {

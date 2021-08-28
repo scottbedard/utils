@@ -1,4 +1,4 @@
-import { lerp } from './lerp'
+import { lerp } from '..'
 
 describe('lerp', () => {
   it('interpolates between numbers', () => {
