@@ -1,3 +1,4 @@
+export { angleFrom } from './functions/angleFrom'
 export { bilerp } from './functions/bilerp'
 export { degreesToRadians } from './functions/degreesToRadians'
 export { isEven } from './functions/isEven'

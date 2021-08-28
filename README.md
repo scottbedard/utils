@@ -26,12 +26,23 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 ## Functions
 
+- [`angleFrom`](#angleFrom)
 - [`bilerp`](#bilerp)
 - [`degreesToRadians`](#degreesToRadians)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
 - [`measure`](#measure)
 - [`radiansToDegrees`](#radiansToDegrees)
+
+### `angleFrom`
+
+Calculate angled distance from a vector. An angle of `0` degrees will track along the X axis, with positive angles rotating counter-clockwise.
+
+```js
+import { angleFrom } from '@bedard/math'
+
+angleFrom([0, 0], 90, 1) // [0, 1] (approx)
+```
 
 ### `bilerp`
 

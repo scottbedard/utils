@@ -2,6 +2,7 @@
 
 ## 0.3.0
 
+- [`angleFrom`](https://github.com/scottbedard/math#angleFrom)
 - [`degreesToRadians`](https://github.com/scottbedard/math#degreesToRadians)
 - [`isEven`](https://github.com/scottbedard/math#isEven)
 - [`measure`](https://github.com/scottbedard/math#measure)
