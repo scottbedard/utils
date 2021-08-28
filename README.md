@@ -8,7 +8,7 @@
 [![Bundle size](https://img.shields.io/bundlephobia/minzip/@bedard/math?label=gzipped)](https://bundlephobia.com/result?p=@bedard/math)
 [![License](https://img.shields.io/github/license/scottbedard/math?color=blue)](https://github.com/scottbedard/math/blob/main/LICENSE)
 
-This library exists to help me avoid duplicate code between projects. My goal here is to expose small, well tested, and tree-shakeable utilities. Given the simplicity of these functions, I do not anticipate breaking changes. But be warned, this project is not following semantic versioning.
+This library exists to help me avoid duplicate code between projects. My goal is to expose small, well tested, and tree-shakeable utility functions. Given the simplicity of these, I do not anticipate breaking changes. But be warned, this project is not following semantic versioning.
 
 ## Installation
 
@@ -51,6 +51,6 @@ lerp(0, 10, 0.5) // 5
 
 ## License
 
-[MIT](https://github.com/scottbedard/math/blob/master/LICENSE)
+[MIT](https://github.com/scottbedard/math/blob/main/LICENSE)
 
 Copyright (c) 2021-present, Scott Bedard
