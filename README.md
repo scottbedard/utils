@@ -60,6 +60,16 @@ import { lerp } from '@bedard/math'
 lerp(0, 10, 0.5) // 5
 ```
 
+### `measure`
+
+Measure the distance between two vectors.
+
+```js
+import { measure } from '@bedard/math'
+
+lerp([0, 0], [3, 4]) // 5
+```
+
 ## License
 
 [MIT](https://github.com/scottbedard/math/blob/main/LICENSE)
