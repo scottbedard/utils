@@ -33,6 +33,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`lerp`](#lerp)
 - [`measure`](#measure)
 - [`radiansToDegrees`](#radiansToDegrees)
+- [`slope`](#slope)
 
 ### `angleFrom`
 
@@ -99,7 +100,23 @@ lerp([0, 0], [3, 4]) // 5
 Convert radians to degrees.
 
 ```js
+import { radiansToDegrees } from '@bedard/math'
+
 radiansToDegrees(Math.PI) // 180
+```
+
+### `slope`
+
+Calculate the slope of a line.
+
+```js
+import { slope } from '@bedard/math'
+
+// arguments can be provided as a pair of vectors
+slope([0, 0], [1, 1]) // 1
+
+// or as a single line argument
+slope([[0, 0], [1, 1]]) // 1
 ```
 
 ## License

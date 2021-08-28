@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.0
+
+- [`slope`](https://github.com/scottbedard/math#slope)
 ## 0.3.0
 
 - [`angleFrom`](https://github.com/scottbedard/math#angleFrom)
