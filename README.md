@@ -26,7 +26,28 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 ## Functions
 
-Documentation coming soon.
+- [`bilerp`](#bilerp)
+- [`lerp`](#lerp)
+
+### `bilerp`
+
+Bi-linear interpolation between vectors.
+
+```js
+import { bilerp } from '@bedard/math'
+
+bilerp([0, 0], [10, 10], 0.5) // [5, 5]
+```
+
+### `lerp`
+
+Linear interpolation between numbers.
+
+```js
+import { lerp } from '@bedard/math'
+
+lerp(0, 10, 0.5) // 5
+```
 
 ## License
 
