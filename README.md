@@ -27,6 +27,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 ## Functions
 
 - [`bilerp`](#bilerp)
+- [`isEven`](#isEven)
 - [`lerp`](#lerp)
 
 ### `bilerp`
@@ -37,6 +38,16 @@ Bi-linear interpolation between vectors.
 import { bilerp } from '@bedard/math'
 
 bilerp([0, 0], [10, 10], 0.5) // [5, 5]
+```
+
+### `isEven`
+
+Test if a number is even.
+
+```js
+import { isEven } from '@bedard/math'
+
+isEven(2) // true
 ```
 
 ### `lerp`
