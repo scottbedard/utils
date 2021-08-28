@@ -16,6 +16,7 @@
     "sourceMap": false,
     "target": "es2015",
     "types": [
+      "jest",
       "node"
     ]
   },
