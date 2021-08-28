@@ -2,8 +2,10 @@
 
 ## 0.3.0
 
+- [`degreesToRadians`](https://github.com/scottbedard/math#degreesToRadians)
 - [`isEven`](https://github.com/scottbedard/math#isEven)
 - [`measure`](https://github.com/scottbedard/math#measure)
+- [`radiansToDegrees`](https://github.com/scottbedard/math#radiansToDegrees)
 ## 0.2.0
 
 - [`bilerp`](https://github.com/scottbedard/math#bilerp)

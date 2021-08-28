@@ -27,8 +27,11 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 ## Functions
 
 - [`bilerp`](#bilerp)
+- [`degreesToRadians`](#degreesToRadians)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
+- [`measure`](#measure)
+- [`radiansToDegrees`](#radiansToDegrees)
 
 ### `bilerp`
 
@@ -38,6 +41,16 @@ Bi-linear interpolation between vectors.
 import { bilerp } from '@bedard/math'
 
 bilerp([0, 0], [10, 10], 0.5) // [5, 5]
+```
+
+### `degreesToRadians`
+
+Convert degrees to radians.
+
+```js
+import { degreesToRadians } from '@bedard/math'
+
+degreesToRadians(180) // 3.141592653589793
 ```
 
 ### `isEven`
@@ -68,6 +81,14 @@ Measure the distance between two vectors.
 import { measure } from '@bedard/math'
 
 lerp([0, 0], [3, 4]) // 5
+```
+
+### `radiansToDegrees`
+
+Convert radians to degrees.
+
+```js
+radiansToDegrees(Math.PI) // 180
 ```
 
 ## License
