@@ -92,7 +92,11 @@ Measure the distance between two vectors.
 ```js
 import { measure } from '@bedard/math'
 
-lerp([0, 0], [3, 4]) // 5
+// arguments can be provided as a pair of vectors
+measure([0, 0], [3, 4]) // 5
+
+// or as a single line argument
+measure([[0, 0], [3, 4]]) // 5
 ```
 
 ### `radiansToDegrees`

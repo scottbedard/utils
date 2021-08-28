@@ -1,8 +1,18 @@
-import { Vector2 } from '../types'
+import { toLine2 } from '../utils'
+import { Line2, Vector2 } from '../types'
 
 /**
- * Measure the distance between two vectors.
+ * Measure a two-dimensional line.
  */
-export function measure([x1, y1]: Vector2, [x2, y2]: Vector2): number {
+export function measure(line: Line2): number
+
+/**
+ * Measure the distance between two-dimensional vectors.
+ */
+export function measure(a: Vector2, b: Vector2): number
+
+export function measure(a: Line2 | Vector2, b?: Vector2): number {
+  const [[x1, y1], [x2, y2]] = toLine2(a, b)
+
   return Math.sqrt(((x1 - x2) ** 2) + ((y1 - y2) ** 2))
 }
