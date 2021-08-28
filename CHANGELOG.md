@@ -2,6 +2,7 @@
 
 ## 0.4.0
 
+- [`intersect`](https://github.com/scottbedard/math#intersect)
 - [`slope`](https://github.com/scottbedard/math#slope)
 ## 0.3.0
 

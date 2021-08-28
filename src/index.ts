@@ -1,6 +1,7 @@
 export { angleFrom } from './functions/angleFrom'
 export { bilerp } from './functions/bilerp'
 export { degreesToRadians } from './functions/degreesToRadians'
+export { intersect } from './functions/intersect'
 export { isEven } from './functions/isEven'
 export { lerp } from './functions/lerp'
 export { measure } from './functions/measure'

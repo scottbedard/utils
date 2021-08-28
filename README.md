@@ -29,6 +29,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`angleFrom`](#angleFrom)
 - [`bilerp`](#bilerp)
 - [`degreesToRadians`](#degreesToRadians)
+- [`intersect`](#intersect)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
 - [`measure`](#measure)
@@ -63,6 +64,16 @@ Convert degrees to radians.
 import { degreesToRadians } from '@bedard/math'
 
 degreesToRadians(180) // 3.141592653589793
+```
+
+### `intersect`
+
+Intersect two-dimensional lines. Returns `undefined` if lines are parellel.
+
+```js
+import { intersect } from '@bedard/math'
+
+intersect([[-1, 0], [1, 0]], [[0, 1], [0, -1]]) // [0, 0]
 ```
 
 ### `isEven`
