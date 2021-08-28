@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+
+- [`rotate`](https://github.com/scottbedard/math#rotate)
+
 ## 0.4.0
 
 - [`intersect`](https://github.com/scottbedard/math#intersect)

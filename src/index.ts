@@ -6,6 +6,7 @@ export { isEven } from './functions/isEven'
 export { lerp } from './functions/lerp'
 export { measure } from './functions/measure'
 export { radiansToDegrees } from './functions/radiansToDegrees'
+export { rotate } from './functions/rotate'
 export { slope } from './functions/slope'
 export * from './types'
 

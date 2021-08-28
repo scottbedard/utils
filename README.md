@@ -34,6 +34,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`lerp`](#lerp)
 - [`measure`](#measure)
 - [`radiansToDegrees`](#radiansToDegrees)
+- [`rotate`](#rotate)
 - [`slope`](#slope)
 
 ### `angleFrom`
@@ -43,7 +44,7 @@ Calculate angled distance from a vector. An angle of `0` degrees will track alon
 ```js
 import { angleFrom } from '@bedard/math'
 
-angleFrom([0, 0], 90, 1) // [0, 1] (approx)
+angleFrom([0, 0], 90, 1) // [0, 1] (approximate)
 ```
 
 ### `bilerp`
@@ -118,6 +119,16 @@ Convert radians to degrees.
 import { radiansToDegrees } from '@bedard/math'
 
 radiansToDegrees(Math.PI) // 180
+```
+
+### `rotate`
+
+Rotate a vector counter-clockwise around the origin.
+
+```js
+import { rotate } from '@bedard/math'
+
+rotate([0, 1], 90) // [-1, 0] (approximate)
 ```
 
 ### `slope`
