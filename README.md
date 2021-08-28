@@ -10,6 +10,24 @@
 
 This library exists to help me avoid duplicate code between projects. My goal here is to expose small, well tested, and tree-shakeable utilities. Given the simplicity of these functions, I do not anticipate breaking changes. But be warned, this project is not following semantic versioning.
 
+## Installation
+
+The recommended installation method is via NPM.
+
+```bash
+npm install @bedard/math
+```
+
+Alternatively, these functions maybe be accessed via a CDN. When using a CDN, the library will be exposed globally as `BedardMath`.
+
+```html
+<script src="https://unpkg.com/@bedard/math"></script>
+```
+
+## Functions
+
+Documentation coming soon.
+
 ## License
 
 [MIT](https://github.com/scottbedard/math/blob/master/LICENSE)
