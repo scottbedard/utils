@@ -33,6 +33,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
 - [`measure`](#measure)
+- [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
 - [`rotate`](#rotate)
 - [`slope`](#slope)
@@ -109,6 +110,16 @@ measure([0, 0], [3, 4]) // 5
 
 // or as a single line argument
 measure([[0, 0], [3, 4]]) // 5
+```
+
+### `polygon`
+
+Create a regular polygon. The first argument defines the number of points, with the second defining the circumradius. Points start from the 12 o'clock position, and rotate counter-clockwise around the origin.
+
+```js
+import { polygon } from '@bedard/math'
+
+polygon(4, 1) // [[0, 1], [-1, 0], [0, -1], [1, 0]] (approximate)
 ```
 
 ### `radiansToDegrees`

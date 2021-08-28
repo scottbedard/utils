@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0
+
+- [`polygon`](https://github.com/scottbedard/math#polygon)
+
 ## 0.5.0
 
 - [`rotate`](https://github.com/scottbedard/math#rotate)
