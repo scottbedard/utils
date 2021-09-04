@@ -63,7 +63,7 @@ bilerp([0, 0], [10, 10], 0.5) // [5, 5]
 
 ### `cols`
 
-Chunk a square matrix into columns.
+Chunk a square matrix into columns. Note that the source matrix must be provided in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
 
 ```js
 import { cols } from '@bedard/math'
@@ -175,7 +175,7 @@ rotate([0, 1], 90) // [-1, 0] (approximate)
 
 ### `rows`
 
-Chunk a square matrix into of rows.
+Chunk a square matrix into of rows. Note that the source matrix must be provided in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
 
 ```js
 import { rows } from '@bedard/math'
