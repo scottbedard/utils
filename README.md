@@ -39,6 +39,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`measure`](#measure)
 - [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
+- [`rotateMatrix`](#rotateMatrix)
 - [`rotate`](#rotate)
 - [`rows`](#rows)
 - [`slope`](#slope)
@@ -191,6 +192,20 @@ Convert radians to degrees.
 import { radiansToDegrees } from '@bedard/math'
 
 radiansToDegrees(Math.PI) // 180
+```
+
+### `rotateMatrix`
+
+Rotate a square matrix. Positive values apply clockwise rotations.
+
+```js
+import { rotateMatrix } from '@bedard/math'
+
+rotateMatrix([
+  0, 1, 2,
+  3, 4, 5,
+  6, 7, 8,
+], 1) // [6, 3, 0, 7, 4, 1, 8, 5, 2]
 ```
 
 ### `rotate`

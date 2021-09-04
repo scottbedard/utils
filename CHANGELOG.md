@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0
+
+- [`rotateMatrix`](https://github.com/scottbedard/math#rotateMatrix)
+
 ## 0.7.0
 
 - [`cols`](https://github.com/scottbedard/math#cols)
