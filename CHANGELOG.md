@@ -3,6 +3,7 @@
 ## 0.8.0
 
 - [`rotateMatrix`](https://github.com/scottbedard/math#rotateMatrix)
+- `rotate` -> [`rotateVector`](https://github.com/scottbedard/math#rotateVector)
 
 ## 0.7.0
 

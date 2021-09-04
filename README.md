@@ -40,7 +40,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
 - [`rotateMatrix`](#rotateMatrix)
-- [`rotate`](#rotate)
+- [`rotateVector`](#rotateVector)
 - [`rows`](#rows)
 - [`slope`](#slope)
 
@@ -208,14 +208,14 @@ rotateMatrix([
 ], 1) // [6, 3, 0, 7, 4, 1, 8, 5, 2]
 ```
 
-### `rotate`
+### `rotateVector`
 
 Rotate a vector counter-clockwise around the origin.
 
 ```js
-import { rotate } from '@bedard/math'
+import { rotateVector } from '@bedard/math'
 
-rotate([0, 1], 90) // [-1, 0] (approximate)
+rotateVector([0, 1], 90) // [-1, 0] (approximate)
 ```
 
 ### `rows`

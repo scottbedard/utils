@@ -1,4 +1,4 @@
-import { rotate } from './rotate'
+import { rotateVector } from './rotateVector'
 import { Vector2 } from '..'
 
 /**
@@ -6,6 +6,6 @@ import { Vector2 } from '..'
  */
 export function polygon(sides: number, circumradius = 1): Vector2[] {
   return new Array(sides).fill(null).map((n, i) => {
-    return rotate([0, circumradius], (360 / sides) * i)
+    return rotateVector([0, circumradius], (360 / sides) * i)
   })
 }
