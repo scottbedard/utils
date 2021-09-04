@@ -30,6 +30,8 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`bilerp`](#bilerp)
 - [`cols`](#cols)
 - [`degreesToRadians`](#degreesToRadians)
+- [`flattenCols`](#flattenCols)
+- [`flattenRows`](#flattenRows)
 - [`flip`](#flip)
 - [`intersect`](#intersect)
 - [`isEven`](#isEven)
@@ -83,6 +85,34 @@ Convert degrees to radians.
 import { degreesToRadians } from '@bedard/math'
 
 degreesToRadians(180) // 3.141592653589793
+```
+
+### `flattenCols`
+
+Flatten an array of columns to a matrix in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
+
+```js
+import { flattenCols } from '@bedard/math'
+
+flattenCols([
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+]) // [0, 1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+### `flattenRows`
+
+Flatten an array of rows to a matrix in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
+
+```js
+import { flattenRows } from '@bedard/math'
+
+flattenRows([
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+]) // [0, 1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 ### `flip`
@@ -175,7 +205,7 @@ rotate([0, 1], 90) // [-1, 0] (approximate)
 
 ### `rows`
 
-Chunk a square matrix into of rows. Note that the source matrix must be provided in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
+Chunk a square matrix into rows. Note that the source matrix must be provided in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
 
 ```js
 import { rows } from '@bedard/math'

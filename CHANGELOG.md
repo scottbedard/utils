@@ -3,6 +3,8 @@
 ## 0.7.0
 
 - [`cols`](https://github.com/scottbedard/math#cols)
+- [`flattenCols`](https://github.com/scottbedard/math#flattenCols)
+- [`flattenRows`](https://github.com/scottbedard/math#flattenRows)
 - [`flip`](https://github.com/scottbedard/math#flip)
 - [`rows`](https://github.com/scottbedard/math#rows)
 
