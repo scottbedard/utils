@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.0
+
+- [`cols`](https://github.com/scottbedard/math#cols)
+- [`flip`](https://github.com/scottbedard/math#flip)
+- [`rows`](https://github.com/scottbedard/math#rows)
+
 ## 0.6.0
 
 - [`polygon`](https://github.com/scottbedard/math#polygon)

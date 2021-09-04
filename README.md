@@ -28,7 +28,9 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 - [`angleFrom`](#angleFrom)
 - [`bilerp`](#bilerp)
+- [`cols`](#cols)
 - [`degreesToRadians`](#degreesToRadians)
+- [`flip`](#flip)
 - [`intersect`](#intersect)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
@@ -36,6 +38,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
 - [`rotate`](#rotate)
+- [`rows`](#rows)
 - [`slope`](#slope)
 
 ### `angleFrom`
@@ -58,6 +61,20 @@ import { bilerp } from '@bedard/math'
 bilerp([0, 0], [10, 10], 0.5) // [5, 5]
 ```
 
+### `cols`
+
+Chunk a square matrix into columns.
+
+```js
+import { cols } from '@bedard/math'
+
+cols([
+  0, 1, 2,
+  3, 4, 5,
+  6, 7, 8,
+]) // [[0, 3, 6], [1, 4, 7], [2, 5, 8]]
+```
+
 ### `degreesToRadians`
 
 Convert degrees to radians.
@@ -66,6 +83,20 @@ Convert degrees to radians.
 import { degreesToRadians } from '@bedard/math'
 
 degreesToRadians(180) // 3.141592653589793
+```
+
+### `flip`
+
+Convert between rows and columns. A good way to visualize this operation is holding a card by the top-left and bottom-right corners and flipping it over.
+
+```js
+import { flip } from '@bedard/math'
+
+flip([
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+]) // [[0, 3, 6], [1, 4, 7], [2, 5, 8]]
 ```
 
 ### `intersect`
@@ -140,6 +171,20 @@ Rotate a vector counter-clockwise around the origin.
 import { rotate } from '@bedard/math'
 
 rotate([0, 1], 90) // [-1, 0] (approximate)
+```
+
+### `rows`
+
+Chunk a square matrix into of rows.
+
+```js
+import { rows } from '@bedard/math'
+
+rows([
+  0, 1, 2,
+  3, 4, 5,
+  6, 7, 8,
+]) // [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 ```
 
 ### `slope`
