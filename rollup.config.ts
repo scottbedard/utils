@@ -20,7 +20,7 @@ export default defineConfig({
     {
       file: pkg.unpkg,
       format: 'iife',
-      name: 'BedardMath',
+      name: 'BedardUtils',
       plugins: [
         terser(),
       ],
