@@ -15,5 +15,6 @@ describe('parseColor', () => {
   it('rgb & rgba', () => {
     expect(parseColor('rgb(12, 34, 56)')).toEqual([12, 34, 56, 1])
     expect(parseColor('rgba(12, 34, 56, 100)')).toEqual([12, 34, 56, 100 / 255])
+    expect(parseColor('rgba(10%, 20%, 30%, 40%)')).toEqual([26, 51, 77, 0.4])
   })
 })

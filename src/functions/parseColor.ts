@@ -1,4 +1,4 @@
-import { clampColor } from '../utils'
+import { clamp, clampColor } from '../utils'
 
 /**
  * Parse a color string.
@@ -8,7 +8,7 @@ export function parseColor(color: string): [number, number, number, number] {
     .match(/^\s*#?([\dabcdef][\dabcdef])([\dabcdef][\dabcdef])([\dabcdef][\dabcdef])([\dabcdef][\dabcdef])?\s*$/i)
 
   if (hex) {
-    const [, r = '0', g = '0', b = '0', a = 'ff'] = hex
+    let [, r = '0', g = '0', b = '0', a = 'ff'] = hex
 
     return [
       clampColor(parseInt(r, 16)),
@@ -18,17 +18,19 @@ export function parseColor(color: string): [number, number, number, number] {
     ]
   }
 
+  const normalize = (str: string) => str.endsWith('%') ? Math.round((parseInt(str, 10) / 100) * 255) : parseInt(str, 10)
+
   const rgba = color
-    .match(/^\s*rgba?\(\s*(\d+),\s*(\d+),\s*(\d+),?\s*(\d+)?\s*\)\s*$/i)
+    .match(/^\s*rgba?\(\s*(\d+%?),\s*(\d+%?),\s*(\d+%?),?\s*(\d+%?)?\s*\)\s*$/i)
 
   if (rgba) {
     const [, r = '0', g = '0', b = '0', a = '255'] = rgba
 
     return [
-      clampColor(parseInt(r, 10)),
-      clampColor(parseInt(g, 10)),
-      clampColor(parseInt(b, 10)),
-      clampColor(parseInt(a, 10) / 255),
+      clampColor(normalize(r)),
+      clampColor(normalize(g)),
+      clampColor(normalize(b)),
+      clamp(normalize(a) / 255, 0, 1),
     ]
   }
 
