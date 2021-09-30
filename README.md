@@ -37,6 +37,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
 - [`measure`](#measure)
+- [`parseColor`](#parseColor)
 - [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
 - [`rotateMatrix`](#rotateMatrix)
@@ -172,6 +173,16 @@ measure([0, 0], [3, 4]) // 5
 
 // or as a single line argument
 measure([[0, 0], [3, 4]]) // 5
+```
+
+### `parseColor`
+
+Parse an [RGB string](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb_colors) to `[red, green, blue, alpha]` values. An error will be thrown if the value is not valid.
+
+```js
+import { parseColor } from '@bedard/utils'
+
+parseColor('#123456') // [18, 52, 86, 0]
 ```
 
 ### `polygon`

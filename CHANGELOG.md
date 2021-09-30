@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.10.0
+
+- [`parseColor`](https://github.com/scottbedard/utils#parseColor)
 ## 0.9.0
 
 - Renamed package to `@bedard/utils`
