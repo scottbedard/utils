@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+- Renamed package to `@bedard/utils`
+
 ## 0.8.0
 
 - [`rotateMatrix`](https://github.com/scottbedard/math#rotateMatrix)
