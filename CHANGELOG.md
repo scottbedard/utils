@@ -9,40 +9,40 @@
 
 ## 0.8.0
 
-- [`rotateMatrix`](https://github.com/scottbedard/math#rotateMatrix)
-- `rotate` -> [`rotateVector`](https://github.com/scottbedard/math#rotateVector)
+- [`rotateMatrix`](https://github.com/scottbedard/utils#rotateMatrix)
+- `rotate` -> [`rotateVector`](https://github.com/scottbedard/utils#rotateVector)
 
 ## 0.7.0
 
-- [`cols`](https://github.com/scottbedard/math#cols)
-- [`flattenCols`](https://github.com/scottbedard/math#flattenCols)
-- [`flattenRows`](https://github.com/scottbedard/math#flattenRows)
-- [`flip`](https://github.com/scottbedard/math#flip)
-- [`rows`](https://github.com/scottbedard/math#rows)
+- [`cols`](https://github.com/scottbedard/utils#cols)
+- [`flattenCols`](https://github.com/scottbedard/utils#flattenCols)
+- [`flattenRows`](https://github.com/scottbedard/utils#flattenRows)
+- [`flip`](https://github.com/scottbedard/utils#flip)
+- [`rows`](https://github.com/scottbedard/utils#rows)
 
 ## 0.6.0
 
-- [`polygon`](https://github.com/scottbedard/math#polygon)
+- [`polygon`](https://github.com/scottbedard/utils#polygon)
 
 ## 0.5.0
 
-- [`rotate`](https://github.com/scottbedard/math#rotate)
+- [`rotate`](https://github.com/scottbedard/utils#rotate)
 
 ## 0.4.0
 
-- [`intersect`](https://github.com/scottbedard/math#intersect)
-- [`slope`](https://github.com/scottbedard/math#slope)
+- [`intersect`](https://github.com/scottbedard/utils#intersect)
+- [`slope`](https://github.com/scottbedard/utils#slope)
 ## 0.3.0
 
-- [`angleFrom`](https://github.com/scottbedard/math#angleFrom)
-- [`degreesToRadians`](https://github.com/scottbedard/math#degreesToRadians)
-- [`isEven`](https://github.com/scottbedard/math#isEven)
-- [`measure`](https://github.com/scottbedard/math#measure)
-- [`radiansToDegrees`](https://github.com/scottbedard/math#radiansToDegrees)
+- [`angleFrom`](https://github.com/scottbedard/utils#angleFrom)
+- [`degreesToRadians`](https://github.com/scottbedard/utils#degreesToRadians)
+- [`isEven`](https://github.com/scottbedard/utils#isEven)
+- [`measure`](https://github.com/scottbedard/utils#measure)
+- [`radiansToDegrees`](https://github.com/scottbedard/utils#radiansToDegrees)
 ## 0.2.0
 
-- [`bilerp`](https://github.com/scottbedard/math#bilerp)
+- [`bilerp`](https://github.com/scottbedard/utils#bilerp)
 
 ## 0.1.0
 
-- [`lerp`](https://github.com/scottbedard/math#lerp)
+- [`lerp`](https://github.com/scottbedard/utils#lerp)
