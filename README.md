@@ -37,6 +37,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`intersect`](#intersect)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
+- [`lerpVectors`](#lerpVectors)
 - [`measure`](#measure)
 - [`parseColor`](#parseColor)
 - [`polygon`](#polygon)
@@ -171,6 +172,16 @@ Linear interpolation between numbers.
 import { lerp } from '@bedard/utils'
 
 lerp(0, 10, 0.5) // 5
+```
+
+### `lerpVectors`
+
+Linear interpolation between two vectors. This function is similar to [`bilerp`](#bilerp), but for vectors of any size, or even vectors of different sizes.
+
+```js
+import { lerpVectors } from '@bedard/utils'
+
+lerpVectors([0, 0, 0], [1, 2, 3], 0.5) // [0.5, 1, 1.5]
 ```
 
 ### `measure`

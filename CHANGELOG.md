@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.11.0
+
+- [`lerpVectors`](https://github.com/scottbedard/utils#lerpVectors)
+
 ## 0.10.0
 
 - [`hslToRgb`](https://github.com/scottbedard/utils#hslToRgb)
