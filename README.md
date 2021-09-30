@@ -40,6 +40,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`parseColor`](#parseColor)
 - [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
+- [`rgbToHsl`](#rgbToHsl)
 - [`rotateMatrix`](#rotateMatrix)
 - [`rotateVector`](#rotateVector)
 - [`rows`](#rows)
@@ -203,6 +204,16 @@ Convert radians to degrees.
 import { radiansToDegrees } from '@bedard/utils'
 
 radiansToDegrees(Math.PI) // 180
+```
+
+### `rgbToHsl`
+
+Convert `[red, green, blue, alpha?]` to `[hue, saturation, lightness, alpha]` values.
+
+```js
+import { rgbToHsl } from '@bedard/utils'
+
+rgbToHsl([255, 0, 0]) // [0, 1, 0.5, 1]
 ```
 
 ### `rotateMatrix`

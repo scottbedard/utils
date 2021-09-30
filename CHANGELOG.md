@@ -2,6 +2,7 @@
 
 ## 0.10.0
 
+- [`rgbToHsl`](https://github.com/scottbedard/utils#rgbToHsl)
 - [`parseColor`](https://github.com/scottbedard/utils#parseColor)
 ## 0.9.0
 
