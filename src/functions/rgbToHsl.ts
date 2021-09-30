@@ -1,7 +1,7 @@
 import { clamp, clampColor } from '../utils'
 
 /**
- * Convert RGB to HSL values.
+ * Convert RGB to HSL.
  */
 export function rgbToHsl(source: [number, number, number, number?]): [number, number, number, number] {
   let [

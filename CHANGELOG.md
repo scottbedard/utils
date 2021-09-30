@@ -2,8 +2,9 @@
 
 ## 0.10.0
 
-- [`rgbToHsl`](https://github.com/scottbedard/utils#rgbToHsl)
+- [`hslToRgb`](https://github.com/scottbedard/utils#hslToRgb)
 - [`parseColor`](https://github.com/scottbedard/utils#parseColor)
+- [`rgbToHsl`](https://github.com/scottbedard/utils#rgbToHsl)
 ## 0.9.0
 
 - Renamed package to `@bedard/utils`

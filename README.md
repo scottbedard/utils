@@ -33,6 +33,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`flattenCols`](#flattenCols)
 - [`flattenRows`](#flattenRows)
 - [`flip`](#flip)
+- [`hslToRgb`](#hslToRgb)
 - [`intersect`](#intersect)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
@@ -130,6 +131,16 @@ flip([
   [3, 4, 5],
   [6, 7, 8],
 ]) // [[0, 3, 6], [1, 4, 7], [2, 5, 8]]
+```
+
+### `hslToRgb`
+
+Convert `[hue, saturation, lightness, alpha?]` to `[red, green, blue, alpha]` values.
+
+```js
+import { hslToRgb } from '@bedard/utils'
+
+hslToRgb([0, 1, 0.5]) // [255, 0, 0, 1]
 ```
 
 ### `intersect`
