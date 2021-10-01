@@ -6,6 +6,6 @@ describe('stringifyColor', () => {
   })
 
   it('hex alpha', () => {
-    expect(stringifyColor([1, 2, 3, 4])).toBe('#01020304')
+    expect(stringifyColor([1, 2, 3, 0.5])).toBe('#01020380')
   })
 })

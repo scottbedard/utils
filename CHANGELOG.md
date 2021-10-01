@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- [`lerpColors`](https://github.com/scottbedard/utils#lerpColors)
 - [`stringifyColor`](https://github.com/scottbedard/utils#stringifyColor)
 
 ## 0.11.0

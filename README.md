@@ -37,6 +37,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`intersect`](#intersect)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
+- [`lerpColors`](#lerpColors)
 - [`lerpVectors`](#lerpVectors)
 - [`measure`](#measure)
 - [`parseColor`](#parseColor)
@@ -173,6 +174,16 @@ Linear interpolation between numbers.
 import { lerp } from '@bedard/utils'
 
 lerp(0, 10, 0.5) // 5
+```
+
+### `lerpColors`
+
+Linear interpolation between colors.
+
+```js
+import { lerpColors } from '@bedard/utils'
+
+lerpColors('#000000', '#ffffff') // '#808080'
 ```
 
 ### `lerpVectors`
