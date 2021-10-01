@@ -3,6 +3,7 @@
 ## 0.12.0
 
 - [`lerpColors`](https://github.com/scottbedard/utils#lerpColors)
+- [`parseColor`](https://github.com/scottbedard/utils#parseColor) added support for [three-digit hexadecimal notation](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb_colors)
 - [`stringifyColor`](https://github.com/scottbedard/utils#stringifyColor)
 
 ## 0.11.0
