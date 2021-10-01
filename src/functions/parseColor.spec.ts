@@ -5,11 +5,16 @@ describe('parseColor', () => {
     expect(() => parseColor('not a valid color')).toThrow()
   })
 
-  it('hex', () => {
+  it('single hex', () => {
+    expect(parseColor('#123')).toEqual([17, 34, 51, 1])
+    expect(parseColor('#1230')).toEqual([17, 34, 51, 0])
+  })
+
+  it('double hex', () => {
     expect(parseColor('123456')).toEqual([18, 52, 86, 1])
     expect(parseColor('#123456')).toEqual([18, 52, 86, 1])
-    expect(parseColor('123456aa')).toEqual([18, 52, 86, 1])
-    expect(parseColor('#123456aa')).toEqual([18, 52, 86, 1])
+    expect(parseColor('123456ff')).toEqual([18, 52, 86, 1])
+    expect(parseColor('#12345600')).toEqual([18, 52, 86, 0])
   })
 
   it('rgb & rgba', () => {
