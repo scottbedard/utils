@@ -19,6 +19,7 @@ export { rotateMatrix } from './functions/rotateMatrix'
 export { rotateVector } from './functions/rotateVector'
 export { rows } from './functions/rows'
 export { slope } from './functions/slope'
+export { stringifyColor } from './functions/stringifyColor'
 export * from './types'
 
 export const version = 'x.y.z'

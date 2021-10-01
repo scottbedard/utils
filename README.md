@@ -47,6 +47,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`rotateVector`](#rotateVector)
 - [`rows`](#rows)
 - [`slope`](#slope)
+- [`stringifyColor`](#stringifyColor)
 
 ### `angleFrom`
 
@@ -288,6 +289,16 @@ slope([0, 0], [1, 1]) // 1
 
 // or as a single line argument
 slope([[0, 0], [1, 1]]) // 1
+```
+
+### `stringifyColor`
+
+Convert `[red, green, blue, alpha?]` values to string using [hexadecimal notation](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb_colors).
+
+```js
+import { stringifyColor } from '@bedard/utils'
+
+stringifyColor([255, 0, 0]) // #ff0000
 ```
 
 ## License

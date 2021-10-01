@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.0
+
+- [`stringifyColor`](https://github.com/scottbedard/utils#stringifyColor)
+
 ## 0.11.0
 
 - [`lerpVectors`](https://github.com/scottbedard/utils#lerpVectors)
