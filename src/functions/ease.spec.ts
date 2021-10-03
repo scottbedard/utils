@@ -26,6 +26,9 @@ import {
   easeInElastic,
   easeOutElastic,
   easeInOutElastic,
+  easeInBounce,
+  easeOutBounce,
+  easeInOutBounce,
 } from '..'
 
 describe('easing functions', () => {
@@ -62,6 +65,7 @@ describe('easing functions', () => {
     easeInOutCirc,
     easeInOutBack,
     easeInOutElastic,
+    easeInOutBounce,
   }
 
   Object.entries(asymmetricalIn).forEach(([name, fn]) => {
@@ -112,5 +116,57 @@ describe('easing functions', () => {
     expect(easeOutElastic(0)).toBeCloseTo(0)
     expect(easeOutElastic(0.5)).toBeGreaterThan(1)
     expect(easeOutElastic(1)).toBeCloseTo(1)
+  })
+
+  it('easeInBounce', () => {
+    let up = 0
+    let down = 0
+    let prevVal = 0
+    let prevDir: 'up' | 'down' = 'down'
+    
+    new Array(100).fill(0).forEach((x, i) => {
+      const val = easeInBounce(i / 100)
+
+      if (val > prevVal && prevDir === 'down') {
+        up++
+        prevDir = 'up'
+      } else if (val < prevVal && prevDir === 'up') {
+        down++
+        prevDir = 'down'
+      }
+
+      prevVal = val
+    })
+
+    expect(easeInBounce(0)).toBeCloseTo(0)
+    expect(up).toBe(4)
+    expect(down).toBe(3)
+    expect(easeInBounce(1)).toBeCloseTo(1)
+  })
+
+  it('easeOutBounce', () => {
+    let up = 0
+    let down = 0
+    let prevVal = 0
+    let prevDir: 'up' | 'down' = 'down'
+    
+    new Array(100).fill(0).forEach((x, i) => {
+      const val = easeOutBounce(i / 100)
+
+      if (val > prevVal && prevDir === 'down') {
+        up++
+        prevDir = 'up'
+      } else if (val < prevVal && prevDir === 'up') {
+        down++
+        prevDir = 'down'
+      }
+
+      prevVal = val
+    })
+
+    expect(easeOutBounce(0)).toBeCloseTo(0)
+    expect(up).toBe(4)
+    expect(down).toBe(3)
+    expect(easeOutBounce(1)).toBeCloseTo(1)
   })
 })
