@@ -1,3 +1,9 @@
+const c1 = 1.70158
+const c2 = c1 * 1.525
+const c3 = c1 + 1
+const c4 = (2 * Math.PI) / 3
+const c5 = (2 * Math.PI) / 4.5
+
 /**
  * Ease in sine
  *
@@ -207,10 +213,6 @@ export function easeInOutCirc(x: number): number {
     : (Math.sqrt(1 - Math.pow(-2 * x + 2, 2)) + 1) / 2
 }
 
-const c1 = 1.70158
-const c2 = c1 * 1.525
-const c3 = c1 + 1
-
 /**
  * Ease in back
  * 
@@ -238,4 +240,39 @@ export function easeInOutBack(x: number): number {
   return x < 0.5
     ? (Math.pow(2 * x, 2) * ((c2 + 1) * 2 * x - c2)) / 2
     : (Math.pow(2 * x - 2, 2) * ((c2 + 1) * (x * 2 - 2) + c2) + 2) / 2
+}
+
+/**
+ * Ease in elastic
+ */
+export function easeInElastic(x: number): number {
+  return x === 0
+    ? 0
+    : x === 1
+      ? 1
+      : -Math.pow(2, 10 * x - 10) * Math.sin((x * 10 - 10.75) * c4)
+}
+
+/**
+ * Ease out elastic
+ */
+export function easeOutElastic(x: number): number {
+  return x === 0
+    ? 0
+    : x === 1
+      ? 1
+      : Math.pow(2, -10 * x) * Math.sin((x * 10 - 0.75) * c4) + 1
+}
+
+/**
+ * Ease in-out elastic
+ */
+export function easeInOutElastic(x: number): number {
+  return x === 0
+    ? 0
+    : x === 1
+      ? 1
+      : x < 0.5
+        ? -(Math.pow(2, 20 * x - 10) * Math.sin((20 * x - 11.125) * c5)) / 2
+        : (Math.pow(2, -20 * x + 10) * Math.sin((20 * x - 11.125) * c5)) / 2 + 1
 }

@@ -23,6 +23,9 @@ import {
   easeInBack,
   easeOutBack,
   easeInOutBack,
+  easeInElastic,
+  easeOutElastic,
+  easeInOutElastic,
 } from '..'
 
 describe('easing functions', () => {
@@ -58,6 +61,7 @@ describe('easing functions', () => {
     easeInOutExpo,
     easeInOutCirc,
     easeInOutBack,
+    easeInOutElastic,
   }
 
   Object.entries(asymmetricalIn).forEach(([name, fn]) => {
@@ -96,5 +100,17 @@ describe('easing functions', () => {
     expect(easeOutBack(0)).toBeCloseTo(0)
     expect(easeOutBack(0.5)).toBeGreaterThan(1)
     expect(easeOutBack(1)).toBeCloseTo(1)
+  })
+
+  it('easeInElastic', () => {
+    expect(easeInElastic(0)).toBeCloseTo(0)
+    expect(easeInElastic(0.5)).toBeLessThan(0)
+    expect(easeInElastic(1)).toBeCloseTo(1)
+  })
+
+  it('easeOutElastic', () => {
+    expect(easeOutElastic(0)).toBeCloseTo(0)
+    expect(easeOutElastic(0.5)).toBeGreaterThan(1)
+    expect(easeOutElastic(1)).toBeCloseTo(1)
   })
 })
