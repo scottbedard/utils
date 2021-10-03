@@ -1,8 +1,7 @@
 /**
  * Create easing function from cubic bezier points.
- * 
  */
-export function createEasingFunction([p0, p1, p2, p3]: [number, number, number, number]): (n: number) => number {
+export function createEasingFunction(p0: number, p1: number, p2: number, p3: number): (n: number) => number {
   const a = (a1: number, a2: number) => 1 - 3 * a2 + 3 * a1
   const b = (a1: number, a2: number) => 3 * a2 - 6 * a1
   const c = (a1: number) => 3 * a1

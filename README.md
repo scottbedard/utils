@@ -28,6 +28,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 ### Animation
 
+- [`createEasingFunction`](#createEasingFunction)
 - [`easeInSine`](#easeInSine)
 - [`easeOutSine`](#easeOutSine)
 - [`easeInOutSine`](#easeInOutSine)
@@ -132,6 +133,18 @@ cols([
   3, 4, 5,
   6, 7, 8,
 ]) // [[0, 3, 6], [1, 4, 7], [2, 5, 8]]
+```
+
+#### `createEasingFunction`
+
+Create an [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function) from cubic-bezier points. Note that the included easing functions do not use this utility. They are simpler mathematical functions, and do not produce quite the same results as easing functions created using this utility.
+
+```js
+import { createEasingFunction } from '@bedard/utils'
+
+const linear = createEasingFunction(0, 0, 1, 1)
+
+linear(0.5) // 0.5
 ```
 
 #### `degreesToRadians`

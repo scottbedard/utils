@@ -1,8 +1,9 @@
 # Changelog
 
-## 0.14.0 (pending)
+## 0.14.0
 
 - [`addVectors`](https://github.com/scottbedard/utils#addVectors)
+- [`createEasingFunction`](https://github.com/scottbedard/utils#createEasingFunction)
 - [`scale`](https://github.com/scottbedard/utils#scale)
 
 ## 0.13.0
