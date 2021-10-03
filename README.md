@@ -28,9 +28,9 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 ### Animation
 
-- [`easeInOutSine`](#easeInOutSine)
 - [`easeInSine`](#easeInSine)
 - [`easeOutSine`](#easeOutSine)
+- [`easeInOutSine`](#easeInOutSine)
 - [`easeInQuad`](#easeInQuad)
 - [`easeOutQuad`](#easeOutQuad)
 - [`easeInOutQuad`](#easeInOutQuad)

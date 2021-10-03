@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.13.0
+
+- [`easeInSine`](https://github.com/scottbedard/utils#easeInSine)
+- [`easeOutSine`](https://github.com/scottbedard/utils#easeOutSine)
+- [`easeInOutSine`](https://github.com/scottbedard/utils#easeInOutSine)
+- [`easeInQuad`](https://github.com/scottbedard/utils#easeInQuad)
+- [`easeOutQuad`](https://github.com/scottbedard/utils#easeOutQuad)
+- [`easeInOutQuad`](https://github.com/scottbedard/utils#easeInOutQuad)
+- [`easeInCubic`](https://github.com/scottbedard/utils#easeInCubic)
+- [`easeOutCubic`](https://github.com/scottbedard/utils#easeOutCubic)
+- [`easeInOutCubic`](https://github.com/scottbedard/utils#easeInOutCubic)
+- [`easeInQuart`](https://github.com/scottbedard/utils#easeInQuart)
+- [`easeOutQuart`](https://github.com/scottbedard/utils#easeOutQuart)
+- [`easeInOutQuart`](https://github.com/scottbedard/utils#easeInOutQuart)
+- [`easeInQuint`](https://github.com/scottbedard/utils#easeInQuint)
+- [`easeOutQuint`](https://github.com/scottbedard/utils#easeOutQuint)
+- [`easeInOutQuint`](https://github.com/scottbedard/utils#easeInOutQuint)
+- [`easeInExpo`](https://github.com/scottbedard/utils#easeInExpo)
+- [`easeOutExpo`](https://github.com/scottbedard/utils#easeOutExpo)
+- [`easeInOutExpo`](https://github.com/scottbedard/utils#easeInOutExpo)
+- [`easeInCirc`](https://github.com/scottbedard/utils#easeInCirc)
+- [`easeOutCirc`](https://github.com/scottbedard/utils#easeOutCirc)
+- [`easeInOutCirc`](https://github.com/scottbedard/utils#easeInOutCirc)
+- [`easeInBack`](https://github.com/scottbedard/utils#easeInBack)
+- [`easeOutBack`](https://github.com/scottbedard/utils#easeOutBack)
+- [`easeInOutBack`](https://github.com/scottbedard/utils#easeInOutBack)
+- [`easeInElastic`](https://github.com/scottbedard/utils#easeInElastic)
+- [`easeOutElastic`](https://github.com/scottbedard/utils#easeOutElastic)
+- [`easeInOutElastic`](https://github.com/scottbedard/utils#easeInOutElastic)
+- [`easeInBounce`](https://github.com/scottbedard/utils#easeInBounce)
+- [`easeOutBounce`](https://github.com/scottbedard/utils#easeOutBounce)
+- [`easeInOutBounce`](https://github.com/scottbedard/utils#easeInOutBounce)
+
 ## 0.12.0
 
 - [`lerpColors`](https://github.com/scottbedard/utils#lerpColors)
