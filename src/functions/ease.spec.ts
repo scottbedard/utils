@@ -14,6 +14,9 @@ import {
   easeInQuint,
   easeOutQuint,
   easeInOutQuint,
+  easeInExpo,
+  easeOutExpo,
+  easeInOutExpo,
 } from '..'
 
 describe('easing functions', () => {
@@ -24,6 +27,7 @@ describe('easing functions', () => {
     easeInCubic,
     easeInQuart,
     easeInQuint,
+    easeInExpo,
   }
 
   // asymmetrical out transitions should have a midde value between 0.5 and 1
@@ -33,6 +37,7 @@ describe('easing functions', () => {
     easeOutCubic,
     easeOutQuart,
     easeOutQuint,
+    easeOutExpo,
   }
 
   // symmetrical transitions should have a middle value equal to 0.5
@@ -42,15 +47,8 @@ describe('easing functions', () => {
     easeInOutCubic,
     easeInOutQuart,
     easeInOutQuint,
+    easeInOutExpo,
   }
-
-  Object.entries(symmetrical).forEach(([name, fn]) => {
-    it(name, () => {
-      expect(fn(0)).toBeCloseTo(0)
-      expect(fn(0.5)).toBeCloseTo(0.5)
-      expect(fn(1)).toBeCloseTo(1)
-    })
-  })
 
   Object.entries(asymmetricalIn).forEach(([name, fn]) => {
     it(name, () => {
@@ -66,6 +64,14 @@ describe('easing functions', () => {
       expect(fn(0)).toBeCloseTo(0)
       expect(fn(0.5)).toBeGreaterThan(0.5)
       expect(fn(0.5)).toBeLessThan(1)
+      expect(fn(1)).toBeCloseTo(1)
+    })
+  })
+
+  Object.entries(symmetrical).forEach(([name, fn]) => {
+    it(name, () => {
+      expect(fn(0)).toBeCloseTo(0)
+      expect(fn(0.5)).toBeCloseTo(0.5)
       expect(fn(1)).toBeCloseTo(1)
     })
   })
