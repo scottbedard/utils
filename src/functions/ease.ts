@@ -24,3 +24,32 @@ export function easeOutSine(x: number): number {
 export function easeInOutSine(x: number): number {
   return -(Math.cos(Math.PI * x) - 1) / 2
 }
+
+/**
+ * Ease in quad
+ *
+ * http://cubic-bezier.com/#0.11,0,0.5,0
+ */
+export function easeInQuad(x: number): number {
+  return x * x
+}
+
+/**
+ * Ease out quad
+ *
+ * http://cubic-bezier.com/#0.5,1,0.89,1
+ */
+export function easeOutQuad(x: number): number {
+  return 1 - (1 - x) * (1 - x)
+}
+
+/**
+ * Ease in-out quad
+ *
+ * http://cubic-bezier.com/#0.45,0,0.55,1
+ */
+export function easeInOutQuad(x: number): number {
+  return x < 0.5
+    ? 2 * x * x
+    : 1 - Math.pow(-2 * x + 2, 2) / 2
+}

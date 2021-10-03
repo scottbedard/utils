@@ -2,22 +2,28 @@ import {
   easeInOutSine,
   easeInSine,
   easeOutSine,
+  easeInQuad,
+  easeOutQuad,
+  easeInOutQuad,
 } from '..'
 
 describe('easing functions', () => {
-  // symmetrical transitions should have a middle value equal to 0.5
-  const symmetrical = {
-    easeInOutSine,
-  }
-
   // asymmetrical in transitions should have a middle value between 0 and 0.5
   const asymmetricalIn = {
     easeInSine,
+    easeInQuad,
   }
 
   // asymmetrical out transitions should have a midde value between 0.5 and 1
   const asymmetricalOut = {
     easeOutSine,
+    easeOutQuad,
+  }
+
+  // symmetrical transitions should have a middle value equal to 0.5
+  const symmetrical = {
+    easeInOutSine,
+    easeInOutQuad,
   }
 
   Object.entries(symmetrical).forEach(([name, fn]) => {
