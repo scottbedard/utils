@@ -69,6 +69,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 ### Math
 
+= [`addVectors`](#addVectors)
 - [`angleFrom`](#angleFrom)
 - [`bilerp`](#bilerp)
 - [`cols`](#cols)
@@ -88,6 +89,16 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`rows`](#rows)
 - [`scale`](#scale)
 - [`slope`](#slope)
+
+#### `addVectors`
+
+Add vectors together.
+
+```js
+import { addVectors } from '@bedard/utils'
+
+addVectors([1, 2], [3, 4]) // [4, 6]
+```
 
 #### `angleFrom`
 

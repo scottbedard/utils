@@ -2,6 +2,7 @@
 
 ## 0.14.0 (pending)
 
+- [`addVectors`](https://github.com/scottbedard/utils#addVectors)
 - [`scale`](https://github.com/scottbedard/utils#scale)
 
 ## 0.13.0
