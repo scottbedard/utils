@@ -8,6 +8,9 @@ import {
   easeInCubic,
   easeOutCubic,
   easeInOutCubic,
+  easeInQuart,
+  easeOutQuart,
+  easeInOutQuart,
 } from '..'
 
 describe('easing functions', () => {
@@ -16,6 +19,7 @@ describe('easing functions', () => {
     easeInSine,
     easeInQuad,
     easeInCubic,
+    easeInQuart,
   }
 
   // asymmetrical out transitions should have a midde value between 0.5 and 1
@@ -23,6 +27,7 @@ describe('easing functions', () => {
     easeOutSine,
     easeOutQuad,
     easeOutCubic,
+    easeOutQuart,
   }
 
   // symmetrical transitions should have a middle value equal to 0.5
@@ -30,6 +35,7 @@ describe('easing functions', () => {
     easeInOutSine,
     easeInOutQuad,
     easeInOutCubic,
+    easeInOutQuart,
   }
 
   Object.entries(symmetrical).forEach(([name, fn]) => {

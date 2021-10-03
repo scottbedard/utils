@@ -82,3 +82,32 @@ export function easeInOutCubic(x: number): number {
     ? 4 * Math.pow(x, 3)
     : 1 - Math.pow(-2 * x + 2, 3) / 2
 }
+
+/**
+ * Ease in quart
+ * 
+ * http://cubic-bezier.com/#0.5,0,0.75,0
+ */
+export function easeInQuart(x: number): number {
+  return Math.pow(x, 4)
+}
+
+/**
+ * Ease out quart
+ * 
+ * http://cubic-bezier.com/#0.25,1,0.5,1
+ */
+export function easeOutQuart(x: number): number {
+  return 1 - Math.pow(1 - x, 4)
+}
+
+/**
+ * Ease in-out quart
+ * 
+ * http://cubic-bezier.com/#0.76,0,0.24,1
+ */
+export function easeInOutQuart(x: number): number {
+  return x < 0.5
+    ? 8 * Math.pow(x, 4)
+    : 1 - Math.pow(-2 * x + 2, 4) / 2
+}
