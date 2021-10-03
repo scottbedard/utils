@@ -8,7 +8,7 @@
 [![Bundle size](https://img.shields.io/bundlephobia/minzip/@bedard/utils?label=gzipped)](https://bundlephobia.com/result?p=@bedard/utils)
 [![License](https://img.shields.io/github/license/scottbedard/utils?color=blue)](https://github.com/scottbedard/utils/blob/main/LICENSE)
 
-This library exists to help me avoid duplicate code between projects. My goal is to expose small, well tested, and tree-shakeable utility functions. Given the simplicity of these, I do not anticipate breaking changes. But be warned, this project is not following semantic versioning.
+I like to think of this library as my own personal lodash. It contains a number of utility functions that I found myself duplicating between projects. I do not anticipate breaking changes, but I'm also not ruling it out. Upgrade with caution.
 
 ## Installation
 
@@ -26,6 +26,20 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 ## Functions
 
+Soon...
+
+### Animation
+
+### Color
+
+- [`hslToRgb`](#hslToRgb)
+- [`lerpColors`](#lerpColors)
+- [`parseColor`](#parseColor)
+- [`rgbToHsl`](#rgbToHsl)
+- [`stringifyColor`](#stringifyColor)
+
+### Math
+
 - [`angleFrom`](#angleFrom)
 - [`bilerp`](#bilerp)
 - [`cols`](#cols)
@@ -33,22 +47,17 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`flattenCols`](#flattenCols)
 - [`flattenRows`](#flattenRows)
 - [`flip`](#flip)
-- [`hslToRgb`](#hslToRgb)
 - [`intersect`](#intersect)
 - [`isEven`](#isEven)
 - [`lerp`](#lerp)
-- [`lerpColors`](#lerpColors)
 - [`lerpVectors`](#lerpVectors)
 - [`measure`](#measure)
-- [`parseColor`](#parseColor)
 - [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
-- [`rgbToHsl`](#rgbToHsl)
 - [`rotateMatrix`](#rotateMatrix)
 - [`rotateVector`](#rotateVector)
 - [`rows`](#rows)
 - [`slope`](#slope)
-- [`stringifyColor`](#stringifyColor)
 
 ### `angleFrom`
 
