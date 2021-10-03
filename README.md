@@ -70,7 +70,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 
 ### Math
 
-= [`addVectors`](#addVectors)
+- [`addVectors`](#addVectors)
 - [`angleFrom`](#angleFrom)
 - [`bilerp`](#bilerp)
 - [`cols`](#cols)
