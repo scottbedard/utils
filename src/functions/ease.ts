@@ -40,7 +40,7 @@ export function easeInQuad(x: number): number {
  * http://cubic-bezier.com/#0.5,1,0.89,1
  */
 export function easeOutQuad(x: number): number {
-  return 1 - (1 - x) * (1 - x)
+  return 1 - Math.pow(1 - x, 2)
 }
 
 /**
@@ -50,6 +50,35 @@ export function easeOutQuad(x: number): number {
  */
 export function easeInOutQuad(x: number): number {
   return x < 0.5
-    ? 2 * x * x
+    ? 2 * Math.pow(x, 2)
     : 1 - Math.pow(-2 * x + 2, 2) / 2
+}
+
+/**
+ * Ease in cubic
+ *
+ * http://cubic-bezier.com/#0.32,0,0.67,0
+ */
+export function easeInCubic(x: number): number {
+  return x * x * x
+}
+
+/**
+ * Ease out cubic
+ *
+ * http://cubic-bezier.com/#0.33,1,0.68,1
+ */
+export function easeOutCubic(x: number): number {
+  return 1 - Math.pow(1 - x, 3)
+}
+
+/**
+ * Ease in-out cubic
+ *
+ * http://cubic-bezier.com/#0.65,0,0.35,1
+ */
+export function easeInOutCubic(x: number): number {
+  return x < 0.5
+    ? 4 * Math.pow(x, 3)
+    : 1 - Math.pow(-2 * x + 2, 3) / 2
 }
