@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.0 (pending)
+
+- [`scale`](https://github.com/scottbedard/utils#scale)
+
 ## 0.13.0
 
 - [`easeInSine`](https://github.com/scottbedard/utils#easeInSine)

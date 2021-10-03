@@ -86,6 +86,7 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`rotateMatrix`](#rotateMatrix)
 - [`rotateVector`](#rotateVector)
 - [`rows`](#rows)
+- [`scale`](#scale)
 - [`slope`](#slope)
 
 #### `angleFrom`
@@ -624,6 +625,16 @@ rows([
   3, 4, 5,
   6, 7, 8,
 ]) // [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+```
+
+#### `scale`
+
+Multiple a vector by a number.
+
+```js
+import { scale } from '@bedard/utils'
+
+scale([1, 2], 2) // [2, 4]
 ```
 
 #### `slope`
