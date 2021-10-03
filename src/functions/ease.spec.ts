@@ -20,6 +20,9 @@ import {
   easeInCirc,
   easeOutCirc,
   easeInOutCirc,
+  easeInBack,
+  easeOutBack,
+  easeInOutBack,
 } from '..'
 
 describe('easing functions', () => {
@@ -54,6 +57,7 @@ describe('easing functions', () => {
     easeInOutQuint,
     easeInOutExpo,
     easeInOutCirc,
+    easeInOutBack,
   }
 
   Object.entries(asymmetricalIn).forEach(([name, fn]) => {
@@ -80,5 +84,17 @@ describe('easing functions', () => {
       expect(fn(0.5)).toBeCloseTo(0.5)
       expect(fn(1)).toBeCloseTo(1)
     })
+  })
+
+  it('easeInBack', () => {
+    expect(easeInBack(0)).toBeCloseTo(0)
+    expect(easeInBack(0.5)).toBeLessThan(0)
+    expect(easeInBack(1)).toBeCloseTo(1)
+  })
+
+  it('easeOutBack', () => {
+    expect(easeOutBack(0)).toBeCloseTo(0)
+    expect(easeOutBack(0.5)).toBeGreaterThan(1)
+    expect(easeOutBack(1)).toBeCloseTo(1)
   })
 })
