@@ -177,3 +177,32 @@ export function easeInOutExpo(x: number): number {
         ? Math.pow(2, 20 * x - 10) / 2
         : (2 - Math.pow(2, -20 * x + 10)) / 2
 }
+
+/**
+ * Ease in circ
+ *
+ * http://cubic-bezier.com/#0.55,0,1,0.45
+ */
+export function easeInCirc(x: number): number {
+  return 1 - Math.sqrt(1 - Math.pow(x, 2))
+}
+
+/**
+ * Ease out circ
+ *
+ * http://cubic-bezier.com/#0,0.55,0.45,1
+ */
+export function easeOutCirc(x: number): number {
+  return Math.sqrt(1 - Math.pow(x - 1, 2))
+}
+
+/**
+ * Ease in-out circ
+ *
+ * http://cubic-bezier.com/#0.85,0,0.15,1
+ */
+export function easeInOutCirc(x: number): number {
+  return x < 0.5
+    ? (1 - Math.sqrt(1 - Math.pow(2 * x, 2))) / 2
+    : (Math.sqrt(1 - Math.pow(-2 * x + 2, 2)) + 1) / 2
+}
