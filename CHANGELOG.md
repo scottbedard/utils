@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.15.0
+
+- [`deepEqual`](https://github.com/scottbedard/utils#deepEqual)
+
 ## 0.14.0
 
 - [`addVectors`](https://github.com/scottbedard/utils#addVectors)

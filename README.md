@@ -91,6 +91,10 @@ Alternatively, these functions maybe be accessed via a CDN. When using a CDN, th
 - [`scale`](#scale)
 - [`slope`](#slope)
 
+### Utility
+
+- [`deepEqual`](#deepEqual)
+
 #### `addVectors`
 
 Add vectors together.
@@ -145,6 +149,16 @@ import { createEasingFunction } from '@bedard/utils'
 const linear = createEasingFunction(0, 0, 1, 1)
 
 linear(0.5) // 0.5
+```
+
+#### `deepEqual`
+
+Deep object comparison.
+
+```js
+import { deepEqual } from '@bedard/utils'
+
+deepEqual({ foo: { bar: 1 }}, { foo: { bar: 1 }}) // true
 ```
 
 #### `degreesToRadians`
