@@ -11,6 +11,7 @@ describe('deepEqual', () => {
   it('arrays', () => {
     expect(deepEqual([1, 2, 3], [1, 2, 3])).toBe(true)
     expect(deepEqual([1, 2, 3], [1, 2, 4])).toBe(false)
+    expect(deepEqual([1, 2, 3], [])).toBe(false)
   })
 
   it('nested arrays', () => {
@@ -22,8 +23,9 @@ describe('deepEqual', () => {
     expect(deepEqual({ foo: 1, bar: { baz: 2 }}, { foo: 1, bar: { baz: 3 }})).toBe(false)
   })
 
-  it('objects with additional properties', () => {
+  it('objects with different properties', () => {
     expect(deepEqual({ foo: 1, bar: 2 }, { foo: 1 })).toBe(false)
+    expect(deepEqual({ foo: 1, bar: 2 }, { foo: 1, baz: 3 })).toBe(false)
   })
 
   it('mixed objects and arrays', () => {
