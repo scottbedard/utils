@@ -31,6 +31,7 @@ export * from './functions/ease'
 // types
 export { AllEqual } from './types/AllEqual'
 export { BreakWords } from './types/BreakWords'
+export { CamelCase } from './types/CamelCase'
 export { Equal } from './types/Equal'
 export { Expect } from './types/Expect'
 export { Join } from './types/Join'
