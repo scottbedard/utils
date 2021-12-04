@@ -32,6 +32,7 @@ export * from './functions/ease'
 export { AllEqual } from './types/AllEqual'
 export { Equal } from './types/Equal'
 export { Expect } from './types/Expect'
+export { Split } from './types/Split'
 export * from './types'
 
 export const version = 'x.y.z'
