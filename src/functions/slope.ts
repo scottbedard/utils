@@ -1,5 +1,4 @@
-import { Line2, Vector2 } from '../types'
-import { toLine2 } from '../utils'
+import { Line2, Vector2, toLine2 } from '../utils'
 
 /**
  * Calculate the slope of a line

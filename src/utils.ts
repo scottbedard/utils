@@ -1,9 +1,17 @@
-import { Line2, Vector2 } from './types'
-
 /**
  * Opaque type tag
  */
 export declare const tag: unique symbol
+
+/**
+ * Two-dimensional vector
+ */
+export type Vector2 = [number, number]
+
+/**
+ * Two-dimensional line
+ */
+export type Line2 = [Vector2, Vector2]
 
 /**
  * Clamp number to a given range.

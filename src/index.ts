@@ -66,6 +66,5 @@ export { Transparent } from './types/Transparent'
 export { ValueOf } from './types/ValueOf'
 export { Without } from './types/Without'
 export { XOR } from './types/XOR'
-export * from './types'
 
 export const version = 'x.y.z'

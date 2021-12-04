@@ -1,5 +1,5 @@
 import { rotateVector } from './rotateVector'
-import { Vector2 } from '..'
+import { Vector2 } from '../utils'
 
 /**
  * Create a regular polygon.

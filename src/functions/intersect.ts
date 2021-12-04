@@ -1,4 +1,4 @@
-import { Line2, Vector2 } from '../types'
+import { Line2, Vector2 } from '../utils'
 import { slope } from './slope'
 
 /**

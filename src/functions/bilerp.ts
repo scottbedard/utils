@@ -1,5 +1,5 @@
 import { lerp } from './lerp'
-import { Vector2 } from '../types'
+import { Vector2 } from '../utils'
 
 /**
  * Bi-linear interpolation

@@ -1,5 +1,5 @@
 import { degreesToRadians } from './degreesToRadians'
-import { Vector2 } from '..'
+import { Vector2 } from '../utils'
 
 /**
  * Calculate angled distance from a vector.

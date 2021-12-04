@@ -1,5 +1,4 @@
-import { toLine2 } from '../utils'
-import { Line2, Vector2 } from '../types'
+import { Line2, Vector2, toLine2 } from '../utils'
 
 /**
  * Measure a two-dimensional line.
