@@ -5,9 +5,9 @@ import { clamp, clampColor } from '../utils'
  */
 export function rgbToHsl(source: [number, number, number, number?]): [number, number, number, number] {
   let [
-    red = 0, 
-    green = 0, 
-    blue = 0, 
+    red, 
+    green, 
+    blue, 
     alpha = 1,
   ] = source
 
