@@ -32,6 +32,7 @@ export * from './functions/ease'
 export { AllEqual } from './types/AllEqual'
 export { Equal } from './types/Equal'
 export { Expect } from './types/Expect'
+export { Last } from './types/Last'
 export { Split } from './types/Split'
 export * from './types'
 
