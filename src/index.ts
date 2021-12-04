@@ -63,6 +63,7 @@ export { SnakeCaseKeysDeep } from './types/SnakeCaseKeysDeep'
 export { Split } from './types/Split'
 export { SymmetricDifference } from './types/SymmetricDifference'
 export { Transparent } from './types/Transparent'
+export { ValueOf } from './types/ValueOf'
 export * from './types'
 
 export const version = 'x.y.z'
