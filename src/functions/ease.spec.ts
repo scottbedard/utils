@@ -71,8 +71,12 @@ describe('easing functions', () => {
   Object.entries(asymmetricalIn).forEach(([name, fn]) => {
     it(name, () => {
       expect(fn(0)).toBeCloseTo(0)
+      expect(fn(0.25)).toBeGreaterThan(0)
+      expect(fn(0.25)).toBeLessThan(0.5)
       expect(fn(0.5)).toBeGreaterThan(0)
       expect(fn(0.5)).toBeLessThan(0.5)
+      expect(fn(0.75)).toBeGreaterThan(0)
+      expect(fn(0.75)).toBeLessThan(1)
       expect(fn(1)).toBeCloseTo(1)
     })
   })
@@ -80,8 +84,12 @@ describe('easing functions', () => {
   Object.entries(asymmetricalOut).forEach(([name, fn]) => {
     it(name, () => {
       expect(fn(0)).toBeCloseTo(0)
+      expect(fn(0.25)).toBeGreaterThan(0)
+      expect(fn(0.25)).toBeLessThan(1)
       expect(fn(0.5)).toBeGreaterThan(0.5)
       expect(fn(0.5)).toBeLessThan(1)
+      expect(fn(0.75)).toBeGreaterThan(0.5)
+      expect(fn(0.75)).toBeLessThan(1)
       expect(fn(1)).toBeCloseTo(1)
     })
   })
@@ -89,7 +97,9 @@ describe('easing functions', () => {
   Object.entries(symmetrical).forEach(([name, fn]) => {
     it(name, () => {
       expect(fn(0)).toBeCloseTo(0)
+      expect(fn(0.25)).toBeLessThan(0.5)
       expect(fn(0.5)).toBeCloseTo(0.5)
+      expect(fn(0.75)).toBeGreaterThan(0.5)
       expect(fn(1)).toBeCloseTo(1)
     })
   })
