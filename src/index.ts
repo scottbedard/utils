@@ -30,6 +30,7 @@ export * from './functions/ease'
 
 // types
 export { AllEqual } from './types/AllEqual'
+export { BreakWords } from './types/BreakWords'
 export { Equal } from './types/Equal'
 export { Expect } from './types/Expect'
 export { Last } from './types/Last'
