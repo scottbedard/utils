@@ -8,6 +8,15 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
   ],
+  'overrides': [
+    {
+      'files': ['*.spec.ts'],
+      'rules': {
+        '@typescript-eslint/ban-ts-comment': 0,
+        '@typescript-eslint/no-unused-vars': 0,
+      },
+    },
+  ],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {
     'ecmaVersion': 12,

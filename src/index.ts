@@ -1,3 +1,4 @@
+// functions
 export { addVectors } from './functions/addVectors'
 export { angleFrom } from './functions/angleFrom'
 export { bilerp } from './functions/bilerp'
@@ -26,6 +27,10 @@ export { scale } from './functions/scale'
 export { slope } from './functions/slope'
 export { stringifyColor } from './functions/stringifyColor'
 export * from './functions/ease'
+
+// types
+export { Equal } from './types/Equal'
+export { Expect } from './types/Expect'
 export * from './types'
 
 export const version = 'x.y.z'
