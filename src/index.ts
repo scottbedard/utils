@@ -61,6 +61,7 @@ export { SnakeCase } from './types/SnakeCase'
 export { SnakeCaseKeys } from './types/SnakeCaseKeys'
 export { SnakeCaseKeysDeep } from './types/SnakeCaseKeysDeep'
 export { Split } from './types/Split'
+export { SymmetricDifference } from './types/SymmetricDifference'
 export { Transparent } from './types/Transparent'
 export * from './types'
 
