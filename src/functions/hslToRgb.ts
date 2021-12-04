@@ -5,9 +5,9 @@ import { clamp } from '../utils'
  */
 export function hslToRgb(source: [number, number, number, number?]): [number, number, number, number] {
   let [
-    hue = 0, /* eslint-disable-line prefer-const */
-    saturation = 0, 
-    lightness = 0, 
+    hue, /* eslint-disable-line prefer-const */
+    saturation, 
+    lightness, 
     alpha = 1,
   ] = source
 
