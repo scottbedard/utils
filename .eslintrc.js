@@ -26,6 +26,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   'rules': {
+    '@typescript-eslint/no-explicit-any': 0,
     'comma-dangle': [
       'error',
       'always-multiline',
