@@ -1,6 +1,11 @@
 import { Line2, Vector2 } from './types'
 
 /**
+ * Opaque type tag
+ */
+export declare const tag: unique symbol
+
+/**
  * Clamp number to a given range.
  */
 export function clamp(val: number, min: number, max: number): number {
