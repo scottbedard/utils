@@ -2,8 +2,6 @@
 
 [![Build status](https://img.shields.io/github/workflow/status/scottbedard/utils/Test)](https://github.com/scottbedard/utils/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/scottbedard/utils)](https://codecov.io/gh/scottbedard/utils)
-[![Dependencies](https://img.shields.io/david/scottbedard/utils)](https://david-dm.org/scottbedard/utils)
-[![Dev dependencies](https://img.shields.io/david/dev/scottbedard/utils)](https://david-dm.org/scottbedard/utils?type=dev)
 [![NPM](https://img.shields.io/npm/v/@bedard/utils)](https://www.npmjs.com/package/@bedard/utils)
 [![Bundle size](https://img.shields.io/bundlephobia/minzip/@bedard/utils?label=gzipped)](https://bundlephobia.com/result?p=@bedard/utils)
 [![License](https://img.shields.io/github/license/scottbedard/utils?color=blue)](https://github.com/scottbedard/utils/blob/main/LICENSE)
