@@ -29,6 +29,7 @@ export { stringifyColor } from './functions/stringifyColor'
 export * from './functions/ease'
 
 // types
+export { AllEqual } from './types/AllEqual'
 export { Equal } from './types/Equal'
 export { Expect } from './types/Expect'
 export * from './types'
