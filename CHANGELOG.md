@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.0
+
+- Types from `@bedard/types` are now included in this library, and that library is now deprecated.
+
 ## 0.15.0
 
 - [`deepEqual`](https://github.com/scottbedard/utils#deepEqual)
