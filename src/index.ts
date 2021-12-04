@@ -37,6 +37,7 @@ export { Join } from './types/Join'
 export { Last } from './types/Last'
 export { MapCapitalize } from './types/MapCapitalize'
 export { MapLowercase } from './types/MapLowercase'
+export { MapUppercase } from './types/MapUppercase'
 export { Split } from './types/Split'
 export * from './types'
 
