@@ -36,6 +36,7 @@ export { Expect } from './types/Expect'
 export { Join } from './types/Join'
 export { Last } from './types/Last'
 export { MapCapitalize } from './types/MapCapitalize'
+export { MapLowercase } from './types/MapLowercase'
 export { Split } from './types/Split'
 export * from './types'
 
