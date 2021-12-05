@@ -30,11 +30,10 @@ describe('rgbToHsl', () => {
   })
     
   it('hex', () => {
-    // #123456
-    const hsl = rgbToHsl([18, 52, 86])
-    expect(hsl[0]).toBe(210)
-    expect(hsl[1]).toBeCloseTo(.654)
-    expect(hsl[2]).toBeCloseTo(.204)
-    expect(hsl[3]).toBe(1)
+    const hsla = rgbToHsl('#123456')
+    expect(hsla[0]).toBe(210)
+    expect(hsla[1]).toBeCloseTo(.654)
+    expect(hsla[2]).toBeCloseTo(.204)
+    expect(hsla[3]).toBe(1)
   })
 })

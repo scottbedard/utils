@@ -1,15 +1,18 @@
 import { clamp, clampColor } from '../utils'
+import { parseColor } from './parseColor'
 
 /**
  * Convert RGB to HSL.
  */
-export function rgbToHsl(source: [number, number, number, number?]): [number, number, number, number] {
+export function rgbToHsl(source: string | [number, number, number, number?]): [number, number, number, number] {
   let [
     red, 
     green, 
     blue, 
     alpha = 1,
-  ] = source
+  ] = typeof source === 'string'
+    ? parseColor(source)
+    : source
 
   red = clampColor(red) / 255
   green = clampColor(green) / 255
