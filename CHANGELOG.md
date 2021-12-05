@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.1
+
+- [`rgbToHsl`](https://github.com/scottbedard/utils#rgbToHsl) now accepts string inputs
+
 ## 0.16.0
 
 - Types from `@bedard/types` are now included in this library, and that library is now deprecated.
