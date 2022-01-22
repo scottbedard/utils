@@ -26,6 +26,7 @@ export { rows } from './functions/rows'
 export { scale } from './functions/scale'
 export { slope } from './functions/slope'
 export { stringifyColor } from './functions/stringifyColor'
+export { toKeyedObjects } from './functions/toKeyedObjects'
 export * from './functions/ease'
 
 // types

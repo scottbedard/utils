@@ -97,6 +97,7 @@ Alternatively, the functions maybe be accessed via a CDN. When using the CDN, th
 ### Utility
 
 - [`deepEqual`](#deepEqual)
+- [`toKeyedObjects`](#toKeyedObjects)
 
 #### `addVectors`
 
@@ -700,6 +701,16 @@ Convert `[red, green, blue, alpha?]` values to string using [hexadecimal notatio
 import { stringifyColor } from '@bedard/utils'
 
 stringifyColor([255, 0, 0]) // #ff0000
+```
+
+#### `toKeyedObjects`
+
+Create keyed objects from an array.
+
+```js
+import { toKeyedObjects } from '@bedard/utils'
+
+toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 ```
 
 ## Types
