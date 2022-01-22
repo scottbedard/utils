@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.17.0
+
+- [`toKeyedObjects`](https://github.com/scottbedard/utils#toKeyedObjects)
+
 ## 0.16.1
 
 - [`rgbToHsl`](https://github.com/scottbedard/utils#rgbToHsl) now accepts string inputs
