@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.17.1
+
+- [`ValueOf<T>`](https://github.com/scottbedard/utils#valueoft) now supports `ReadonlyArray<T>`
+
 ## 0.17.0
 
 - [`toKeyedObjects`](https://github.com/scottbedard/utils#toKeyedObjects)
