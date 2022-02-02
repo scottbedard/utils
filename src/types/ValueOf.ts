@@ -5,8 +5,10 @@
  * ValueOf<Array<string>> // string
  * ValuesOf<{ foo: number, bar: string }> // number | string
  */
-export type ValueOf<T extends Record<string, unknown> | Array<any>> = T extends Array<infer U> 
+export type ValueOf<T extends Record<string, unknown> | Array<any> | ReadonlyArray<any>> = T extends Array<infer U> 
   ? U
-  : T extends Record<string, unknown>
-    ? T[keyof T]
-    : never
+  : T extends ReadonlyArray<infer V>
+    ? V
+    : T extends Record<string, unknown>
+      ? T[keyof T]
+      : never

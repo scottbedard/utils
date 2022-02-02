@@ -11,6 +11,12 @@ describe('ValueOf', () => {
     type Test = Expect<Equal<number | string, ValueOf<T>>>
   })
 
+  it('readonly array', () => {
+    type T = ReadonlyArray<'foo' | 'bar'>
+
+    type Test = Expect<Equal<'foo' | 'bar', ValueOf<T>>>
+  })
+
   it('object', () => {
     type T = { foo: number, bar: string };
 
