@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.18.0
+
+- [`PickType<T, U>`](https://github.com/scottbedard/utils#picktypetu)
+
 ## 0.17.1
 
 - [`ValueOf<T>`](https://github.com/scottbedard/utils#valueoft) now supports `ReadonlyArray<T>`
