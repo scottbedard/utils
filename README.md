@@ -738,7 +738,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`PascalCase<T>`](#pascalcaset)
 - [`PascalCaseKeys<T>`](#pascalcasekeyst)
 - [`PascalCaseKeysDeep<T>`](#pascalcasekeysdeept)
-- [`PickType<T, U>`](#picktypetu)
+- [`PickType<T, U>`](#picktypet-u)
 - [`Pop<T>`](#popt)
 - [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
 - [`ScreamingSnakeCaseKeys<T>`](#screamingsnakecasekeyst)

@@ -2,7 +2,7 @@
 
 ## 0.18.0
 
-- [`PickType<T, U>`](https://github.com/scottbedard/utils#picktypetu)
+- [`PickType<T, U>`](https://github.com/scottbedard/utils#picktypet-u)
 
 ## 0.17.1
 
