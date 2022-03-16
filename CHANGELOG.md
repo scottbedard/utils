@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.19.0
+
+- [`OmitStartsWith<T, U>`](https://github.com/scottbedard/utils#omitstartswitht-u)
+- [`PickStartsWith<T, U>`](https://github.com/scottbedard/utils#pickstartswitht-u)
+- [`StartsWith<T, U>`](https://github.com/scottbedard/utils#startswitht-u)
+
 ## 0.18.0
 
 - [`PickType<T, U>`](https://github.com/scottbedard/utils#picktypet-u)

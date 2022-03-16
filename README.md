@@ -750,7 +750,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`SnakeCaseKeys<T>`](#snakecasekeyst)
 - [`SnakeCaseKeysDeep<T>`](#snakecasekeysdeept)
 - [`Split<Source, Delimeter>`](#splitsource-delimeter)
-- [`StartsWith<A, B>`](#startswitha-b)
+- [`StartsWith<T, U>`](#startswitht-u)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`Transparent<T>`](#transparentt)
 - [`ValueOf<T>`](#valueoft)
@@ -1118,9 +1118,9 @@ type SingleDelimeter = Split<'a.b.c', '.'> // ['a', 'b', 'c']
 type MultipleDelimeters = Split<'a.b-c', ['.', '-']> // ['a', 'b', 'c']
 ```
 
-#### `StartsWith<A, B>`
+#### `StartsWith<T, U>`
 
-Types `true` if `A` starts with `B`.
+Types `true` if `T` starts with `U`.
 
 ```ts
 import { StartsWith } from '@bedard/utils'
