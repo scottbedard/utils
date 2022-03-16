@@ -738,6 +738,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`PascalCase<T>`](#pascalcaset)
 - [`PascalCaseKeys<T>`](#pascalcasekeyst)
 - [`PascalCaseKeysDeep<T>`](#pascalcasekeysdeept)
+- [`PickStartsWith<T, U>`](#pickstartswitht-u)
 - [`PickType<T, U>`](#picktypet-u)
 - [`Pop<T>`](#popt)
 - [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
@@ -990,6 +991,16 @@ Deeply pascal case object keys.
 import { PascalCaseKeysDeep } from '@bedard/utils'
 
 type Obj = PascalCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FooBar: { OneTwo: any }}
+```
+
+#### `PickStartsWith<T, U>`
+
+Pick keys of `T` that start with `U`.
+
+```ts
+import { PickStartsWith } from '@bedard/utils'
+
+type Obj = PickStartsWith<{ FooOne: void; FooTwo: void ; Bar: void }, 'Foo'> // { FooOne: void; FooTwo: void }
 ```
 
 #### `PickType<T, U>`
