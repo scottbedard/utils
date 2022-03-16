@@ -734,6 +734,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`MapLowercase<T>`](#maplowercaset)
 - [`MapUppercase<T>`](#mapuppercaset)
 - [`Not<T>`](#nott)
+- [`OmitStartsWith<T, U>`](#omitstartswitht-u)
 - [`Opaque<T, Token>`](#opaquet-token)
 - [`PascalCase<T>`](#pascalcaset)
 - [`PascalCaseKeys<T>`](#pascalcasekeyst)
@@ -949,6 +950,16 @@ Reverse the boolean value of `T`.
 import { Not } from '@bedard/utils'
 
 type Test = Not<true> // false
+```
+
+#### `OmitStartsWith<T, U>`
+
+Omit keys of `T` that start with `U`.
+
+```ts
+import { OmitStartsWith } from '@bedard/utils'
+
+type Foo = OmitStartsWith<{ FooOne: void; FooTwo: void; BarThree: void }, 'Bar'> // { FooOne: void; FooTwo: void }
 ```
 
 #### `Opaque<T, Token>`
