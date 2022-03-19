@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.20.0
+
+- [`OptionalKeys<T, U>`](https://github.com/scottbedard/utils#optionalkeyst-u)
+- [`RequiredKeys<T, U>`](https://github.com/scottbedard/utils#requiredkeyst-u)
+
 ## 0.19.0
 
 - [`OmitStartsWith<T, U>`](https://github.com/scottbedard/utils#omitstartswitht-u)

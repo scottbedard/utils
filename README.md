@@ -736,12 +736,14 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Not<T>`](#nott)
 - [`OmitStartsWith<T, U>`](#omitstartswitht-u)
 - [`Opaque<T, Token>`](#opaquet-token)
+- [`OptionalKeys<T, U>`](#optionalkeyst-u)
 - [`PascalCase<T>`](#pascalcaset)
 - [`PascalCaseKeys<T>`](#pascalcasekeyst)
 - [`PascalCaseKeysDeep<T>`](#pascalcasekeysdeept)
 - [`PickStartsWith<T, U>`](#pickstartswitht-u)
 - [`PickType<T, U>`](#picktypet-u)
 - [`Pop<T>`](#popt)
+- [`RequiredKeys<T, U>`](#requiredkeyst-u)
 - [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
 - [`ScreamingSnakeCaseKeys<T>`](#screamingsnakecasekeyst)
 - [`ScreamingSnakeCaseKeysDeep<T>`](#screamingsnakecasekeysdeept)
@@ -974,6 +976,18 @@ type USD = Opaque<number, 'usd'>
 const dollars = 5 as USD
 ```
 
+#### `OptionalKeys<T, U>`
+
+Get optional keys from `T`, or make keys `U` of `T` optional.
+
+```ts
+import { OptionalKeys } from '@bedard/utils'
+
+type Keys = OptionalKeys<{ foo?: any, bar: any }> // 'foo'
+
+type Obj = OptionalKeys<{ foo: any, bar: any }, 'foo'> // { foo?: any, bar: any }
+```
+
 #### `PascalCase<T>`
 
 Convert a string to pascal case.
@@ -1032,6 +1046,18 @@ Remove the last element of `T`.
 import { Pop } from '@bedard/utils'
 
 type Items = Pop<['foo', 'bar', 'baz']> // ['foo', 'bar']
+```
+
+#### `RequiredKeys<T, U>`
+
+Get required keys from `T`, or make keys `U` of `T` required.
+
+```ts
+import { RequiredKeys } from '@bedard/utils'
+
+type Keys = RequiredKeys<{ foo: any, bar?: any }> // 'foo'
+
+type Obj = RequiredKeys<{ foo?: any, bar?: any }, 'foo'> // { foo: any, bar?: any }
 ```
 
 #### `ScreamingSnakeCase<T>`
