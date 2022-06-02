@@ -3,7 +3,7 @@
 ## 0.21.0
 
 - [`Methods<T>`](https://github.com/scottbedard/utils#methodst)
-- [`OmitKeys<T, U>`](https://github.com/scottbedard/utils#omitkeyst-u)
+- [`OmitType<T, U>`](https://github.com/scottbedard/utils#omittypet-u)
 - [`Properties<T>`](https://github.com/scottbedard/utils#propertiest)
 
 ## 0.20.0
