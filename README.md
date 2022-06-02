@@ -733,8 +733,10 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
 - [`MapUppercase<T>`](#mapuppercaset)
+- [`Methods<T>`](#methodst)
 - [`Not<T>`](#nott)
 - [`OmitStartsWith<T, U>`](#omitstartswitht-u)
+- [`OmitType<T, U>`](#omittypet-u)
 - [`Opaque<T, Token>`](#opaquet-token)
 - [`OptionalKeys<T, U>`](#optionalkeyst-u)
 - [`PascalCase<T>`](#pascalcaset)
@@ -743,6 +745,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`PickStartsWith<T, U>`](#pickstartswitht-u)
 - [`PickType<T, U>`](#picktypet-u)
 - [`Pop<T>`](#popt)
+- [`Properties<T>`](#propertiest)
 - [`RequiredKeys<T, U>`](#requiredkeyst-u)
 - [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
 - [`ScreamingSnakeCaseKeys<T>`](#screamingsnakecasekeyst)
@@ -944,6 +947,16 @@ import { MapUppercase } from '@bedard/utils'
 type Upper = MapUppercase<['a', 'b']> // ['A', 'B']
 ```
 
+#### `Methods<T>`
+
+Create a string union of methods from `T`. This is the inverse of [`Properties<T>`](#propertiest)
+
+```ts
+import { Methods } from '@bedard/utils'
+
+type Foo = Methods<{ foo: string, bar(): any }> // 'bar'
+```
+
 #### `Not<T>`
 
 Reverse the boolean value of `T`.
@@ -962,6 +975,16 @@ Omit keys of `T` that start with `U`.
 import { OmitStartsWith } from '@bedard/utils'
 
 type Foo = OmitStartsWith<{ FooOne: void; FooTwo: void; BarThree: void }, 'Bar'> // { FooOne: void; FooTwo: void }
+```
+
+#### `OmitType<T, U>`
+
+Omit keys of `T` that extend `U`. This is the inverse of [`PickType<T, U>`](#picktypet-u).
+
+```ts
+import { OmitType } from '@bedard/utils'
+
+type Foo = OmitType<{ foo: string, bar: number }, string> // { bar: number }
 ```
 
 #### `Opaque<T, Token>`
@@ -1030,7 +1053,7 @@ type Obj = PickStartsWith<{ FooOne: void; FooTwo: void ; Bar: void }, 'Foo'> // 
 
 #### `PickType<T, U>`
 
-Pick an object by type.
+Pick keys of `T` that extend `U`. This is the inverse of [`OmitType<T, U>`](#omittypet-u).
 
 ```ts
 import { PickType } from '@bedard/utils'
@@ -1046,6 +1069,16 @@ Remove the last element of `T`.
 import { Pop } from '@bedard/utils'
 
 type Items = Pop<['foo', 'bar', 'baz']> // ['foo', 'bar']
+```
+
+#### `Properties<T>`
+
+Create a string union of properties from `T`. This is the inverse of [`Methods<T>`](#methodst).
+
+```ts
+import { Properties } from '@bedard/utils'
+
+type Foo = Properties<{ foo: string, bar(): any }> // 'foo'
 ```
 
 #### `RequiredKeys<T, U>`
@@ -1168,7 +1201,7 @@ type OuterObj= SymmetricDifference<{ a: any, b: any }, { b: any, c: any }> // { 
 
 #### `Transparent<T>`
 
-A type that does not encode any additional data. This type the inverse of [`Opaque<T>`](#opaquet-token).
+A type that does not encode any additional data. This is the inverse of [`Opaque<T>`](#opaquet-token).
 
 ```ts
 import { Transparent } from '@bedard/utils'
