@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.21.0
+
+- [`Methods<T>`](https://github.com/scottbedard/utils#methodst)
+- [`OmitKeys<T, U>`](https://github.com/scottbedard/utils#omitkeyst-u)
+- [`Properties<T>`](https://github.com/scottbedard/utils#propertiest)
+
 ## 0.20.0
 
 - [`OptionalKeys<T, U>`](https://github.com/scottbedard/utils#optionalkeyst-u)
