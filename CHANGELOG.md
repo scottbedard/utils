@@ -4,6 +4,7 @@
 
 - [`parse`](https://github.com/scottbedard/utils#parse)
 - [`stringify`](https://github.com/scottbedard/utils#stringify)
+- [`roll`](https://github.com/scottbedard/utils#roll)
 - [`Json<T>`](https://github.com/scottbedard/utils#jsont)
 - [`UnwrapJson<T>`](https://github.com/scottbedard/utils#unwrapjsont)
 

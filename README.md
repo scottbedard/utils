@@ -88,6 +88,7 @@ Alternatively, the functions maybe be accessed via a CDN. When using the CDN, th
 - [`measure`](#measure)
 - [`polygon`](#polygon)
 - [`radiansToDegrees`](#radiansToDegrees)
+- [`roll`](#roll)
 - [`rotateMatrix`](#rotateMatrix)
 - [`rotateVector`](#rotateVector)
 - [`rows`](#rows)
@@ -631,6 +632,16 @@ Convert radians to degrees.
 import { radiansToDegrees } from '@bedard/utils'
 
 radiansToDegrees(Math.PI) // 180
+```
+
+#### `roll`
+
+Roll the start of an array forwards or backwards.
+
+```js
+import { roll } from '@bedard/utils'
+
+roll([0, 1, 2], 1) // [1, 2, 0]
 ```
 
 #### `rgbToHsl`
