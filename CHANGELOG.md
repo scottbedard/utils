@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.22.0 (not released)
+## 0.22.0
 
 - [`parse`](https://github.com/scottbedard/utils#parse)
 - [`stringify`](https://github.com/scottbedard/utils#stringify)
