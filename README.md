@@ -595,7 +595,7 @@ measure([[0, 0], [3, 4]]) // 5
 
 #### `parse`
 
-A type-safe wrapper around `JSON.parse`. This utility is complimented by [`stringify`](#stringify), [`Json`](#json-t), and [`UnwrapJson`](#unwrapJson-t).
+A type-safe wrapper around `JSON.parse`. This utility is complimented by [`stringify`](#stringify), [`Json`](#jsont), and [`UnwrapJson`](#unwrapjsont).
 
 ```js
 import { stringify } from '@bedard/utils'
@@ -707,7 +707,7 @@ slope([[0, 0], [1, 1]]) // 1
 
 #### `stringify`
 
-A type-safe wrapper around `JSON.stringify`. This utility is complimented by [`parse`](#parse), [`Json`](#json-t), and [`UnwrapJson`](#unwrapJson-t)
+A type-safe wrapper around `JSON.stringify`. This utility is complimented by [`parse`](#parse), [`Json`](#jsont), and [`UnwrapJson`](#unwrapjsont)
 
 ```ts
 import { parse, stringify } from '@bedard/utils'
@@ -750,7 +750,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`First<T>`](#firstt)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
-- [`Json<T>`](#json-t)
+- [`Json<T>`](#jsont)
 - [`KebabCase<T>`](#kebabcaset)
 - [`KebabCaseKeys<T>`](#kebabcasekeyst)
 - [`KebabCaseKeysDeep<T>`](#kebabcasekeysdeept)
@@ -783,7 +783,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`StartsWith<T, U>`](#startswitht-u)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`Transparent<T>`](#transparentt)
-- [`UnwrapJson<T>`](#unwrapjson-t)
+- [`UnwrapJson<T>`](#unwrapjsont)
 - [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
@@ -904,7 +904,7 @@ type Parts = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
 
 #### `Json<T>`
 
-Encodes a JSON string with underlying type information. This utility is complimented by [`parse`](#parse), [`stringify`](#stringify), and [`UnwrapJson`](#unwrapjson-t).
+Encodes a JSON string with underlying type information. This utility is complimented by [`parse`](#parse), [`stringify`](#stringify), and [`UnwrapJson`](#unwrapjsont).
 
 ```ts
 import { Json } from '@bedard/utils'
@@ -1247,7 +1247,7 @@ type NonOpaqueString = Transparent<string>
 
 #### `UnwrapJson<T>`
 
-Decodes type information from a [`Json<T>`](#json-t) string.
+Decodes type information from a [`Json<T>`](#jsont) string.
 
 ```ts
 import { Json, UnwrapJson } from '@bedard/utils'
