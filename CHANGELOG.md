@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.22.0 (not released)
+
+- [`parse`](https://github.com/scottbedard/utils#parse)
+- [`stringify`](https://github.com/scottbedard/utils#stringify)
+- [`Json<T>`](https://github.com/scottbedard/utils#jsont)
+- [`UnwrapJson<T>`](https://github.com/scottbedard/utils#unwrapjsont)
+
 ## 0.21.0
 
 - [`Methods<T>`](https://github.com/scottbedard/utils#methodst)
