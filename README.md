@@ -6,7 +6,7 @@
 [![Bundle size](https://img.shields.io/bundlephobia/minzip/@bedard/utils?label=gzipped)](https://bundlephobia.com/result?p=@bedard/utils)
 [![License](https://img.shields.io/github/license/scottbedard/utils?color=blue)](https://github.com/scottbedard/utils/blob/main/LICENSE)
 
-I like to think of this library as my own personal lodash. It contains a number of utility types and functions that I found myself duplicating between projects. I do not anticipate breaking changes, but I'm also not ruling it out. Upgrade with caution.
+This repository acts as my own personal lodash. It contains a number of utility types and functions that I found myself duplicating between projects. I do not anticipate breaking changes, but I'm also not ruling it out. Upgrade with caution.
 
 - [Installation](#installation)
 - [Functions](#functions)
@@ -97,6 +97,8 @@ Alternatively, the functions maybe be accessed via a CDN. When using the CDN, th
 ### Utility
 
 - [`deepEqual`](#deepEqual)
+- [`parse`](#parse)
+- [`stringify`](#stringify)
 - [`toKeyedObjects`](#toKeyedObjects)
 
 #### `addVectors`
@@ -591,6 +593,16 @@ measure([0, 0], [3, 4]) // 5
 measure([[0, 0], [3, 4]]) // 5
 ```
 
+#### `parse`
+
+A type-safe wrapper around `JSON.parse`. This utility is complimented by [`stringify`](#stringify), [`Json`](#json-t), and [`UnwrapJson`](#unwrapJson-t).
+
+```js
+import { stringify } from '@bedard/utils'
+
+stringify({ foo: 'bar' }) // '{"foo":"bar"}' as Json<{ foo: string }>
+```
+
 #### `parseColor`
 
 Parse an [RGB string](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb_colors) to `[red, green, blue, alpha]` values. An error will be thrown if the value is not valid.
@@ -693,6 +705,18 @@ slope([0, 0], [1, 1]) // 1
 slope([[0, 0], [1, 1]]) // 1
 ```
 
+#### `stringify`
+
+A type-safe wrapper around `JSON.stringify`. This utility is complimented by [`parse`](#parse), [`Json`](#json-t), and [`UnwrapJson`](#unwrapJson-t)
+
+```ts
+import { parse, stringify } from '@bedard/utils'
+
+const json = stringify({ foo: 'bar' })
+
+const obj = parse(json) // { foo: 'bar' } as { foo: number }
+```
+
 #### `stringifyColor`
 
 Convert `[red, green, blue, alpha?]` values to string using [hexadecimal notation](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb_colors).
@@ -726,6 +750,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`First<T>`](#firstt)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
+- [`Json<T>`](#json-t)
 - [`KebabCase<T>`](#kebabcaset)
 - [`KebabCaseKeys<T>`](#kebabcasekeyst)
 - [`KebabCaseKeysDeep<T>`](#kebabcasekeysdeept)
@@ -758,6 +783,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`StartsWith<T, U>`](#startswitht-u)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`Transparent<T>`](#transparentt)
+- [`UnwrapJson<T>`](#unwrapjson-t)
 - [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
@@ -874,6 +900,16 @@ import { Join } from '@bedard/utils'
 type Str = Join<['a', 'b', 'c']> // 'abc'
 
 type Parts = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
+```
+
+#### `Json<T>`
+
+Encodes a JSON string with underlying type information. This utility is complimented by [`parse`](#parse), [`stringify`](#stringify), and [`UnwrapJson`](#unwrapjson-t).
+
+```ts
+import { Json } from '@bedard/utils'
+
+type UserJson = Json<{ foo: 'bar' }> // string
 ```
 
 #### `KebabCase<T>`
@@ -1207,6 +1243,18 @@ A type that does not encode any additional data. This is the inverse of [`Opaque
 import { Transparent } from '@bedard/utils'
 
 type NonOpaqueString = Transparent<string>
+```
+
+#### `UnwrapJson<T>`
+
+Decodes type information from a [`Json<T>`](#json-t) string.
+
+```ts
+import { Json, UnwrapJson } from '@bedard/utils'
+
+type UserJson = Json<{ email: string }> // string
+
+type User = UnwrapJson<UserJson> // { email: string }
 ```
 
 #### `ValueOf<T>`
