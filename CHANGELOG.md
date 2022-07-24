@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.23.0
+
+- [`UnwrapOpaque<T>`](https://github.com/scottbedard/utils#unwrapopaquet)
+
 ## 0.22.0
 
 - [`parse`](https://github.com/scottbedard/utils#parse)
