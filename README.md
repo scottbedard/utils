@@ -794,6 +794,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`StartsWith<T, U>`](#startswitht-u)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`Transparent<T>`](#transparentt)
+- [`UnwrapOpaque<T>`](#unwrapopaquet)
 - [`UnwrapJson<T>`](#unwrapjsont)
 - [`ValueOf<T>`](#valueoft)
 - [`Without<A, B>`](#withouta-b)
@@ -1254,6 +1255,18 @@ A type that does not encode any additional data. This is the inverse of [`Opaque
 import { Transparent } from '@bedard/utils'
 
 type NonOpaqueString = Transparent<string>
+```
+
+#### `UnwrapOpaque<T>`
+
+Unwrap the underlying data of an [`Opaque<T>`](#opaquet-token) type.
+
+```ts
+import { UnwrapOpaque } from '@bedard/utils'
+
+type Foo = Opaque<string, 'example'>
+
+type Bar = UnwrapOpaque<Foo> // string
 ```
 
 #### `UnwrapJson<T>`
