@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.24.0
+
+- [`entries`](https://github.com/scottbedard/utils#entries)
+- [`keys`](https://github.com/scottbedard/utils#keys)
+
 ## 0.23.0
 
 - [`UnwrapOpaque<T>`](https://github.com/scottbedard/utils#unwrapopaquet)
