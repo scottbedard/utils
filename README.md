@@ -98,6 +98,8 @@ Alternatively, the functions maybe be accessed via a CDN. When using the CDN, th
 ### Utility
 
 - [`deepEqual`](#deepEqual)
+- [`entries`](#entries)
+- [`keys`](#keys)
 - [`parse`](#parse)
 - [`stringify`](#stringify)
 - [`toKeyedObjects`](#toKeyedObjects)
@@ -478,6 +480,16 @@ import { easeInOutBounce } from '@bedard/utils'
 easeInOutBounce(0.5) // 0.5
 ```
 
+#### `entries`
+
+Type safe wrapper around [`Object.entries`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+
+```js
+import { entries } from '@bedard/utils'
+
+entries({ foo: 'bar' }) // [['foo', 'bar']]
+```
+
 #### `flattenCols`
 
 Flatten an array of columns to a matrix in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
@@ -548,6 +560,16 @@ Test if a number is even.
 import { isEven } from '@bedard/utils'
 
 isEven(2) // true
+```
+
+#### `keys`
+
+Type-safe wrapper around [`Object.keys`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+
+```js
+import { keys } from '@bedard/utils'
+
+keys({ foo: 'bar' }) // ['foo']
 ```
 
 #### `lerp`
