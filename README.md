@@ -114,6 +114,8 @@ import { addVectors } from '@bedard/utils'
 addVectors([1, 2], [3, 4]) // [4, 6]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/addVectors.ts)
+
 #### `angleFrom`
 
 Calculate angled distance from a vector. An angle of `0` degrees will track along the X axis, with positive angles rotating counter-clockwise.
@@ -124,6 +126,8 @@ import { angleFrom } from '@bedard/utils'
 angleFrom([0, 0], 90, 1) // [0, 1] (approximate)
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/angleFrom.ts)
+
 #### `bilerp`
 
 Bi-linear interpolation between vectors.
@@ -132,7 +136,10 @@ Bi-linear interpolation between vectors.
 import { bilerp } from '@bedard/utils'
 
 bilerp([0, 0], [10, 10], 0.5) // [5, 5]
+
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/bilerp.ts)
 
 #### `cols`
 
@@ -148,6 +155,8 @@ cols([
 ]) // [[0, 3, 6], [1, 4, 7], [2, 5, 8]]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/cols.ts)
+
 #### `createEasingFunction`
 
 Create an [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function) from cubic-bezier points. Note that the included easing functions do not use this utility. They are simpler mathematical functions, and do not produce quite the same results as easing functions created using this utility.
@@ -160,6 +169,8 @@ const linear = createEasingFunction(0, 0, 1, 1)
 linear(0.5) // 0.5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/createEasingFunction.ts)
+
 #### `deepEqual`
 
 Deep object comparison.
@@ -170,6 +181,8 @@ import { deepEqual } from '@bedard/utils'
 deepEqual({ foo: { bar: 1 }}, { foo: { bar: 1 }}) // true
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/deepEqual.ts)
+
 #### `degreesToRadians`
 
 Convert degrees to radians.
@@ -178,7 +191,10 @@ Convert degrees to radians.
 import { degreesToRadians } from '@bedard/utils'
 
 degreesToRadians(180) // 3.141592653589793
+
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/degreesToRadians.ts)
 
 #### `easeInSine`
 
@@ -190,6 +206,8 @@ import { easeInSine } from '@bedard/utils'
 easeInSine(0.5) // 0.2928932188134524
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeOutSine`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.61,1,0.88,1).
@@ -199,6 +217,8 @@ import { easeOutSine } from '@bedard/utils'
 
 easeOutSine(0.5) // 0.7071067811865475
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInOutSine`
 
@@ -210,6 +230,8 @@ import { easeInOutSine } from '@bedard/utils'
 easeInOutSine(0.5) // 0.49999999999999994
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInQuad`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.11,0,0.5,0).
@@ -219,6 +241,8 @@ import { easeInQuad } from '@bedard/utils'
 
 easeInQuad(0.5) // 0.25
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeOutQuad`
 
@@ -230,6 +254,8 @@ import { easeOutQuad } from '@bedard/utils'
 easeOutQuad(0.5) // 0.75
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInOutQuad`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.45,0,0.55,1).
@@ -239,6 +265,8 @@ import { easeInOutQuad } from '@bedard/utils'
 
 easeInOutQuad(0.5) // 0.5
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInCubic`
 
@@ -250,6 +278,8 @@ import { easeInCubic } from '@bedard/utils'
 easeInCubic(0.5) // 0.125
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeOutCubic`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.33,1,0.68,1).
@@ -259,6 +289,8 @@ import { easeOutCubic } from '@bedard/utils'
 
 easeOutCubic(0.5) // 0.875
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInOutCubic`
 
@@ -270,6 +302,8 @@ import { easeInOutCubic } from '@bedard/utils'
 easeInOutCubic(0.5) // 0.5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInQuart`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.5,0,0.75,0).
@@ -279,6 +313,8 @@ import { easeInQuart } from '@bedard/utils'
 
 easeInQuart(0.5) // 0.0625
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeOutQuart`
 
@@ -290,6 +326,8 @@ import { easeOutQuart } from '@bedard/utils'
 easeOutQuart(0.5) // 0.9375
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInOutQuart`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.76,0,0.24,1).
@@ -299,6 +337,8 @@ import { easeInOutQuart } from '@bedard/utils'
 
 easeInOutQuart(0.5) // 0.5
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInQuint`
 
@@ -310,6 +350,8 @@ import { easeInQuint } from '@bedard/utils'
 easeInQuint(0.5) // 0.03125
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeOutQuint`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.22,1,0.36,1).
@@ -319,6 +361,8 @@ import { easeOutQuint } from '@bedard/utils'
 
 easeOutQuint(0.5) // 0.96875
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInOutQuint`
 
@@ -330,6 +374,8 @@ import { easeInOutQuint } from '@bedard/utils'
 easeInOutQuint(0.5) // 0.5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInExpo`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.7,0,0.84,0).
@@ -339,6 +385,8 @@ import { easeInExpo } from '@bedard/utils'
 
 easeInExpo(0.5) // 0.03125
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeOutExpo`
 
@@ -350,6 +398,8 @@ import { easeOutExpo } from '@bedard/utils'
 easeOutExpo(0.5) // 0.96875
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInOutExpo`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.87,0,0.13,1).
@@ -359,6 +409,8 @@ import { easeInOutExpo } from '@bedard/utils'
 
 easeInOutExpo(0.5) // 0.5
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInCirc`
 
@@ -370,6 +422,8 @@ import { easeInCirc } from '@bedard/utils'
 easeInCirc(0.5) // 0.1339745962155614
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeOutCirc`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0,0.55,0.45,1).
@@ -379,6 +433,8 @@ import { easeOutCirc } from '@bedard/utils'
 
 easeOutCirc(0.5) // 0.8660254037844386
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInOutCirc`
 
@@ -390,6 +446,8 @@ import { easeInOutCirc } from '@bedard/utils'
 easeInOutCirc(0.5) // 0.5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInBack`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.36,0,0.66,-0.56).
@@ -399,6 +457,8 @@ import { easeInBack } from '@bedard/utils'
 
 easeInBack(0.5) // -0.08769750000000004
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeOutBack`
 
@@ -410,6 +470,8 @@ import { easeOutBack } from '@bedard/utils'
 easeOutBack(0.5) // 1.0876975
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInOutBack`
 
 Easing function that follows [this curve](http://cubic-bezier.com/#0.68,-0.6,0.32,1.6).
@@ -419,6 +481,8 @@ import { easeInOutBack } from '@bedard/utils'
 
 easeInOutBack(0.5) // 0.5
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInElastic`
 
@@ -430,6 +494,8 @@ import { easeInElastic } from '@bedard/utils'
 easeInElastic(0.5) // -0.015625000000000045
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeOutElastic`
 
 Easing function that creates an elastic-out effect.
@@ -439,6 +505,8 @@ import { easeOutElastic } from '@bedard/utils'
 
 easeOutElastic(0.5) // 1.015625
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeInOutElastic`
 
@@ -450,6 +518,8 @@ import { easeInOutElastic } from '@bedard/utils'
 easeInOutElastic(0.5) // 0.5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInBounce`
 
 Easing function that creates a bounce-in effect.
@@ -459,6 +529,8 @@ import { easeInBounce } from '@bedard/utils'
 
 easeInBounce(0.5) // 0.234375
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
 
 #### `easeOutBounce`
 
@@ -470,6 +542,8 @@ import { easeOutBounce } from '@bedard/utils'
 easeOutBounce(0.5) // 0.765625
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `easeInOutBounce`
 
 Easing function that creates a bounce-in-out effect.
@@ -480,6 +554,8 @@ import { easeInOutBounce } from '@bedard/utils'
 easeInOutBounce(0.5) // 0.5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/ease.ts)
+
 #### `entries`
 
 Type safe wrapper around [`Object.entries`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
@@ -489,6 +565,8 @@ import { entries } from '@bedard/utils'
 
 entries({ foo: 'bar' }) // [['foo', 'bar']]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/entries.ts)
 
 #### `flattenCols`
 
@@ -504,6 +582,8 @@ flattenCols([
 ]) // [0, 1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/flattenCols.ts)
+
 #### `flattenRows`
 
 Flatten an array of rows to a matrix in [row-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
@@ -517,6 +597,8 @@ flattenRows([
   [6, 7, 8],
 ]) // [0, 1, 2, 3, 4, 5, 6, 7, 8]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/flattenRows.ts)
 
 #### `flip`
 
@@ -532,6 +614,8 @@ flip([
 ]) // [[0, 3, 6], [1, 4, 7], [2, 5, 8]]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/flip.ts)
+
 #### `hslToRgb`
 
 Convert `[hue, saturation, lightness, alpha?]` to `[red, green, blue, alpha]` values.
@@ -541,6 +625,8 @@ import { hslToRgb } from '@bedard/utils'
 
 hslToRgb([0, 1, 0.5]) // [255, 0, 0, 1]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/hslToRgb.ts)
 
 #### `intersect`
 
@@ -552,6 +638,8 @@ import { intersect } from '@bedard/utils'
 intersect([[-1, 0], [1, 0]], [[0, 1], [0, -1]]) // [0, 0]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/intersect.ts)
+
 #### `isEven`
 
 Test if a number is even.
@@ -561,6 +649,8 @@ import { isEven } from '@bedard/utils'
 
 isEven(2) // true
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/isEven.ts)
 
 #### `keys`
 
@@ -572,6 +662,8 @@ import { keys } from '@bedard/utils'
 keys({ foo: 'bar' }) // ['foo']
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/keys.ts)
+
 #### `lerp`
 
 Linear interpolation between numbers.
@@ -581,6 +673,8 @@ import { lerp } from '@bedard/utils'
 
 lerp(0, 10, 0.5) // 5
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/lerp.ts)
 
 #### `lerpColors`
 
@@ -592,6 +686,8 @@ import { lerpColors } from '@bedard/utils'
 lerpColors('#000000', '#ffffff') // '#808080'
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/lerpColors.ts)
+
 #### `lerpVectors`
 
 Linear interpolation between two vectors. This function is similar to [`bilerp`](#bilerp), but for vectors of any size, or even vectors of different sizes.
@@ -601,6 +697,8 @@ import { lerpVectors } from '@bedard/utils'
 
 lerpVectors([0, 0, 0], [1, 2, 3], 0.5) // [0.5, 1, 1.5]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/lerpVectors.ts)
 
 #### `measure`
 
@@ -616,6 +714,8 @@ measure([0, 0], [3, 4]) // 5
 measure([[0, 0], [3, 4]]) // 5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/measure.ts)
+
 #### `parse`
 
 A type-safe wrapper around `JSON.parse`. This utility is complimented by [`stringify`](#stringify), [`Json`](#jsont), and [`UnwrapJson`](#unwrapjsont).
@@ -625,6 +725,8 @@ import { stringify } from '@bedard/utils'
 
 stringify({ foo: 'bar' }) // '{"foo":"bar"}' as Json<{ foo: string }>
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/json.ts)
 
 #### `parseColor`
 
@@ -636,6 +738,8 @@ import { parseColor } from '@bedard/utils'
 parseColor('#123456') // [18, 52, 86, 0]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/parseColor.ts)
+
 #### `polygon`
 
 Create a regular polygon. The first argument defines the number of points, with the second defining the circumradius. Points start from the 12 o'clock position, and rotate counter-clockwise around the origin.
@@ -645,6 +749,8 @@ import { polygon } from '@bedard/utils'
 
 polygon(4, 1) // [[0, 1], [-1, 0], [0, -1], [1, 0]] (approximate)
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/polygon.ts)
 
 #### `radiansToDegrees`
 
@@ -656,6 +762,8 @@ import { radiansToDegrees } from '@bedard/utils'
 radiansToDegrees(Math.PI) // 180
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/radiansToDegrees.ts)
+
 #### `roll`
 
 Roll the start of an array forwards or backwards.
@@ -666,6 +774,8 @@ import { roll } from '@bedard/utils'
 roll([0, 1, 2], 1) // [1, 2, 0]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/roll.ts)
+
 #### `rgbToHsl`
 
 Convert `[red, green, blue, alpha?]` to `[hue, saturation, lightness, alpha]` values.
@@ -675,6 +785,8 @@ import { rgbToHsl } from '@bedard/utils'
 
 rgbToHsl([255, 0, 0]) // [0, 1, 0.5, 1]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/rgbToHsl.ts)
 
 #### `rotateMatrix`
 
@@ -690,6 +802,8 @@ rotateMatrix([
 ], 1) // [6, 3, 0, 7, 4, 1, 8, 5, 2]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/rotateMatrix.ts)
+
 #### `rotateVector`
 
 Rotate a vector counter-clockwise around the origin.
@@ -699,6 +813,8 @@ import { rotateVector } from '@bedard/utils'
 
 rotateVector([0, 1], 90) // [-1, 0] (approximate)
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/rotateVector.ts)
 
 #### `rows`
 
@@ -714,6 +830,8 @@ rows([
 ]) // [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/rows.ts)
+
 #### `scale`
 
 Multiple a vector by a number.
@@ -723,6 +841,8 @@ import { scale } from '@bedard/utils'
 
 scale([1, 2], 2) // [2, 4]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/scale.ts)
 
 #### `slope`
 
@@ -738,6 +858,8 @@ slope([0, 0], [1, 1]) // 1
 slope([[0, 0], [1, 1]]) // 1
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/slope.ts)
+
 #### `stringify`
 
 A type-safe wrapper around `JSON.stringify`. This utility is complimented by [`parse`](#parse), [`Json`](#jsont), and [`UnwrapJson`](#unwrapjsont)
@@ -750,6 +872,8 @@ const json = stringify({ foo: 'bar' })
 const obj = parse(json) // { foo: 'bar' } as { foo: number }
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/json.ts)
+
 #### `stringifyColor`
 
 Convert `[red, green, blue, alpha?]` values to string using [hexadecimal notation](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb_colors).
@@ -760,6 +884,8 @@ import { stringifyColor } from '@bedard/utils'
 stringifyColor([255, 0, 0]) // #ff0000
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/stringifyColor.ts)
+
 #### `toKeyedObjects`
 
 Create keyed objects from an array.
@@ -769,6 +895,8 @@ import { toKeyedObjects } from '@bedard/utils'
 
 toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/toKeyedObjects.ts)
 
 ## Types
 
