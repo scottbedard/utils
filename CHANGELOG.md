@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.26.0
+
+- [`Line<T>`](https://github.com/scottbedard/utils#linet)
+
 ## 0.25.0
 
 - [`Vector<T>`](https://github.com/scottbedard/utils#vectort)
