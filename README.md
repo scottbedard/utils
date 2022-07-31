@@ -944,9 +944,10 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`StartsWith<T, U>`](#startswitht-u)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`Transparent<T>`](#transparentt)
-- [`UnwrapOpaque<T>`](#unwrapopaquet)
 - [`UnwrapJson<T>`](#unwrapjsont)
+- [`UnwrapOpaque<T>`](#unwrapopaquet)
 - [`ValueOf<T>`](#valueoft)
+- [`Vector<T>`](#vectort)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
 
@@ -1536,6 +1537,18 @@ type ObjectValues = ValueOf<{ foo: number, bar: string }> // number | string
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ValueOf.ts)
+
+#### `Vector<T>`
+
+Generate a numeric tuple of size `T`.
+
+```ts
+import { Vector } from '@bedard/utils'
+
+type Coordinate = Vector<3> // [number, number, number]
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Vector.ts)
 
 #### `Without<A, B>`
 

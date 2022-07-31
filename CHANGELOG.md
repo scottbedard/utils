@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.25.0
+
+- [`Vector<T>`](https://github.com/scottbedard/utils#vectort)
+
 ## 0.24.0
 
 - [`entries`](https://github.com/scottbedard/utils#entries)
