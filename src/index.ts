@@ -80,6 +80,7 @@ export { SymmetricDifference } from './types/SymmetricDifference'
 export { Transparent } from './types/Transparent'
 export { UnwrapOpaque } from './types/UnwrapOpaque'
 export { ValueOf } from './types/ValueOf'
+export { Vector } from './types/Vector'
 export { Without } from './types/Without'
 export { XOR } from './types/XOR'
 
