@@ -1,10 +1,10 @@
 import { degreesToRadians } from './degreesToRadians'
-import { Vector2 } from '../utils'
+import { Vector } from '../types/Vector'
 
 /**
  * Calculate angled distance from a vector.
  */
-export function angleFrom([x, y]: Vector2, degrees: number, distance: number): Vector2 {
+export function angleFrom([x, y]: Vector<2>, degrees: number, distance: number): Vector<2> {
   const radians = degreesToRadians(degrees)
 
   return [(distance * Math.cos(radians)) + x, (distance * Math.sin(radians)) + y]

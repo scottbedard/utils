@@ -1,10 +1,10 @@
-import { Vector2 } from '../utils'
 import { degreesToRadians } from './degreesToRadians'
+import { Vector } from '../types/Vector'
 
 /**
  * Rotate a vector counter-clockwise around the origin.
  */
-export function rotateVector([x, y]: Vector2, degrees: number): Vector2 {
+export function rotateVector([x, y]: Vector<2>, degrees: number): Vector<2> {
   const radians = degreesToRadians(degrees)
   const cos = Math.cos(radians)
   const sin = Math.sin(radians)

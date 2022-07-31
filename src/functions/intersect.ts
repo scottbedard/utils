@@ -1,10 +1,14 @@
-import { Line2, Vector2 } from '../utils'
+import { Line2 } from '../utils'
 import { slope } from './slope'
+import { Vector } from '../types/Vector'
 
 /**
  * Intersect two-dimensional lines. Returns undefined if lines are parellel.
  */
-export function intersect([v1, v2]: Line2, [v3, v4]: Line2): Vector2 | undefined {
+export function intersect(
+  [v1, v2]: [Vector<2>, Vector<2>],
+  [v3, v4]: [Vector<2>, Vector<2>],
+): Vector<2> | undefined {
   const [x1, y1] = v1, [x3, y3] = v3
   const m1 = slope(v1, v2)
   const m3 = slope(v3, v4)
