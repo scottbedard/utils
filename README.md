@@ -916,6 +916,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`KebabCaseKeys<T>`](#kebabcasekeyst)
 - [`KebabCaseKeysDeep<T>`](#kebabcasekeysdeept)
 - [`Last<T>`](#lastt)
+- [`Line<T>`](#linet)
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
 - [`MapUppercase<T>`](#mapuppercaset)
@@ -1147,6 +1148,18 @@ type LastItem = Last<[1, 2, 3]>, // 3
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Last.ts)
+
+#### `Line<T>`
+
+Describes a straight line between two vectors of length `T`.
+
+```ts
+import { Line } from '@bedard/utils'
+
+type Line2D = Line<T> // [[number, number], [number, number]]
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Line.ts)
 
 #### `MapCapitalize<T>`
 

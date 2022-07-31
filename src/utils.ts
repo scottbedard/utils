@@ -1,14 +1,10 @@
+import { Line } from './types/Line'
 import { Vector } from './types/Vector'
 
 /**
  * Opaque type tag
  */
 export declare const tag: unique symbol
-
-/**
- * Two-dimensional line
- */
-export type Line2 = [Vector<2>, Vector<2>]
 
 /**
  * Clamp number to a given range.
@@ -27,6 +23,6 @@ export function clampColor(val: number): number {
 /**
  * Helper to allow functions to accept lines or vectors.
  */
-export function toLine2(lineOrV1: Line2 | Vector<2>, maybeV2?: Vector<2>): Line2 {
-  return maybeV2 ? [lineOrV1 as Vector<2>, maybeV2] : lineOrV1 as Line2
+export function toLine2(lineOrV1: Line<2> | Vector<2>, maybeV2?: Vector<2>): Line<2> {
+  return maybeV2 ? [lineOrV1 as Vector<2>, maybeV2] : lineOrV1 as Line<2>
 }
