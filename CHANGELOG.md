@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.27.0
+
+- [`Vector<T, U>`](https://github.com/scottbedard/utils#vectort) now supports non-numeric values
+
 ## 0.26.0
 
 - [`Line<T>`](https://github.com/scottbedard/utils#linet)
