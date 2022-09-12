@@ -1553,12 +1553,14 @@ type ObjectValues = ValueOf<{ foo: number, bar: string }> // number | string
 
 #### `Vector<T>`
 
-Generate a numeric tuple of size `T`.
+Generate a uniform tuple of length `T`, with numeric values by default.
 
 ```ts
 import { Vector } from '@bedard/utils'
 
 type Coordinate = Vector<3> // [number, number, number]
+
+type Things = Vector<3, Thing> // [Thing, Thing, Thing]
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Vector.ts)

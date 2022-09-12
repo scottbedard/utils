@@ -1,7 +1,8 @@
 /**
- * Numeric tuple of size `T`
+ * Uniform tuple of length `T`, numeric by default
  */
 export type Vector<
   T extends number,
-  U extends unknown[] = []
-> = U['length'] extends T ? U : Vector<T, [number, ...U]>
+  U = number,
+  V extends unknown[] = []
+> = V['length'] extends T ? V : Vector<T, U, [U, ...V]>
