@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.28.0
+
+- [`XOR<[...]>`](https://github.com/scottbedard/utils#xora-b) syntax added for chained exclusive or
+
 # 0.27.0
 
 - [`Vector<T, U>`](https://github.com/scottbedard/utils#vectort) now supports non-numeric values

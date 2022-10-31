@@ -1591,6 +1591,17 @@ const b: FooOrBar = { bar } // pass
 const c: FooOrBar = { foo, bar } // fail
 ```
 
+Additionally, a tuple can be provided for a chained XOR.
+
+```ts
+type ValidNumber = XOR<[1, 2, 3]>
+
+const a: ValidNumber = 1 // pass
+const b: ValidNumber = 2 // pass
+const c: ValidNumber = 3 // pass
+const d: ValidNumber = 4 // fail
+```
+
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XOR.ts)
 
 ## License
