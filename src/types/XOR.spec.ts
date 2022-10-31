@@ -22,4 +22,30 @@ describe('XOR', ()  => {
     // @ts-expect-error
     const test4: FooOrBar = { foo: 1, bar: 1 }
   })
+
+  it('exclusive item from tuple', () => {
+    type FooBarBaz = XOR<[
+      { foo: number },
+      { bar: number },
+      { baz: number },
+      { qux: number, abc: number },
+    ]>
+
+    let test: FooBarBaz
+
+    // exclusive item from set
+    test = { foo: 1 }
+    test = { bar: 1 }
+    test = { baz: 1 }
+    test = { baz: 1 }
+
+    // @ts-expect-error, missing keys
+    test = {}
+
+    // @ts-expect-error, missing secondary key
+    test = { qux: 1 }
+
+    // @ts-expect-error, item overlap
+    test = { foo: 1, bar: 1 }
+  })
 })
