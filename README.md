@@ -650,6 +650,8 @@ import { isEmail } from '@bedard/utils'
 isEmail('hello@world.com') // true
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/isEmail.ts)
+
 #### `isEven`
 
 Test if a number is even.
