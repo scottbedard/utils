@@ -1,6 +1,6 @@
 # `@bedard/utils`
 
-[![Build status](https://img.shields.io/github/workflow/status/scottbedard/utils/Test)](https://github.com/scottbedard/utils/actions)
+[![Build status](https://img.shields.io/github/actions/workflow/status/scottbedard/utils/test.yml?branch=main)](https://github.com/scottbedard/utils/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/scottbedard/utils)](https://codecov.io/gh/scottbedard/utils)
 [![NPM](https://img.shields.io/npm/v/@bedard/utils)](https://www.npmjs.com/package/@bedard/utils)
 [![Bundle size](https://img.shields.io/bundlephobia/minzip/@bedard/utils?label=gzipped)](https://bundlephobia.com/result?p=@bedard/utils)
