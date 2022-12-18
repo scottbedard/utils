@@ -99,6 +99,7 @@ Alternatively, the functions maybe be accessed via a CDN. When using the CDN, th
 
 - [`deepEqual`](#deepEqual)
 - [`entries`](#entries)
+- [`isEmail`](#isemail)
 - [`keys`](#keys)
 - [`parse`](#parse)
 - [`stringify`](#stringify)
