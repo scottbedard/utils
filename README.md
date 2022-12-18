@@ -640,6 +640,16 @@ intersect([[-1, 0], [1, 0]], [[0, 1], [0, -1]]) // [0, 0]
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/intersect.ts)
 
+#### `isEmail`
+
+A fairly permissive email test where the value must be shaped `email@domain.tld`, and contain exactly one `@` characters.
+
+```js
+import { isEmail } from '@bedard/utils'
+
+isEmail('hello@world.com') // true
+```
+
 #### `isEven`
 
 Test if a number is even.
