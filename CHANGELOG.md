@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.29.0
+
+- [`isEmail`](https://github.com/scottbedard/utils#isemail)
+
 # 0.28.0
 
 - [`XOR<[...]>`](https://github.com/scottbedard/utils#xora-b) syntax added for chained exclusive or
