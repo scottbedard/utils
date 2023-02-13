@@ -882,7 +882,7 @@ import { parse, stringify } from '@bedard/utils'
 
 const json = stringify({ foo: 'bar' })
 
-const obj = parse(json) // { foo: 'bar' } as { foo: string }
+const obj = parse(json) // { foo: string }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/json.ts)
