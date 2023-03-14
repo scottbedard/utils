@@ -950,6 +950,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Pop<T>`](#popt)
 - [`Properties<T>`](#propertiest)
 - [`RequiredKeys<T, U>`](#requiredkeyst-u)
+- [`RgbColor<T>`](#rgbcolort)
 - [`ScreamingSnakeCase<T>`](#screamingsnakecaset)
 - [`ScreamingSnakeCaseKeys<T>`](#screamingsnakecasekeyst)
 - [`ScreamingSnakeCaseKeysDeep<T>`](#screamingsnakecasekeysdeept)
@@ -961,6 +962,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`StartsWith<T, U>`](#startswitht-u)
 - [`SymmetricDifference<A, B>`](#symmetricdifferencea-b)
 - [`Transparent<T>`](#transparentt)
+- [`Trim<T>`](#trimt)
 - [`UnwrapJson<T>`](#unwrapjsont)
 - [`UnwrapOpaque<T>`](#unwrapopaquet)
 - [`ValueOf<T>`](#valueoft)
@@ -1425,6 +1427,20 @@ type Obj = RequiredKeys<{ foo?: any, bar?: any }, 'foo'> // { foo: any, bar?: an
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/RequiredKeys.ts)
 
+#### `RgbColor<T>`
+
+Validate a rgb color
+
+```ts
+import { RgbColor } from '@bedard/utils'
+
+const rgb = <T>(color: RgbColor<T>) => color
+
+rgb('rgb(0, 0, 0)')
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/RgbColor.ts)
+
 #### `ScreamingSnakeCase<T>`
 
 Convert a string to screaming snake case.
@@ -1562,6 +1578,18 @@ type NonOpaqueString = Transparent<string>
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Transparent.ts)
+
+#### `Trim<T>`
+
+Trim leading and trailing whitespace
+
+```ts
+import { Trim } from '@bedard/utils'
+
+type Foo = Trim<'  foo bar  '> // 'foo bar'
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Trim.ts)
 
 #### `UnwrapOpaque<T>`
 

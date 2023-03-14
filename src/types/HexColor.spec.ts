@@ -6,11 +6,10 @@ import {
 
 describe('HexColor', () => {
   it('hex color', () => {
-    type Pass1 = Expect<Equal<'#abc', HexColor<'#abc'>>>
-sa
-    type Pass2 = Expect<Equal<'#ff0000', HexColor<'#ff0000'>>>
+    type P1 = Expect<Equal<'#abc', HexColor<'#abc'>>>
+    type P2 = Expect<Equal<'#ff0000', HexColor<'#ff0000'>>>
 
-    type Fail = Expect<Equal<never, HexColor<'not a hex color'>>>
+    type F1 = Expect<Equal<never, HexColor<'invalid'>>>
   })
 
   it('validator', () => {
