@@ -915,6 +915,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 
 - [`AllEqual<Sources, Value>`](#allequalsources-value)
 - [`BreakWords<T>`](#breakwordst)
+- [`Byte`](#byte)
 - [`CamelCase<T>`](#camelcaset)
 - [`CamelCaseKeys<T>`](#camelcasekeyst)
 - [`CamelCaseKeysDeep<T>`](#camelcasekeysdeept)
@@ -989,6 +990,18 @@ type Words = BreakWords<'one twoThree-four'> // ['one', 'two', 'Three', 'four']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/BreakWords.ts)
+
+#### `Byte`
+
+Integers that can be represented by one byte (0 - 255).
+
+```ts
+import { Byte } from '@bedard/utils'
+
+const n: Byte = 255
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Byte.ts)
 
 #### `CamelCase<T>`
 

@@ -37,6 +37,7 @@ export * from './functions/ease'
 // types
 export { AllEqual } from './types/AllEqual'
 export { BreakWords } from './types/BreakWords'
+export { Byte } from './types/Byte'
 export { CamelCase } from './types/CamelCase'
 export { CamelCaseKeys } from './types/CamelCaseKeys'
 export { CamelCaseKeysDeep } from './types/CamelCaseKeysDeep'
