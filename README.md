@@ -923,6 +923,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
 - [`First<T>`](#firstt)
+- [`Hex`](#hex)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`Json<T>`](#jsont)
@@ -993,7 +994,7 @@ type Words = BreakWords<'one twoThree-four'> // ['one', 'two', 'Three', 'four']
 
 #### `Byte`
 
-Integers that can be represented by one byte (0 - 255).
+A union of all numbers that can be represented by a single byte (0 - 255).
 
 ```ts
 import { Byte } from '@bedard/utils'
@@ -1087,6 +1088,18 @@ type FirstItem = First<[1, 2, 3]>, // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/First.ts)
+
+#### `Hex`
+
+A hexadecimal character
+
+```ts
+import { Hex } from '@bedard/utils'
+
+const char: Hex = 'a'
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Hex.ts)
 
 #### `Intersection<A, B>`
 

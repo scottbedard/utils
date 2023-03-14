@@ -1,7 +1,5 @@
 import {
   Byte,
-  Equal,
-  Expect,
 } from '../index'
 
 describe('Byte', () => {
