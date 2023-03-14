@@ -1,5 +1,13 @@
 # Changelog
 
+# 0.30.0
+
+- [`Byte`](https://github.com/scottbedard/utils#byte)
+- [`Hex`](https://github.com/scottbedard/utils#hex)
+- [`HexColor<T>`](https://github.com/scottbedard/utils#hexcolort)
+- [`RgbColor<T>`](https://github.com/scottbedard/utils#rgbcolort)
+- [`Trim<T>`](https://github.com/scottbedard/utils#trimt)
+
 # 0.29.0
 
 - [`isEmail`](https://github.com/scottbedard/utils#isemail)

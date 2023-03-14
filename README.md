@@ -924,7 +924,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Expect<T>`](#expectt)
 - [`First<T>`](#firstt)
 - [`Hex`](#hex)
-- [`HexColor`](#hexcolor)
+- [`HexColor<T>`](#hexcolor)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`Json<T>`](#jsont)
