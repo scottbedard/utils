@@ -924,6 +924,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Expect<T>`](#expectt)
 - [`First<T>`](#firstt)
 - [`Hex`](#hex)
+- [`HexColor`](#hexcolor)
 - [`Intersection<A, B>`](#intersectiona-b)
 - [`Join<Parts, Delimeter>`](#joinparts-delimeter)
 - [`Json<T>`](#jsont)
@@ -1100,6 +1101,20 @@ const char: Hex = 'a'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Hex.ts)
+
+#### `HexColor<T>`
+
+Validate a [hexadecimal color value](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color)
+
+```ts
+import { HexColor } from '@bedard/utils'
+
+const color = <T>(val: HexColor<T>) => val
+
+color('#abc')
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/HexColor.ts)
 
 #### `Intersection<A, B>`
 
