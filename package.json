@@ -3,7 +3,6 @@
   "bugs": {
     "url": "https://github.com/scottbedard/utils/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-eslint": "^8.0.1",
     "@types/jest": "^27.0.3",
