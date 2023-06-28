@@ -1,16 +1,16 @@
 import { 
   Equal,
   Expect,
-  XOR,
+  Either,
 } from '../index'
 
-describe('XOR', ()  => {
+describe('Either', ()  => {
   it('acts as a union for primitive types', () => {
-    type Test = Expect<Equal<XOR<1, 2>, 1 | 2>>
+    type Test = Expect<Equal<Either<1, 2>, 1 | 2>>
   })
 
   it('acts as exclusive or for objects', () => {
-    type FooOrBar = XOR<{ foo: number }, { bar: number }>
+    type FooOrBar = Either<{ foo: number }, { bar: number }>
 
     const test1: FooOrBar = { foo: 1 }
 
@@ -24,7 +24,7 @@ describe('XOR', ()  => {
   })
 
   it('exclusive item from tuple', () => {
-    type FooBarBaz = XOR<[
+    type FooBarBaz = Either<[
       { foo: number },
       { bar: number },
       { baz: number },
