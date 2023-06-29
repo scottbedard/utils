@@ -2,9 +2,11 @@ import {
   Abs,
   AND,
   DecimalAdd,
+  Digits,
   Equal,
   Expect,
   IsFloat,
+  IsInteger,
   IsNegative,
   IsPositive,
   MUX,
@@ -134,6 +136,16 @@ describe('math', () => {
     })
   })
 
+  // describe('Digits<T>', () => {
+  //   it('positive integer', () => {
+  //     type Test = Expect<Equal<[1, 2, 3], Digits<123>>>
+  //   })
+
+  //   it('negative integer', () => {
+  //     type Test = Expect<Equal<[1, 2, 3], Digits<-123>>>
+  //   })
+  // })
+
   describe('IsFloat<T>', () => {
     it('positive integer', () => {
       type Test = Expect<Not<IsFloat<1>>>
@@ -153,6 +165,28 @@ describe('math', () => {
     
     it('zero', () => {
       type Test = Expect<Not<IsFloat<0>>>
+    })
+  })
+
+  describe('IsInteger<T>', () => {
+    it('positive integer', () => {
+      type Test = Expect<IsInteger<1>>
+    })
+
+    it('negative integer', () => {
+      type Test = Expect<IsInteger<-1>>
+    })
+
+    it('positive float', () => {
+      type Test = Expect<Not<IsInteger<1.5>>>
+    })
+
+    it('negative float', () => {
+      type Test = Expect<Not<IsInteger<-1.5>>>
+    })
+
+    it('zero', () => {
+      type Test = Expect<IsInteger<0>>
     })
   })
 

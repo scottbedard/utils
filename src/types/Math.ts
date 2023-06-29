@@ -11,6 +11,21 @@ import { Not } from './Not'
 export type Abs<T extends number> = `${T}` extends `-${infer U extends number}` ? U : T
 
 /**
+ * Explode a positive integer into decimal digits
+ *
+ * @example
+ * Digits<123> // [1, 2, 3]
+ */
+export type Digits<T extends number> =
+  T extends Decimal
+    ? [T]
+    : IsPositive<T> extends true
+      ? `${T}` extends `${infer U extends number}${infer V extends number}`
+        ? [U, ...Digits<V>]
+        : never
+      : never
+
+/**
  * Bit
  */
 export type Bit = 0 | 1
@@ -183,6 +198,15 @@ export type DecimalAdd<T extends Decimal, U extends Decimal> = {
   8: {  0: 8,   1: 9,   2: 10,  3: 11,  4: 12,  5: 13,  6: 14,  7: 15,  8: 16,  9: 17  },
   9: {  0: 9,   1: 10,  2: 11,  3: 12,  4: 13,  5: 14,  6: 15,  7: 16,  8: 17,  9: 18  },
 }[T][U]
+
+/**
+ * Test if `T` is an integer
+ *
+ * @example
+ * IsInteger<1> // true
+ * IsInteger<1.5> // false
+ */
+export type IsInteger<T extends number> = Not<IsFloat<T>>
 
 /**
  * Test if `T` is a float
