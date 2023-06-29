@@ -16,6 +16,7 @@ import {
   Not,
   NOT,
   OR,
+  PadDigits,
   ToNumber,
   XNOR,
   XOR,
@@ -136,15 +137,27 @@ describe('math', () => {
     })
   })
 
-  // describe('Digits<T>', () => {
-  //   it('positive integer', () => {
-  //     type Test = Expect<Equal<[1, 2, 3], Digits<123>>>
-  //   })
+  describe('Digits<T>', () => {
+    it('positive integer', () => {
+      type Test = Expect<Equal<[1, 2, 3], Digits<123>>>
+    })
 
-  //   it('negative integer', () => {
-  //     type Test = Expect<Equal<[1, 2, 3], Digits<-123>>>
-  //   })
-  // })
+    it('negative integer', () => {
+      type Test = Expect<Equal<never, Digits<-123>>>
+    })
+
+    it('positive float', () => {
+      type Test = Expect<Equal<never, Digits<123.456>>>
+    })
+
+    it('negative float', () => {
+      type Test = Expect<Equal<never, Digits<-123.456>>>
+    })
+
+    it('zero', () => {
+      type Test = Expect<Equal<[0], Digits<0>>>
+    })
+  })
 
   describe('IsFloat<T>', () => {
     it('positive integer', () => {
@@ -253,6 +266,20 @@ describe('math', () => {
 
     it('zero', () => {
       type Test = Expect<Equal<0, Negate<0>>>
+    })
+  })
+
+  describe('PadDigits<T, U>', () => {
+    it('equal length', () => {
+      type Test = Expect<Equal<[[1], [2]], PadDigits<[1], [2]>>>
+    })
+
+    it('first shorter', () => {
+      type Test = Expect<Equal<[[0, 1], [2, 3]], PadDigits<[1], [2, 3]>>>
+    })
+
+    it('second shorter', () => {
+      type Test = Expect<Equal<[[1, 2], [0, 3]], PadDigits<[1, 2], [3]>>>
     })
   })
 

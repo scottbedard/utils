@@ -1,3 +1,4 @@
+import { LeftPad } from './LeftPad'
 import { Not } from './Not'
 
 /**
@@ -11,7 +12,7 @@ import { Not } from './Not'
 export type Abs<T extends number> = `${T}` extends `-${infer U extends number}` ? U : T
 
 /**
- * Explode a positive integer into decimal digits
+ * Explode positive integer into digits
  *
  * @example
  * Digits<123> // [1, 2, 3]
@@ -128,6 +129,14 @@ export type NOR<T extends Bit, U extends Bit> = {
   0: { 0: 1, 1: 0 },
   1: { 0: 0, 1: 0 },
 }[T][U]
+
+/**
+ * Pad vectors with leading zeros
+ *
+ * @example
+ * PadDigits<[1, 2], [3]> // [ [1, 2], [0, 3] ]
+ */
+export type PadDigits<T extends number[], U extends number[]> = [LeftPad<T, U['length'], 0>, LeftPad<U, T['length'], 0>]
 
 /**
  * Logical NOT
