@@ -8,7 +8,11 @@ import {
   IsFloat,
   IsInteger,
   IsNegative,
+  IsNegativeFloat,
+  IsNegativeInteger,
   IsPositive,
+  IsPositiveFloat,
+  IsPositiveInteger,
   MUX,
   NAND,
   Negate,
@@ -225,6 +229,50 @@ describe('math', () => {
     })
   })
 
+  describe('IsNegativeFloat<T>', () => {
+    it('positive integer', () => {
+      type Test = Expect<Not<IsNegativeFloat<1>>>
+    })
+
+    it('negative integer', () => {
+      type Test = Expect<Not<IsNegativeFloat<-1>>>
+    })
+
+    it('positive float', () => {
+      type Test = Expect<Not<IsNegativeFloat<1.5>>>
+    })
+  
+    it('negative float', () => {
+      type Test = Expect<IsNegativeFloat<-1.5>>
+    })
+  
+    it('zero', () => {
+      type Test = Expect<Not<IsNegativeFloat<0>>>
+    })
+  })
+
+  describe('IsNegativeInteger<T>', () => {
+    it('positive integer', () => {
+      type Test = Expect<Not<IsNegativeInteger<1>>>
+    })
+
+    it('negative integer', () => {
+      type Test = Expect<IsNegativeInteger<-1>>
+    })
+
+    it('positive float', () => {
+      type Test = Expect<Not<IsNegativeInteger<1.5>>>
+    })
+  
+    it('negative float', () => {
+      type Test = Expect<Not<IsNegativeInteger<-1.5>>>
+    })
+  
+    it('zero', () => {
+      type Test = Expect<Not<IsNegativeInteger<0>>>
+    })
+  })
+
   describe('IsPositive<T>', () => {
     it('positive integer', () => {
       type Test = Expect<IsPositive<1>>
@@ -244,6 +292,50 @@ describe('math', () => {
   
     it('zero', () => {
       type Test = Expect<Not<IsPositive<0>>>
+    })
+  })
+
+  describe('IsPositiveFloat<T>', () => {
+    it('positive integer', () => {
+      type Test = Expect<Not<IsPositiveFloat<1>>>
+    })
+
+    it('negative integer', () => {
+      type Test = Expect<Not<IsPositiveFloat<-1>>>
+    })
+  
+    it('positive float', () => {
+      type Test = Expect<IsPositiveFloat<1.5>>
+    })
+  
+    it('negative integer', () => {
+      type Test = Expect<Not<IsPositiveFloat<-1>>>
+    })
+  
+    it('zero', () => {
+      type Test = Expect<Not<IsPositiveFloat<0>>>
+    })
+  })
+
+  describe('IsPositiveInteger<T>', () => {
+    it('positive integer', () => {
+      type Test = Expect<IsPositiveInteger<1>>
+    })
+
+    it('negative integer', () => {
+      type Test = Expect<Not<IsPositiveInteger<-1>>>
+    })
+  
+    it('positive float', () => {
+      type Test = Expect<Not<IsPositiveInteger<1.5>>>
+    })
+  
+    it('negative integer', () => {
+      type Test = Expect<Not<IsPositiveInteger<-1>>>
+    })
+  
+    it('zero', () => {
+      type Test = Expect<Not<IsPositiveInteger<0>>>
     })
   })
 

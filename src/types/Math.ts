@@ -11,6 +11,27 @@ import { Not } from './Not'
  */
 export type Abs<T extends number> = `${T}` extends `-${infer U extends number}` ? U : T
 
+// /**
+//  * Add two numbers
+//  *
+//  * @example
+//  * Add<1, 2> // 3
+//  */
+// export type Add<T extends number, U extends number> =
+//   IsPositive<T> extends true
+//     ? IsInteger<T> extends true
+//       ? IsPositive<U> extends true
+//         ? IsInteger<U> extends true
+//           ? never // positive integer + positive integer
+//           : never // positive integer + positive float
+//         : IsInteger<U> extends true
+//           ? never // positive integer + negative integer
+//           : never // positive integer + negative float
+//       : never
+//     : IsInteger<T> extends true
+
+// type T1 = Add<1, 2>
+
 /**
  * Explode positive integer into digits
  *
@@ -244,6 +265,26 @@ export type IsNegative<T extends number> = T extends 0
     : false
 
 /**
+ * Determine if `T` is a negative float
+ * 
+ * @example
+ * IsNegativeFloat<-1> // false
+ * IsNegativeFloat<-1.5> // true
+ * IsNegativeFloat<1> // false
+ */
+export type IsNegativeFloat<T extends number> = IsNegative<T> extends true ? IsFloat<T> : false
+
+/**
+ * Determine if `T` is a negative integer
+ * 
+ * @example
+ * IsNegativeInteger<-1> // true
+ * IsNegativeInteger<-1.5> // false
+ * IsNegativeInteger<1> // false
+ */
+export type IsNegativeInteger<T extends number> = IsNegative<T> extends true ? IsInteger<T> : false
+
+/**
  * Determine if `T` is greater than 0
  *
  * @example
@@ -254,6 +295,26 @@ export type IsNegative<T extends number> = T extends 0
 export type IsPositive<T extends number> = T extends 0
   ? false
   : Not<IsNegative<T>>
+
+/**
+ * Determine if `T` is a positive integer
+ * 
+ * @example
+ * IsPositiveInteger<1> // true
+ * IsPositiveInteger<1.5> // false
+ * IsPositiveInteger<-1> // false
+ */
+export type IsPositiveFloat<T extends number> = IsPositive<T> extends true ? IsFloat<T> : false
+
+/**
+ * Determine if `T` is a positive integer
+ * 
+ * @example
+ * IsPositiveInteger<1> // true
+ * IsPositiveInteger<1.5> // false
+ * IsPositiveInteger<-1> // false
+ */
+export type IsPositiveInteger<T extends number> = IsPositive<T> extends true ? IsInteger<T> : false
 
 /**
  * Convert numeric string to number
