@@ -2,17 +2,46 @@ import { Not } from './Not'
 import { Vector } from './Vector'
 
 /**
- * Integer union
+ * Get the absolute value of a number
+ *
+ * @example
+ * Abs<-1> // 1
+ * Abs<0> // 0
+ * Abs<1> // 1
+ */
+export type Abs<T extends number> = `${T}` extends `-${infer U extends number}` ? U : T
+
+/**
+ * Convert a decimal to base 2
+ *
+ * @example
+ * Base2<5> // 101
+ */
+export type Base2<T extends Decimal> =
+  T extends 0 ? 0 :
+  T extends 1 ? 1 :
+  T extends 2 ? 10 :
+  T extends 3 ? 11 :
+  T extends 4 ? 100 :
+  T extends 5 ? 101 :
+  T extends 6 ? 110 :
+  T extends 7 ? 111 :
+  T extends 8 ? 1000 :
+  T extends 9 ? 1001 :
+  never
+
+/**
+ * Bit
  */
 export type Bit = 0 | 1
 
 /**
- * Integer union from 0 to 9
+ * Union of  decimal digits
  */
 export type Decimal = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 
 /**
- * Logical And
+ * Logical BD
  * 
  * @example
  * AND<1, 1> // 1
@@ -28,6 +57,26 @@ export type AND<T extends Bit, U extends Bit> =
   : 0
 
 /**
+ * Get the last digit of a number
+ *
+ * @example
+ * LastDigit<123> // 3
+ */
+export type LastDigit<T extends number> =
+  T extends Decimal ? T :
+  `${T}` extends `${number}${0}` ? 0 :
+  `${T}` extends `${number}${1}` ? 1 :
+  `${T}` extends `${number}${2}` ? 2 :
+  `${T}` extends `${number}${3}` ? 3 :
+  `${T}` extends `${number}${4}` ? 4 :
+  `${T}` extends `${number}${5}` ? 5 :
+  `${T}` extends `${number}${6}` ? 6 :
+  `${T}` extends `${number}${7}` ? 7 :
+  `${T}` extends `${number}${8}` ? 8 :
+  `${T}` extends `${number}${9}` ? 9 :
+  never
+
+/**
  * Logical MUX
  * 
  * @example
@@ -40,7 +89,7 @@ export type AND<T extends Bit, U extends Bit> =
  * MUX<1, 0, 1> // 0
  * MUX<1, 1, 1> // 1
  */
-export type MUX<T extends Bit, U extends Bit, S extends Bit> = OR<AND<T, NOT<S>>, AND<U, S>>
+export type MUX<T extends Bit, U extends Bit, S extends Bit> = S extends 0 ? T : U
 
 /**
  * Logical NAND
@@ -52,6 +101,23 @@ export type MUX<T extends Bit, U extends Bit, S extends Bit> = OR<AND<T, NOT<S>>
  * NAND<1, 1> // 0
  */
 export type NAND<T extends Bit, U extends Bit> = NOT<AND<T, U>>
+
+/**
+ * Reverse the sign of a number
+ *
+ * @example
+ * Negate<1> // -1
+ * Negate<-1> // 1
+ * Negate<0> // 0 
+ */
+export type Negate<T extends number> =
+  T extends 0
+    ? 0
+    : `${T}` extends `-${infer U extends number}`
+      ? U
+      : `-${T}` extends `${infer V extends number}`
+        ? V
+        : never
 
 /**
  * Logical NOR
@@ -132,6 +198,9 @@ export type DecimalAdd<T extends Decimal, U extends Decimal> = T extends 0
   : U extends 0
     ? T
     : Length<[...Vector<T>, ...Vector<U>]>
+    
+// type Add<T extends number, U extends number, Carry extends number = 0>
+
 
 /**
  * Subtract decimals
