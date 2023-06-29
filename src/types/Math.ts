@@ -1,5 +1,4 @@
 import { Not } from './Not'
-import { Vector } from './Vector'
 
 /**
  * Get the absolute value of a number
@@ -10,25 +9,6 @@ import { Vector } from './Vector'
  * Abs<1> // 1
  */
 export type Abs<T extends number> = `${T}` extends `-${infer U extends number}` ? U : T
-
-/**
- * Convert a decimal to base 2
- *
- * @example
- * Base2<5> // 101
- */
-export type Base2<T extends Decimal> =
-  T extends 0 ? 0 :
-  T extends 1 ? 1 :
-  T extends 2 ? 10 :
-  T extends 3 ? 11 :
-  T extends 4 ? 100 :
-  T extends 5 ? 101 :
-  T extends 6 ? 110 :
-  T extends 7 ? 111 :
-  T extends 8 ? 1000 :
-  T extends 9 ? 1001 :
-  never
 
 /**
  * Bit
@@ -49,12 +29,10 @@ export type Decimal = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
  * AND<0, 1> // 0
  * AND<0, 0> // 0
  */
-export type AND<T extends Bit, U extends Bit> =
-  T extends 1
-    ? U extends 1
-      ? 1
-      : 0
-  : 0
+export type AND<T extends Bit, U extends Bit> = {
+  0: { 0: 0, 1: 0 },
+  1: { 0: 0, 1: 1 },
+}[T][U]
 
 /**
  * Get the last digit of a number
@@ -100,7 +78,10 @@ export type MUX<T extends Bit, U extends Bit, S extends Bit> = S extends 0 ? T :
  * NAND<1, 0> // 1
  * NAND<1, 1> // 0
  */
-export type NAND<T extends Bit, U extends Bit> = NOT<AND<T, U>>
+export type NAND<T extends Bit, U extends Bit> = {
+  0: { 0: 1, 1: 1 },
+  1: { 0: 1, 1: 0 },
+}[T][U]
 
 /**
  * Reverse the sign of a number
@@ -128,7 +109,10 @@ export type Negate<T extends number> =
  * NOR<1, 0> // 0
  * NOR<1, 1> // 0
  */
-export type NOR<T extends Bit, U extends Bit> = NOT<OR<T, U>>
+export type NOR<T extends Bit, U extends Bit> = {
+  0: { 0: 1, 1: 0 },
+  1: { 0: 0, 1: 0 },
+}[T][U]
 
 /**
  * Logical NOT
@@ -137,7 +121,10 @@ export type NOR<T extends Bit, U extends Bit> = NOT<OR<T, U>>
  * NOT<1> // 0
  * NOT<0> // 1
  */
-export type NOT<T extends Bit> = T extends 0 ? 1 : 0
+export type NOT<T extends Bit> = {
+  0: 1,
+  1: 0,
+}[T]
 
 /**
  * Logical OR
@@ -148,23 +135,24 @@ export type NOT<T extends Bit> = T extends 0 ? 1 : 0
  * OR<1, 0> // 1
  * OR<1, 1> // 1
  */
-export type OR<T extends Bit, U extends Bit> =
-  T extends 0
-    ? U extends 0
-      ? 0
-      : 1
-    : 1
+export type OR<T extends Bit, U extends Bit> = {
+  0: { 0: 0, 1: 1 },
+  1: { 0: 1, 1: 1 },
+}[T][U]
 
 /**
  * Logical XOR
  *
  * @example
- * XOR<1, 0> // 1
- * XOR<0, 1> // 1
- * XOR<1, 1> // 0
  * XOR<0, 0> // 0
+ * XOR<0, 1> // 1
+ * XOR<1, 0> // 1
+ * XOR<1, 1> // 0
  */
-export type XOR<T extends Bit, U extends Bit> = T extends U ? 0 : 1
+export type XOR<T extends Bit, U extends Bit> = {
+  0: { 0: 0, 1: 1 },
+  1: { 0: 1, 1: 0 },
+}[T][U]
 
 /**
  * Logical XNOR
@@ -175,17 +163,7 @@ export type XOR<T extends Bit, U extends Bit> = T extends U ? 0 : 1
  * XNOR<1, 0> // 0
  * XNOR<1, 1> // 1
  */
-export type XNOR<T extends Bit, U extends Bit> = NOT<XOR<T, U>>
-
-/**
- * Get the length of a tuple
- *
- * @example
- * Length<[]> // 0
- * Length<[any]> // 1
- * Length<[any, any]> // 2
- */
-type Length<T extends any[]> = T extends { length: infer L } ? L : never;
+export type XNOR<T extends Bit, U extends Bit> = T extends U ? 1 : 0
 
 /**
  * Add decimals
@@ -193,28 +171,18 @@ type Length<T extends any[]> = T extends { length: infer L } ? L : never;
  * @example
  * DecimalAdd<1, 2> // 3
  */
-export type DecimalAdd<T extends Decimal, U extends Decimal> = T extends 0
-  ? U
-  : U extends 0
-    ? T
-    : Length<[...Vector<T>, ...Vector<U>]>
-    
-// type Add<T extends number, U extends number, Carry extends number = 0>
-
-
-/**
- * Subtract decimals
- *
- * @example
- * DecimalSubtract<1, 2> // 0
- */
-export type DecimalSubtract<T extends Decimal, U extends Decimal> = T extends 0
-  ? U
-  : U extends 0
-    ? T
-    : Vector<T> extends [...(infer V), ...Vector<U>]
-      ? Length<V>
-      : never
+export type DecimalAdd<T extends Decimal, U extends Decimal> = {
+  0: {  0: 0,   1: 1,   2: 2,   3: 3,   4: 4,   5: 5,   6: 6,   7: 7,   8: 8,   9: 9   },
+  1: {  0: 1,   1: 2,   2: 3,   3: 4,   4: 5,   5: 6,   6: 7,   7: 8,   8: 9,   9: 10  },
+  2: {  0: 2,   1: 3,   2: 4,   3: 5,   4: 6,   5: 7,   6: 8,   7: 9,   8: 10,  9: 11  },
+  3: {  0: 3,   1: 4,   2: 5,   3: 6,   4: 7,   5: 8,   6: 9,   7: 10,  8: 11,  9: 12  },
+  4: {  0: 4,   1: 5,   2: 6,   3: 7,   4: 8,   5: 9,   6: 10,  7: 11,  8: 12,  9: 13  },
+  5: {  0: 5,   1: 6,   2: 7,   3: 8,   4: 9,   5: 10,  6: 11,  7: 12,  8: 13,  9: 14  },
+  6: {  0: 6,   1: 7,   2: 8,   3: 9,   4: 10,  5: 11,  6: 12,  7: 13,  8: 14,  9: 15  },
+  7: {  0: 7,   1: 8,   2: 9,   3: 10,  4: 11,  5: 12,  6: 13,  7: 14,  8: 15,  9: 16  },
+  8: {  0: 8,   1: 9,   2: 10,  3: 11,  4: 12,  5: 13,  6: 14,  7: 15,  8: 16,  9: 17  },
+  9: {  0: 9,   1: 10,  2: 11,  3: 12,  4: 13,  5: 14,  6: 15,  7: 16,  8: 17,  9: 18  },
+}[T][U]
 
 /**
  * Test if `T` is a float
@@ -253,3 +221,13 @@ export type IsNegative<T extends number> = T extends 0
 export type IsPositive<T extends number> = T extends 0
   ? false
   : Not<IsNegative<T>>
+
+/**
+ * Convert numeric string to number
+ *
+ * @example
+ * ToNumber<'123'> // 123
+ */
+export type ToNumber<T extends string> = `${T}` extends `${infer U extends number}`
+  ? U
+  : never

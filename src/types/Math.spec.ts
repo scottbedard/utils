@@ -2,7 +2,6 @@ import {
   Abs,
   AND,
   DecimalAdd,
-  DecimalSubtract,
   Equal,
   Expect,
   IsFloat,
@@ -15,6 +14,7 @@ import {
   Not,
   NOT,
   OR,
+  ToNumber,
   XNOR,
   XOR,
 } from '../index'
@@ -219,6 +219,28 @@ describe('math', () => {
 
     it('zero', () => {
       type Test = Expect<Equal<0, Negate<0>>>
+    })
+  })
+
+  describe('ToNumber<T>', () => {
+    it('positive integer', () => {
+      type Test = Expect<Equal<123, ToNumber<'123'>>>
+    })
+
+    it('negative integer', () => {
+      type Test = Expect<Equal<-123, ToNumber<'-123'>>>
+    })
+
+    it('positive float', () => {
+      type Test = Expect<Equal<123.456, ToNumber<'123.456'>>>
+    })
+
+    it('negative float', () => {
+      type Test = Expect<Equal<-123.456, ToNumber<'-123.456'>>>
+    })
+
+    it('zero', () => {
+      type Test = Expect<Equal<0, ToNumber<'0'>>>
     })
   })
 })
