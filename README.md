@@ -1001,6 +1001,8 @@ import { Abs } from '@bedard/utils'
 type Example = Abs<-5> // 5
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Abs.ts)
+
 #### `AddDigits<T, U>`
 
 Add two decimal digits
@@ -1010,6 +1012,8 @@ import { AddDigits } from '@bedard/utils'
 
 type Example = AddDigits<1, 2> // 3
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/AddDigits.ts)
 
 #### `AllEqual<Sources, Value>`
 
@@ -1022,6 +1026,8 @@ type Good = AllEqual<[1, 1], 1> // true
 type Bad = AllEqual<[1, 2], 1> // false
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/AllEqual.ts)
+
 #### `AND<T, U>`
 
 Logical AND gate
@@ -1032,7 +1038,7 @@ import { AND } from '@bedard/utils'
 type Test = AND<1, 1> // 1
 ```
 
-[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/AllEqual.ts)
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/AND.ts)
 
 #### `Bit`
 
@@ -1043,6 +1049,8 @@ import { Bit } from '@bedard/utils'
 
 type Example = Bit // 0 | 1
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Bit.ts)
 
 #### `BreakWords<T>`
 
@@ -1114,6 +1122,8 @@ import { Decimal } from '@bedard/utils'
 type Example = Decimal // 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Decimal.ts)
+
 #### `Digits<T>`
 
 Explode the digits of a positive integer
@@ -1123,6 +1133,8 @@ import { Digits } from '@bedard/utils'
 
 type Example1 = Digits<123> // [1, 2, 3]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Digits.ts)
 
 #### `Difference<A, B>`
 
@@ -1236,6 +1248,8 @@ import { Intersection } from '@bedard/utils'
 type Shared = Intersection<{ a: any, b: number }, { c: string, d: any }> // { b: number }
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Intersection.ts)
+
 #### `IsFloat<T>`
 
 Test if number is a float
@@ -1245,6 +1259,8 @@ import { IsInteger } from '@bedard/utils'
 
 type Example = IsFloat<1.5> // true
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsFloat.ts)
 
 #### `IsInteger<T>`
 
@@ -1256,6 +1272,8 @@ import { IsInteger } from '@bedard/utils'
 type Example = IsInteger(1) // true
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsInteger.ts)
+
 #### `IsNegative<T>`
 
 Test if number is less than zero
@@ -1265,6 +1283,8 @@ import { IsNegative } from '@bedard/utils'
 
 type Example = IsNegative(-1) // true
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsNegative.ts)
 
 #### `IsPositive<T>`
 
@@ -1276,7 +1296,7 @@ import { IsPositive } from '@bedard/utils'
 type Example = IsPositive(1) // true
 ```
 
-[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Intersection.ts)
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsPositive.ts)
 
 #### `Join<Parts, Delimeter>`
 
@@ -1351,6 +1371,8 @@ type LastChar = Last<'abc'> // 'c'
 type LastItem = Last<[1, 2, 3]>, // 3
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Last.ts)
+
 #### `LastDigit<T>`
 
 Get the last digit of a number
@@ -1362,7 +1384,7 @@ type Example1 = LastDigit<12> // 2
 type Example2 = LastDigit<1.5> // 5
 ```
 
-[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Last.ts)
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/LastDigit.ts)
 
 #### `Line<T>`
 
@@ -1434,6 +1456,8 @@ import { MUX } from '@bedard/utils'
 type Example = MUX<1, 0, 0> // 1
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/MUX.ts)
+
 #### `NAND<T, U>`
 
 Logical NAND gate
@@ -1443,6 +1467,8 @@ import { NAND } from '@bedard/utils'
 
 type Example = NAND<0, 0> // 1
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/NAND.ts)
 
 #### `Negate<T>`
 
@@ -1454,6 +1480,8 @@ import { Negate } from '@bedard/utils'
 type Example = Negate<1> // -1
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Negate.ts)
+
 #### `NOR<T, U>`
 
 Logical NOR gate
@@ -1463,6 +1491,8 @@ import { NOR } from '@bedard/utils'
 
 type Example = NOR<0, 0> // 1
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/NOR.ts)
 
 #### `NOT<T>`
 
@@ -1485,6 +1515,8 @@ import { Not } from '@bedard/utils'
 
 type Example = Not<true> // false
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Not.ts)
 
 #### `OmitStartsWith<T, U>`
 
@@ -1548,6 +1580,8 @@ import { OR } from '@bedard/utils'
 type Example = OR<0, 1> // 1
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/OR.ts)
+
 #### `PadDigits<T, U>`
 
 Pad two numeric vectors so they are the same size
@@ -1557,6 +1591,8 @@ import { PadVec } from '@bedard/utils'
 
 type Example = PadDigits<[1, 2], [3]> // [ [1, 2], [0, 3] ]
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/PadDigits.ts)
 
 #### `PascalCase<T>`
 
@@ -1806,6 +1842,8 @@ import { ToNumber } from '@bedard/types'
 type Example = ToNumber<'123'> // 123
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ToNumber.ts)
+
 #### `Transparent<T>`
 
 A type that does not encode any additional data. This is the inverse of [`Opaque<T>`](#opaquet-token).
@@ -1908,6 +1946,8 @@ import { XNOR } from '@bedard/types'
 type Example = XNOR<0, 0> // 1
 ```
 
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XNOR.ts)
+
 #### `XOR<T, U>`
 
 Logical XOR gate
@@ -1917,6 +1957,8 @@ import { XOR } from '@bedard/utils'
 
 type Example = XOR<0, 1> // 1
 ```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XOR.ts)
 
 ## License
 
