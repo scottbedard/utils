@@ -953,8 +953,8 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`NAND<T, U>`](#nandt-u)
 - [`Negate<T>`](#negatet)
 - [`NOR<T, U>`](#nort-u)
-- [`NOT<T, U>`](#)
-- [`Not<T>`](#nott)
+- [`NOT<T, U>`](nott)
+- [`Not<T>`](#nott-1)
 - [`OmitStartsWith<T, U>`](#omitstartswitht-u)
 - [`OmitType<T, U>`](#omittypet-u)
 - [`Opaque<T, Token>`](#opaquet-token)
@@ -1465,16 +1465,6 @@ import { NOR } from '@bedard/utils'
 type Example = NOR<0, 0> // 1
 ```
 
-#### `Not<T>`
-
-Reverse the `boolean` value of `T`.
-
-```ts
-import { Not } from '@bedard/utils'
-
-type Example = Not<true> // false
-```
-
 #### `NOT<T>`
 
 Reverse the [`Bit`](#bit) value of `T`.
@@ -1486,6 +1476,16 @@ type Example = NOT<1> // /0
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Not.ts)
+
+#### `Not<T>`
+
+Reverse the `boolean` value of `T`.
+
+```ts
+import { Not } from '@bedard/utils'
+
+type Example = Not<true> // false
+```
 
 #### `OmitStartsWith<T, U>`
 
