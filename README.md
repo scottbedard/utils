@@ -989,7 +989,6 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Vector<T>`](#vectort)
 - [`Without<A, B>`](#withouta-b)
 - [`XNOR<T, U>`](#xnort-u)
-- [`XOR<A, B>`](#xora-b)
 - [`XOR<T, U>`](#xort-u)
 
 #### `Abs<T>`
