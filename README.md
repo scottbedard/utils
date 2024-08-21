@@ -926,6 +926,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Decimal`](#decimal)
 - [`Difference<A, B>`](#differencea-b)
 - [`Digits<T>`](#digitst)
+- [`Either<T, U>`](#eithert-u)
 - [`Equal<A, B>`](#equala-b)
 - [`Expect<T>`](#expectt)
 - [`First<T>`](#firstt)
@@ -1001,6 +1002,16 @@ import { Abs } from '@bedard/utils'
 type Example = Abs<-5> // 5
 ```
 
+#### `AddDigits<T, U>`
+
+Add two decimal digits
+
+```ts
+import { AddDigits } from '@bedard/utils'
+
+type Example = AddDigits<1, 2> // 3
+```
+
 #### `AllEqual<Sources, Value>`
 
 Types `true` if all `Sources` equal `Value`.
@@ -1012,7 +1023,27 @@ type Good = AllEqual<[1, 1], 1> // true
 type Bad = AllEqual<[1, 2], 1> // false
 ```
 
+#### `AND<T, U>`
+
+Logical AND gate
+
+```ts
+import { AND } from '@bedard/utils'
+
+type Test = AND<1, 1> // 1
+```
+
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/AllEqual.ts)
+
+#### `Bit`
+
+Union of bit values
+
+```ts
+import { Bit } from '@bedard/utils'
+
+type Example = Bit // 0 | 1
+```
 
 #### `BreakWords<T>`
 
@@ -1074,6 +1105,26 @@ type Obj = CamelCaseKeysDeep<{ foo_bar: { one_two: any }}> // { fooBar: { oneTwo
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/CamelCaseKeysDeep.ts)
 
+#### `Decimal`
+
+Union of decimal values
+
+```ts
+import { Decimal } from '@bedard/utils'
+
+type Example = Decimal // 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+```
+
+#### `Digits<T>`
+
+Explode the digits of a positive integer
+
+```ts
+import { Digits } from '@bedard/utils'
+
+type Example1 = Digits<123> // [1, 2, 3]
+```
+
 #### `Difference<A, B>`
 
 Elements of `A` that are not elements of `B`. For unions, this is the same as the [`Exclude`](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludetype-excludedunion) utility.
@@ -1085,6 +1136,33 @@ type Left = Difference<{ a: any, b: any }, { b: any, c: any }> // { a: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Difference.ts)
+
+#### `Either<T, U>`
+
+Create an [exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) between two types. Note that for objects, this differs from a union type in that keys are strictly matched.
+
+```ts
+import { Either } from '@bedard/utils'
+
+type FooOrBar = Either<{ foo: any }, { bar: any }>
+
+const a: FooOrBar = { foo } // pass
+const b: FooOrBar = { bar } // pass
+const c: FooOrBar = { foo, bar } // fail
+```
+
+Additionally, a tuple can be provided for a chained XOR.
+
+```ts
+type ValidNumber = XOR<[1, 2, 3]>
+
+const a: ValidNumber = 1 // pass
+const b: ValidNumber = 2 // pass
+const c: ValidNumber = 3 // pass
+const d: ValidNumber = 4 // fail
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XOR.ts)
 
 #### `Equal<A, B>`
 
@@ -1157,6 +1235,46 @@ The [intersection](https://en.wikipedia.org/wiki/Intersection_(set_theory)) of `
 import { Intersection } from '@bedard/utils'
 
 type Shared = Intersection<{ a: any, b: number }, { c: string, d: any }> // { b: number }
+```
+
+#### `IsFloat<T>`
+
+Test if number is a float
+
+```ts
+import { IsInteger } from '@bedard/utils'
+
+type Example = IsFloat<1.5> // true
+```
+
+#### `IsInteger<T>`
+
+Test if number is an integer
+
+```ts
+import { IsInteger } from '@bedard/utils'
+
+type Example = IsInteger(1) // true
+```
+
+#### `IsNegative<T>`
+
+Test if number is less than zero
+
+```ts
+import { IsNegative } from '@bedard/utils'
+
+type Example = IsNegative(-1) // true
+```
+
+#### `IsPositive<T>`
+
+Test if number is greater than zero
+
+```ts
+import { IsPositive } from '@bedard/utils'
+
+type Example = IsPositive(1) // true
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Intersection.ts)
@@ -1234,6 +1352,17 @@ type LastChar = Last<'abc'> // 'c'
 type LastItem = Last<[1, 2, 3]>, // 3
 ```
 
+#### `LastDigit<T>`
+
+Get the last digit of a number
+
+```ts
+import { LastDigit } from '@bedard/utils'
+
+type Example1 = LastDigit<12> // 2
+type Example2 = LastDigit<1.5> // 5
+```
+
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Last.ts)
 
 #### `Line<T>`
@@ -1296,14 +1425,64 @@ type Foo = Methods<{ foo: string, bar(): any }> // 'bar'
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Methods.ts)
 
+#### `MUX<T, U, S>`
+
+Logical MUX gate
+
+```ts
+import { MUX } from '@bedard/utils'
+
+type Example = MUX<1, 0, 0> // 1
+```
+
+#### `NAND<T, U>`
+
+Logical NAND gate
+
+```ts
+import { NAND } from '@bedard/utils'
+
+type Example = NAND<0, 0> // 1
+```
+
+#### `Negate<T>`
+
+Reverse the sign of a number
+
+```ts
+import { Negate } from '@bedard/utils'
+
+type Example = Negate<1> // -1
+```
+
+#### `NOR<T, U>`
+
+Logical NOR gate
+
+```ts
+import { NOR } from '@bedard/utils'
+
+type Example = NOR<0, 0> // 1
+```
+
 #### `Not<T>`
 
-Reverse the boolean value of `T`.
+Reverse the `boolean` value of `T`.
 
 ```ts
 import { Not } from '@bedard/utils'
 
-type Test = Not<true> // false
+type Example = Not<true> // false
+```
+
+#### `NOT<T>`
+
+Reverse the [`Bit`](#bit) value of `T`.
+
+```ts
+import { NOT } from '@bedard/utils'
+
+type Example = NOT<1> // /0
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Not.ts)
@@ -1359,6 +1538,26 @@ type Obj = OptionalKeys<{ foo: any, bar: any }, 'foo'> // { foo?: any, bar: any 
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/OptionalKeys.ts)
+
+#### `OR<T, U>`
+
+Logical OR gate
+
+```ts
+import { OR } from '@bedard/utils'
+
+type Example = OR<0, 1> // 1
+```
+
+#### `PadDigits<T, U>`
+
+Pad two numeric vectors so they are the same size
+
+```ts
+import { PadVec } from '@bedard/utils'
+
+type Example = PadDigits<[1, 2], [3]> // [ [1, 2], [0, 3] ]
+```
 
 #### `PascalCase<T>`
 
@@ -1598,6 +1797,16 @@ type OuterObj= SymmetricDifference<{ a: any, b: any }, { b: any, c: any }> // { 
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/SymmetricDifference.ts)
 
+#### `ToNumber<T>`
+
+Convert numeric `string` to `number`
+
+```ts
+import { ToNumber } from '@bedard/types'
+
+type Example = ToNumber<'123'> // 123
+```
+
 #### `Transparent<T>`
 
 A type that does not encode any additional data. This is the inverse of [`Opaque<T>`](#opaquet-token).
@@ -1690,32 +1899,15 @@ type FooWithoutBar = Without<{ foo: any, bar: any }, { bar: any }> // { foo?: ne
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Without.ts)
 
-#### `XOR<A, B>`
+#### `XNOR<T, U>`
 
-Create an [exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) between two types. Note that for objects, this differs from a union type in that keys are strictly matched.
-
-```ts
-import { XOR } from '@bedard/utils'
-
-type FooOrBar = XOR<{ foo: any }, { bar: any }>
-
-const a: FooOrBar = { foo } // pass
-const b: FooOrBar = { bar } // pass
-const c: FooOrBar = { foo, bar } // fail
-```
-
-Additionally, a tuple can be provided for a chained XOR.
+Logical XNOR gate
 
 ```ts
-type ValidNumber = XOR<[1, 2, 3]>
+import { XNOR } from '@bedard/types'
 
-const a: ValidNumber = 1 // pass
-const b: ValidNumber = 2 // pass
-const c: ValidNumber = 3 // pass
-const d: ValidNumber = 4 // fail
+type Example = XNOR<0, 0> // 1
 ```
-
-[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XOR.ts)
 
 ## License
 
