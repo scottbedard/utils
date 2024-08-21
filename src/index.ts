@@ -115,4 +115,4 @@ export { Without } from './types/Without'
 export { XNOR } from './types/XNOR'
 export { XOR } from './types/XOR'
 
-export const version = 'x.y.z'
+export const version = '0.31.0'
