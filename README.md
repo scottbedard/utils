@@ -986,7 +986,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`UnwrapJson<T>`](#unwrapjsont)
 - [`UnwrapOpaque<T>`](#unwrapopaquet)
 - [`ValueOf<T>`](#valueoft)
-- [`Vector<T>`](#vectort)
+- [`Vec<T>`](#vect)
 - [`Without<A, B>`](#withouta-b)
 - [`XNOR<T, U>`](#xnort-u)
 - [`XOR<T, U>`](#xort-u)
@@ -1910,19 +1910,19 @@ type ObjectValues = ValueOf<{ foo: number, bar: string }> // number | string
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ValueOf.ts)
 
-#### `Vector<T>`
+#### `Vec<T>`
 
 Generate a uniform tuple of length `T`, with numeric values by default.
 
 ```ts
-import { Vector } from '@bedard/utils'
+import { Vec } from '@bedard/utils'
 
-type Coordinate = Vector<3> // [number, number, number]
+type Example1 = Vec<3> // [number, number, number]
 
-type Things = Vector<3, Thing> // [Thing, Thing, Thing]
+type Example2 = Vec<3, Thing> // [Thing, Thing, Thing]
 ```
 
-[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Vector.ts)
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Vec.ts)
 
 #### `Without<A, B>`
 
