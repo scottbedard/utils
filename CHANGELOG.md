@@ -3,30 +3,30 @@
 # 0.31.0
 
 #### Breaking
-- `XOR<T, U>` renamed to [`Either<T, U>`](#eithert-u) to differentiate from logic gates
-- `Vector<T>` renamed to [`Vec<T>`](#vect)
+- `XOR<T, U>` renamed to [`Either<T, U>`](https://github.com/scottbedard/utils#eithert-u) to differentiate from logic gates
+- `Vector<T>` renamed to [`Vec<T>`](https://github.com/scottbedard/utils#vect)
 
 #### Types
-- [`AddDigits<T, U>`](#adddigitst-u)
-- [`AND<T, U>`](#andt-u)
-- [`Bit`](#bit)
-- [`Decimal`](#decimal)
-- [`Digits<T>`](#digitst)
-- [`IsFloat<T>`](#isfloatt)
-- [`IsInteger<T>`](#isintegert)
-- [`IsNegative<T>`](#isnegativet)
-- [`IsPositive<T>`](#ispositivet)
-- [`LastDigit<T>`](#lastdigitt)
-- [`MUX<T, U, S>`](#muxt-u-s)
-- [`NAND<T, U>`](#nandt-u)
-- [`Negate<T>`](#negatet)
-- [`NOR<T, U>`](#nort-u)
-- [`NOT<T, U>`](#nott)
-- [`OR<T, U>`](#ort-u)
-- [`PadDigits<T, U>`](#paddigitst-u)
-- [`ToNumber<T>`](#tonumbert)
-- [`XNOR<T, U>`](#xnort-u)
-- [`XOR<T, U>`](#xort-u)
+- [`AddDigits<T, U>`](https://github.com/scottbedard/utils#adddigitst-u)
+- [`AND<T, U>`](https://github.com/scottbedard/utils#andt-u)
+- [`Bit`](https://github.com/scottbedard/utils#bit)
+- [`Decimal`](https://github.com/scottbedard/utils#decimal)
+- [`Digits<T>`](https://github.com/scottbedard/utils#digitst)
+- [`IsFloat<T>`](https://github.com/scottbedard/utils#isfloatt)
+- [`IsInteger<T>`](https://github.com/scottbedard/utils#isintegert)
+- [`IsNegative<T>`](https://github.com/scottbedard/utils#isnegativet)
+- [`IsPositive<T>`](https://github.com/scottbedard/utils#ispositivet)
+- [`LastDigit<T>`](https://github.com/scottbedard/utils#lastdigitt)
+- [`MUX<T, U, S>`](https://github.com/scottbedard/utils#muxt-u-s)
+- [`NAND<T, U>`](https://github.com/scottbedard/utils#nandt-u)
+- [`Negate<T>`](https://github.com/scottbedard/utils#negatet)
+- [`NOR<T, U>`](https://github.com/scottbedard/utils#nort-u)
+- [`NOT<T, U>`](https://github.com/scottbedard/utils#nott)
+- [`OR<T, U>`](https://github.com/scottbedard/utils#ort-u)
+- [`PadDigits<T, U>`](https://github.com/scottbedard/utils#paddigitst-u)
+- [`ToNumber<T>`](https://github.com/scottbedard/utils#tonumbert)
+- [`XNOR<T, U>`](https://github.com/scottbedard/utils#xnort-u)
+- [`XOR<T, U>`](https://github.com/scottbedard/utils#xort-u)
 
 # 0.30.0
 
