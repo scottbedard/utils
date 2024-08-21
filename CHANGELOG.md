@@ -1,5 +1,33 @@
 # Changelog
 
+# 0.31.0
+
+#### Breaking
+- `XOR<T, U>` renamed to [`Either<T, U>`](#eithert-u) to differentiate from logic gates
+- `Vector<T>` renamed to [`Vec<T>`](#vect)
+
+#### Types
+- [`AddDigits<T, U>`](#adddigitst-u)
+- [`AND<T, U>`](#andt-u)
+- [`Bit`](#bit)
+- [`Decimal`](#decimal)
+- [`Digits<T>`](#digitst)
+- [`IsFloat<T>`](#isfloatt)
+- [`IsInteger<T>`](#isintegert)
+- [`IsNegative<T>`](#isnegativet)
+- [`IsPositive<T>`](#ispositivet)
+- [`LastDigit<T>`](#lastdigitt)
+- [`MUX<T, U, S>`](#muxt-u-s)
+- [`NAND<T, U>`](#nandt-u)
+- [`Negate<T>`](#negatet)
+- [`NOR<T, U>`](#nort-u)
+- [`NOT<T, U>`](#nott)
+- [`OR<T, U>`](#ort-u)
+- [`PadDigits<T, U>`](#paddigitst-u)
+- [`ToNumber<T>`](#tonumbert)
+- [`XNOR<T, U>`](#xnort-u)
+- [`XOR<T, U>`](#xort-u)
+
 # 0.30.0
 
 - [`Byte`](https://github.com/scottbedard/utils#byte)
