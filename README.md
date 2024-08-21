@@ -953,7 +953,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`NAND<T, U>`](#nandt-u)
 - [`Negate<T>`](#negatet)
 - [`NOR<T, U>`](#nort-u)
-- [`NOT<T, U>`](nott)
+- [`NOT<T, U>`](#nott)
 - [`Not<T>`](#nott-1)
 - [`OmitStartsWith<T, U>`](#omitstartswitht-u)
 - [`OmitType<T, U>`](#omittypet-u)
