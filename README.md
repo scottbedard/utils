@@ -913,6 +913,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 
 ## Types
 
+- [`Abs<T>`](#abst)
 - [`AllEqual<Sources, Value>`](#allequalsources-value)
 - [`BreakWords<T>`](#breakwordst)
 - [`Byte`](#byte)
@@ -969,6 +970,16 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`Vector<T>`](#vectort)
 - [`Without<A, B>`](#withouta-b)
 - [`XOR<A, B>`](#xora-b)
+
+#### `Abs<T>`
+
+Type the absolute value of `T`
+
+```ts
+import { Abs } from '@bedard/utils'
+
+type Example = Abs<-5> // 5
+```
 
 #### `AllEqual<Sources, Value>`
 
