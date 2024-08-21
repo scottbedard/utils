@@ -1,5 +1,5 @@
 import { Longer } from './Longer'
-import { Vector } from './Vector'
+import { Vec } from './Vec'
 
 /**
  * Left pad `T` to length `U` with `Character`
@@ -10,7 +10,7 @@ import { Vector } from './Vector'
 export type LeftPad<T extends unknown[], U extends number, Character = unknown> =
   T['length'] extends U
     ? T
-    : Longer<T, Vector<U>> extends T
+    : Longer<T, Vec<U>> extends T
       ? T
         : [Character, ...T]['length'] extends U
           ? [Character, ...T]

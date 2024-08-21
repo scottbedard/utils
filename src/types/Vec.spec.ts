@@ -1,15 +1,15 @@
 import { 
   Equal,
   Expect,
-  Vector,
+  Vec,
 } from '../index'
 
 describe('Vector', () => {
   it('creates numeric tuple of length T', () => {
-    type Test1 = Expect<Equal<[number, number, number], Vector<3>>>
+    type Test1 = Expect<Equal<[number, number, number], Vec<3>>>
   })
 
   it('creates non-numeric tuples of length T', () => {
-    type Test = Expect<Equal<[string, string, string], Vector<3, string>>>
+    type Test = Expect<Equal<[string, string, string], Vec<3, string>>>
   })
 })

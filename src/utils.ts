@@ -1,5 +1,5 @@
 import { Line } from './types/Line'
-import { Vector } from './types/Vector'
+import { Vec } from './types/Vec'
 
 /**
  * Opaque type tag
@@ -23,6 +23,6 @@ export function clampColor(val: number): number {
 /**
  * Helper to allow functions to accept lines or vectors.
  */
-export function toLine2(lineOrV1: Line<2> | Vector<2>, maybeV2?: Vector<2>): Line<2> {
-  return maybeV2 ? [lineOrV1 as Vector<2>, maybeV2] : lineOrV1 as Line<2>
+export function toLine2(lineOrV1: Line<2> | Vec<2>, maybeV2?: Vec<2>): Line<2> {
+  return maybeV2 ? [lineOrV1 as Vec<2>, maybeV2] : lineOrV1 as Line<2>
 }
