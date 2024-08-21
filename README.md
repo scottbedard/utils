@@ -1908,6 +1908,16 @@ import { XNOR } from '@bedard/types'
 type Example = XNOR<0, 0> // 1
 ```
 
+#### `XOR<T, U>`
+
+Logical XOR gate
+
+```ts
+import { XOR } from '@bedard/utils'
+
+type Example = XOR<0, 1> // 1
+```
+
 ## License
 
 [MIT](https://github.com/scottbedard/utils/blob/main/LICENSE)
