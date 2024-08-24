@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.32.0
+
+- [`MaybeArray<T>`](https://github.com/scottbedard/utils#maybearrayt)
+
 # 0.31.0
 
 #### Breaking
