@@ -999,7 +999,7 @@ Type the absolute value of `T`
 ```ts
 import { Abs } from '@bedard/utils'
 
-type Example = Abs<-5> // 5
+type Test = Abs<-5> // 5
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Abs.ts)
@@ -1011,7 +1011,7 @@ Add two decimal digits
 ```ts
 import { AddDigits } from '@bedard/utils'
 
-type Example = AddDigits<1, 2> // 3
+type Test = AddDigits<1, 2> // 3
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/AddDigits.ts)
@@ -1023,8 +1023,8 @@ Types `true` if all `Sources` equal `Value`.
 ```ts
 import { AllEqual } from '@bedard/utils'
 
-type Good = AllEqual<[1, 1], 1> // true
-type Bad = AllEqual<[1, 2], 1> // false
+type Test1 = AllEqual<[1, 1], 1> // true
+type Test2 = AllEqual<[1, 2], 1> // false
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/AllEqual.ts)
@@ -1048,7 +1048,7 @@ Union of bit values
 ```ts
 import { Bit } from '@bedard/utils'
 
-type Example = Bit // 0 | 1
+type Test = Bit // 0 | 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Bit.ts)
@@ -1060,7 +1060,7 @@ Explode a string by common word breaks. This currently includes spaces, hyphens,
 ```ts
 import { BreakWords } from '@bedard/utils'
 
-type Words = BreakWords<'one twoThree-four'> // ['one', 'two', 'Three', 'four']
+type Test = BreakWords<'one twoThree-four'> // ['one', 'two', 'Three', 'four']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/BreakWords.ts)
@@ -1084,7 +1084,7 @@ Convert a string to camel case.
 ```ts
 import { CamelCase } from '@bedard/utils'
 
-type Str = CamelCase<'foo-bar'> // 'fooBar'
+type Test = CamelCase<'foo-bar'> // 'fooBar'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/CamelCase.ts)
@@ -1096,7 +1096,7 @@ Camel case object keys.
 ```ts
 import { CamelCaseKeys } from '@bedard/utils'
 
-type Obj = CamelCaseKeys<{ foo_bar: any }> // { fooBar: any }
+type Test = CamelCaseKeys<{ foo_bar: any }> // { fooBar: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/CamelCaseKeys.ts)
@@ -1108,7 +1108,7 @@ Deeply camel case object keys.
 ```ts
 import { CamelCaseKeysDeep } from '@bedard/utils'
 
-type Obj = CamelCaseKeysDeep<{ foo_bar: { one_two: any }}> // { fooBar: { oneTwo: any }}
+type Test = CamelCaseKeysDeep<{ foo_bar: { one_two: any }}> // { fooBar: { oneTwo: any }}
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/CamelCaseKeysDeep.ts)
@@ -1120,7 +1120,7 @@ Union of decimal values
 ```ts
 import { Decimal } from '@bedard/utils'
 
-type Example = Decimal // 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+type Test = Decimal // 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Decimal.ts)
@@ -1132,7 +1132,7 @@ Explode the digits of a positive integer
 ```ts
 import { Digits } from '@bedard/utils'
 
-type Example1 = Digits<123> // [1, 2, 3]
+type Test = Digits<123> // [1, 2, 3]
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Digits.ts)
@@ -1144,7 +1144,7 @@ Elements of `A` that are not elements of `B`. For unions, this is the same as th
 ```ts
 import { Difference } from '@bedard/utils'
 
-type Left = Difference<{ a: any, b: any }, { b: any, c: any }> // { a: any }
+type Test = Difference<{ a: any, b: any }, { b: any, c: any }> // { a: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Difference.ts)
@@ -1156,22 +1156,22 @@ Create an [exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) between two
 ```ts
 import { Either } from '@bedard/utils'
 
-type FooOrBar = Either<{ foo: any }, { bar: any }>
+type Test = Either<{ foo: any }, { bar: any }>
 
-const a: FooOrBar = { foo } // pass
-const b: FooOrBar = { bar } // pass
-const c: FooOrBar = { foo, bar } // fail
+const a: Test = { foo } // pass
+const b: Test = { bar } // pass
+const c: Test = { foo, bar } // fail
 ```
 
 Additionally, a tuple can be provided for a chained XOR.
 
 ```ts
-type ValidNumber = XOR<[1, 2, 3]>
+type Test = XOR<[1, 2, 3]>
 
-const a: ValidNumber = 1 // pass
-const b: ValidNumber = 2 // pass
-const c: ValidNumber = 3 // pass
-const d: ValidNumber = 4 // fail
+const a: Test = 1 // pass
+const b: Test = 2 // pass
+const c: Test = 3 // pass
+const d: Test = 4 // fail
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XOR.ts)
@@ -1207,8 +1207,8 @@ Extract the first element of a string or array.
 ```ts
 import { First } from '@bedard/utils'
 
-type FirstChar = First<'abc'> // 'a'
-type FirstItem = First<[1, 2, 3]>, // 1
+type Test1 = First<'abc'> // 'a'
+type Test2 = First<[1, 2, 3]>, // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/First.ts)
@@ -1246,7 +1246,7 @@ The [intersection](https://en.wikipedia.org/wiki/Intersection_(set_theory)) of `
 ```ts
 import { Intersection } from '@bedard/utils'
 
-type Shared = Intersection<{ a: any, b: number }, { c: string, d: any }> // { b: number }
+type Test = Intersection<{ a: any, b: number }, { c: string, d: any }> // { b: number }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Intersection.ts)
@@ -1258,7 +1258,7 @@ Test if number is a float
 ```ts
 import { IsInteger } from '@bedard/utils'
 
-type Example = IsFloat<1.5> // true
+type Test = IsFloat<1.5> // true
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsFloat.ts)
@@ -1270,7 +1270,7 @@ Test if number is an integer
 ```ts
 import { IsInteger } from '@bedard/utils'
 
-type Example = IsInteger(1) // true
+type Test = IsInteger<1> // true
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsInteger.ts)
@@ -1282,7 +1282,7 @@ Test if number is less than zero
 ```ts
 import { IsNegative } from '@bedard/utils'
 
-type Example = IsNegative(-1) // true
+type Test = IsNegative<-1> // true
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsNegative.ts)
@@ -1294,7 +1294,7 @@ Test if number is greater than zero
 ```ts
 import { IsPositive } from '@bedard/utils'
 
-type Example = IsPositive(1) // true
+type Test = IsPositive<1> // true
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/IsPositive.ts)
@@ -1306,9 +1306,9 @@ Join `Parts` by `Delimeter`. This type is the opposite of [`Split`](#splitsource
 ```ts
 import { Join } from '@bedard/utils'
 
-type Str = Join<['a', 'b', 'c']> // 'abc'
+type Test1 = Join<['a', 'b', 'c']> // 'abc'
 
-type Parts = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
+type Test2 = Join<['a', 'b', 'c'], '.'> // 'a.b.c'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Join.ts)
@@ -1320,7 +1320,7 @@ Encodes a JSON string with underlying type information. This utility is complime
 ```ts
 import { Json } from '@bedard/utils'
 
-type UserJson = Json<{ foo: 'bar' }> // string
+type Test = Json<{ foo: 'bar' }> // string
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Json.ts)
@@ -1332,7 +1332,7 @@ Convert a string to kebab case.
 ```ts
 import { KebabCase } from '@bedard/utils'
 
-type Str = KebabCase<'fooBar'> // 'foo-bar'
+type Test = KebabCase<'fooBar'> // 'foo-bar'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/KebabCase.ts)
@@ -1344,7 +1344,7 @@ Kebab case object keys.
 ```ts
 import { KebabCaseKeys } from '@bedard/utils'
 
-type Obj = KebabCaseKeys<{ foo_bar: any }> // { 'foo-bar': any }
+type Test = KebabCaseKeys<{ foo_bar: any }> // { 'foo-bar': any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/KebabCaseKeys.ts)
@@ -1356,7 +1356,7 @@ Deeply kebab case object keys.
 ```ts
 import { KebabCaseKeysDeep } from '@bedard/utils'
 
-type Obj = KebabCaseKeysDeep<{ foo_bar: { one_two: any }}> // { 'foo-bar': { 'one-two': any }}
+type Test = KebabCaseKeysDeep<{ foo_bar: { one_two: any }}> // { 'foo-bar': { 'one-two': any }}
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/KebabCaseKeysDeep.ts)
@@ -1368,8 +1368,8 @@ Extract the last element of a string or array.
 ```ts
 import { Last } from '@bedard/utils'
 
-type LastChar = Last<'abc'> // 'c'
-type LastItem = Last<[1, 2, 3]>, // 3
+type Test1 = Last<'abc'> // 'c'
+type Test2 = Last<[1, 2, 3]>, // 3
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Last.ts)
@@ -1381,8 +1381,8 @@ Get the last digit of a number
 ```ts
 import { LastDigit } from '@bedard/utils'
 
-type Example1 = LastDigit<12> // 2
-type Example2 = LastDigit<1.5> // 5
+type Test1 = LastDigit<12> // 2
+type Test2 = LastDigit<1.5> // 5
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/LastDigit.ts)
@@ -1394,7 +1394,7 @@ Describes a straight line between two vectors of length `T`.
 ```ts
 import { Line } from '@bedard/utils'
 
-type Line2D = Line<2> // [[number, number], [number, number]]
+type Test = Line<2> // [[number, number], [number, number]]
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Line.ts)
@@ -1406,7 +1406,7 @@ Capitalize the first letter of each string.
 ```ts
 import { MapCapitalize } from '@bedard/utils'
 
-type Capitalized = MapLowercase<['foo', 'bar']> // ['Foo', 'Bar']
+type Test = MapLowercase<['foo', 'bar']> // ['Foo', 'Bar']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/MapCapitalize.ts)
@@ -1418,7 +1418,7 @@ Map strings to lowercase.
 ```ts
 import { MapLowercase } from '@bedard/utils'
 
-type Lower = MapLowercase<['A', 'B']> // ['a', 'b']
+type Test = MapLowercase<['A', 'B']> // ['a', 'b']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/MapLowercase.ts)
@@ -1430,7 +1430,7 @@ Map strings to uppercase.
 ```ts
 import { MapUppercase } from '@bedard/utils'
 
-type Upper = MapUppercase<['a', 'b']> // ['A', 'B']
+type Test = MapUppercase<['a', 'b']> // ['A', 'B']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/MapUppercase.ts)
@@ -1454,7 +1454,7 @@ Create a string union of methods from `T`. This is the inverse of [`Properties<T
 ```ts
 import { Methods } from '@bedard/utils'
 
-type Foo = Methods<{ foo: string, bar(): any }> // 'bar'
+type Test = Methods<{ foo: string, bar(): any }> // 'bar'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Methods.ts)
@@ -1466,7 +1466,7 @@ Logical MUX gate
 ```ts
 import { MUX } from '@bedard/utils'
 
-type Example = MUX<1, 0, 0> // 1
+type Test = MUX<1, 0, 0> // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/MUX.ts)
@@ -1478,7 +1478,7 @@ Logical NAND gate
 ```ts
 import { NAND } from '@bedard/utils'
 
-type Example = NAND<0, 0> // 1
+type Test = NAND<0, 0> // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/NAND.ts)
@@ -1490,7 +1490,7 @@ Reverse the sign of a number
 ```ts
 import { Negate } from '@bedard/utils'
 
-type Example = Negate<1> // -1
+type Test = Negate<1> // -1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Negate.ts)
@@ -1502,7 +1502,7 @@ Logical NOR gate
 ```ts
 import { NOR } from '@bedard/utils'
 
-type Example = NOR<0, 0> // 1
+type Test = NOR<0, 0> // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/NOR.ts)
@@ -1514,7 +1514,7 @@ Reverse the [`Bit`](#bit) value of `T`.
 ```ts
 import { NOT } from '@bedard/utils'
 
-type Example = NOT<1> // /0
+type Test = NOT<1> // /0
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Not.ts)
@@ -1526,7 +1526,7 @@ Reverse the `boolean` value of `T`.
 ```ts
 import { Not } from '@bedard/utils'
 
-type Example = Not<true> // false
+type Test = Not<true> // false
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Not.ts)
@@ -1538,7 +1538,7 @@ Omit keys of `T` that start with `U`.
 ```ts
 import { OmitStartsWith } from '@bedard/utils'
 
-type Foo = OmitStartsWith<{ FooOne: void; FooTwo: void; BarThree: void }, 'Bar'> // { FooOne: void; FooTwo: void }
+type Test = OmitStartsWith<{ FooOne: void; FooTwo: void; BarThree: void }, 'Bar'> // { FooOne: void; FooTwo: void }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/OmitStartsWith.ts)
@@ -1550,7 +1550,7 @@ Omit keys of `T` that extend `U`. This is the inverse of [`PickType<T, U>`](#pic
 ```ts
 import { OmitType } from '@bedard/utils'
 
-type Foo = OmitType<{ foo: string, bar: number }, string> // { bar: number }
+type Test = OmitType<{ foo: string, bar: number }, string> // { bar: number }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/OmitType.ts)
@@ -1576,9 +1576,9 @@ Get optional keys from `T`, or make keys `U` of `T` optional.
 ```ts
 import { OptionalKeys } from '@bedard/utils'
 
-type Keys = OptionalKeys<{ foo?: any, bar: any }> // 'foo'
+type Test1 = OptionalKeys<{ foo?: any, bar: any }> // 'foo'
 
-type Obj = OptionalKeys<{ foo: any, bar: any }, 'foo'> // { foo?: any, bar: any }
+type Test2 = OptionalKeys<{ foo: any, bar: any }, 'foo'> // { foo?: any, bar: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/OptionalKeys.ts)
@@ -1590,7 +1590,7 @@ Logical OR gate
 ```ts
 import { OR } from '@bedard/utils'
 
-type Example = OR<0, 1> // 1
+type Test = OR<0, 1> // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/OR.ts)
@@ -1602,7 +1602,7 @@ Pad two numeric vectors so they are the same size
 ```ts
 import { PadVec } from '@bedard/utils'
 
-type Example = PadDigits<[1, 2], [3]> // [ [1, 2], [0, 3] ]
+type Test = PadDigits<[1, 2], [3]> // [ [1, 2], [0, 3] ]
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/PadDigits.ts)
@@ -1614,7 +1614,7 @@ Convert a string to pascal case.
 ```ts
 import { PascalCase } from '@bedard/utils'
 
-type Str = PascalCase<'foo-bar'> // 'FooBar'
+type Test = PascalCase<'foo-bar'> // 'FooBar'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/PascalCase.ts)
@@ -1626,7 +1626,7 @@ Kebab case object keys.
 ```ts
 import { PascalCaseKeys } from '@bedard/utils'
 
-type Obj = PascalCaseKeys<{ foo_bar: any }> // { 'foo-bar': any }
+type Test = PascalCaseKeys<{ foo_bar: any }> // { 'foo-bar': any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/PascalCaseKeys.ts)
@@ -1638,7 +1638,7 @@ Deeply pascal case object keys.
 ```ts
 import { PascalCaseKeysDeep } from '@bedard/utils'
 
-type Obj = PascalCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FooBar: { OneTwo: any }}
+type Test = PascalCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FooBar: { OneTwo: any }}
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/PascalCaseKeysDeep.ts)
@@ -1650,7 +1650,7 @@ Pick keys of `T` that start with `U`.
 ```ts
 import { PickStartsWith } from '@bedard/utils'
 
-type Obj = PickStartsWith<{ FooOne: void; FooTwo: void ; Bar: void }, 'Foo'> // { FooOne: void; FooTwo: void }
+type Test = PickStartsWith<{ FooOne: void; FooTwo: void ; Bar: void }, 'Foo'> // { FooOne: void; FooTwo: void }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/PickStartsWith.ts)
@@ -1662,7 +1662,7 @@ Pick keys of `T` that extend `U`. This is the inverse of [`OmitType<T, U>`](#omi
 ```ts
 import { PickType } from '@bedard/utils'
 
-type Obj = PickType<{ foo: string, bar: number }, string> // { foo: string }
+type Test = PickType<{ foo: string, bar: number }, string> // { foo: string }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/PickType.ts)
@@ -1674,7 +1674,7 @@ Remove the last element of `T`.
 ```ts
 import { Pop } from '@bedard/utils'
 
-type Items = Pop<['foo', 'bar', 'baz']> // ['foo', 'bar']
+type Test = Pop<['foo', 'bar', 'baz']> // ['foo', 'bar']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Pop.ts)
@@ -1686,7 +1686,7 @@ Create a string union of properties from `T`. This is the inverse of [`Methods<T
 ```ts
 import { Properties } from '@bedard/utils'
 
-type Foo = Properties<{ foo: string, bar(): any }> // 'foo'
+type Test = Properties<{ foo: string, bar(): any }> // 'foo'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Properties.ts)
@@ -1698,9 +1698,9 @@ Get required keys from `T`, or make keys `U` of `T` required.
 ```ts
 import { RequiredKeys } from '@bedard/utils'
 
-type Keys = RequiredKeys<{ foo: any, bar?: any }> // 'foo'
+type Test = RequiredKeys<{ foo: any, bar?: any }> // 'foo'
 
-type Obj = RequiredKeys<{ foo?: any, bar?: any }, 'foo'> // { foo: any, bar?: any }
+type Test = RequiredKeys<{ foo?: any, bar?: any }, 'foo'> // { foo: any, bar?: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/RequiredKeys.ts)
@@ -1726,7 +1726,7 @@ Convert a string to screaming snake case.
 ```ts
 import { ScreamingSnakeCase } from '@bedard/utils'
 
-type Str = ScreamingSnakeCase<'fooBar'> // 'FOO_BAR'
+type Test = ScreamingSnakeCase<'fooBar'> // 'FOO_BAR'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ScreamingSnakeCase.ts)
@@ -1738,7 +1738,7 @@ Screaming snake case object keys.
 ```ts
 import { ScreamingSnakeCaseKeys } from '@bedard/utils'
 
-type Obj = ScreamingSnakeCaseKeys<{ foo_bar: any }> // { FOO_BAR: any }
+type Test = ScreamingSnakeCaseKeys<{ foo_bar: any }> // { FOO_BAR: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ScreamingSnakeCaseKeys.ts)
@@ -1750,7 +1750,7 @@ Deeply screaming snake case object keys.
 ```ts
 import { ScreamingSnakeCaseKeysDeep } from '@bedard/utils'
 
-type Obj = ScreamingSnakeCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FOO_BAR: { ONE_TWO: any }}
+type Test = ScreamingSnakeCaseKeysDeep<{ foo_bar: { one_two: any }}> // { FOO_BAR: { ONE_TWO: any }}
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ScreamingSnakeCaseKeysDeep.ts)
@@ -1762,7 +1762,7 @@ Remove the first element of `T`.
 ```ts
 import { Shift } from '@bedard/utils'
 
-type Items = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
+type Test = Shift<['foo', 'bar', 'baz']> // ['bar', 'baz']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Shift.ts)
@@ -1774,7 +1774,7 @@ Convert a string to snake case.
 ```ts
 import { SnakeCase } from '@bedard/utils'
 
-type Str = SnakeCase<'fooBar'> // 'foo_bar'
+type Test = SnakeCase<'fooBar'> // 'foo_bar'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/SnakeCase.ts)
@@ -1786,7 +1786,7 @@ Snake case object keys.
 ```ts
 import { SnakeCaseKeys } from '@bedard/utils'
 
-type Obj = SnakeCaseKeys<{ fooBar: any }> // { foo_bar: any }
+type Test = SnakeCaseKeys<{ fooBar: any }> // { foo_bar: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/SnakeCaseKeys.ts)
@@ -1798,7 +1798,7 @@ Deeply snake case object keys.
 ```ts
 import { SnakeCaseKeysDeep } from '@bedard/utils'
 
-type Obj = SnakeCaseKeysDeep<{ fooBar: { oneTwo: any }}> // { foo_bar: { one_two: any }}
+type Test = SnakeCaseKeysDeep<{ fooBar: { oneTwo: any }}> // { foo_bar: { one_two: any }}
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/SnakeCaseKeysDeep.ts)
@@ -1810,11 +1810,11 @@ Split `Source` by `Delimeter`. This type is the opposite of [`Join`](#joinparts-
 ```ts
 import { Split } from '@bedard/utils'
 
-type Characters = Split<'abc'> // ['a', 'b', 'c']
+type Test1 = Split<'abc'> // ['a', 'b', 'c']
 
-type SingleDelimeter = Split<'a.b.c', '.'> // ['a', 'b', 'c']
+type Test2 = Split<'a.b.c', '.'> // ['a', 'b', 'c']
 
-type MultipleDelimeters = Split<'a.b-c', ['.', '-']> // ['a', 'b', 'c']
+type Test3 = Split<'a.b-c', ['.', '-']> // ['a', 'b', 'c']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Split.ts)
@@ -1826,7 +1826,7 @@ Types `true` if `T` starts with `U`.
 ```ts
 import { StartsWith } from '@bedard/utils'
 
-type Foo = StartsWith<'FooBar', 'Foo'> // true
+type Test = StartsWith<'FooBar', 'Foo'> // true
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/StartsWith.ts)
@@ -1838,9 +1838,9 @@ The [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference) o
 ```ts
 import { SymmetricDifference } from '@bedard/utils'
 
-type OuterSet = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
+type Test1 = SymmetricDifference<'a' | 'b', 'b' | 'c'> // 'a' | 'c'
 
-type OuterObj= SymmetricDifference<{ a: any, b: any }, { b: any, c: any }> // { a: any, c: any }
+type Test2 = SymmetricDifference<{ a: any, b: any }, { b: any, c: any }> // { a: any, c: any }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/SymmetricDifference.ts)
@@ -1852,7 +1852,7 @@ Convert numeric `string` to `number`
 ```ts
 import { ToNumber } from '@bedard/types'
 
-type Example = ToNumber<'123'> // 123
+type Test = ToNumber<'123'> // 123
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ToNumber.ts)
@@ -1864,7 +1864,7 @@ A type that does not encode any additional data. This is the inverse of [`Opaque
 ```ts
 import { Transparent } from '@bedard/utils'
 
-type NonOpaqueString = Transparent<string>
+type Test = Transparent<string>
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Transparent.ts)
@@ -1876,7 +1876,7 @@ Trim leading and trailing whitespace
 ```ts
 import { Trim } from '@bedard/utils'
 
-type Foo = Trim<'  foo bar  '> // 'foo bar'
+type Test = Trim<'  foo bar  '> // 'foo bar'
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Trim.ts)
@@ -1888,9 +1888,9 @@ Unwrap the underlying data of an [`Opaque<T>`](#opaquet-token) type.
 ```ts
 import { UnwrapOpaque } from '@bedard/utils'
 
-type Foo = Opaque<string, 'example'>
+type Test1 = Opaque<string, 'example'>
 
-type Bar = UnwrapOpaque<Foo> // string
+type Test2 = UnwrapOpaque<Foo> // string
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/UnwrapOpaque.ts)
@@ -1916,9 +1916,9 @@ Generate a union from the values of `T`.
 ```ts
 import { ValueOf } from '@bedard/utils'
 
-type ArrayValues = ValueOf<Array<string>> // string
+type Test1 = ValueOf<Array<string>> // string
 
-type ObjectValues = ValueOf<{ foo: number, bar: string }> // number | string
+type Test2 = ValueOf<{ foo: number, bar: string }> // number | string
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/ValueOf.ts)
@@ -1930,9 +1930,9 @@ Generate a uniform tuple of length `T`, with numeric values by default.
 ```ts
 import { Vec } from '@bedard/utils'
 
-type Example1 = Vec<3> // [number, number, number]
+type Test1 = Vec<3> // [number, number, number]
 
-type Example2 = Vec<3, Thing> // [Thing, Thing, Thing]
+type Test2 = Vec<3, Thing> // [Thing, Thing, Thing]
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Vec.ts)
@@ -1944,7 +1944,7 @@ Prohibit properties of `A` and omit properties of `B`.
 ```ts
 import { Without } from '@bedard/utils'
 
-type FooWithoutBar = Without<{ foo: any, bar: any }, { bar: any }> // { foo?: never }
+type Test = Without<{ foo: any, bar: any }, { bar: any }> // { foo?: never }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/Without.ts)
@@ -1956,7 +1956,7 @@ Logical XNOR gate
 ```ts
 import { XNOR } from '@bedard/types'
 
-type Example = XNOR<0, 0> // 1
+type Test = XNOR<0, 0> // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XNOR.ts)
@@ -1968,7 +1968,7 @@ Logical XOR gate
 ```ts
 import { XOR } from '@bedard/utils'
 
-type Example = XOR<0, 1> // 1
+type Test = XOR<0, 1> // 1
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/XOR.ts)
