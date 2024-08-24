@@ -948,6 +948,7 @@ toKeyedObjects([1, 2], 'foo') // [{ foo: 1 }, { foo: 2 }]
 - [`MapCapitalize<T>`](#mapcapitalizet)
 - [`MapLowercase<T>`](#maplowercaset)
 - [`MapUppercase<T>`](#mapuppercaset)
+- [`MaybeArray<T>`](#maybearrayt)
 - [`Methods<T>`](#methodst)
 - [`MUX<T, U, S>`](#muxt-u-s)
 - [`NAND<T, U>`](#nandt-u)
@@ -1433,6 +1434,18 @@ type Upper = MapUppercase<['a', 'b']> // ['A', 'B']
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/MapUppercase.ts)
+
+#### `MaybeArray<T>`
+
+Singular or array of `T`
+
+```ts
+import { MaybeArray } from '@bedard/utils'
+
+type Test = MaybeArray<number> // number | number[]
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/types/MaybeArray.ts)
 
 #### `Methods<T>`
 
