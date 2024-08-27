@@ -29,7 +29,7 @@
     "build": "rollup -c",
     "lint": "eslint . --ext .js,.ts",
     "publish:ci": "node ./scripts/publish.js",
-    "test": "vitest --coverage"
+    "test": "vitest"
   },
   "unpkg": "dist/index.bundle.js",
   "version": "0.32.0"
