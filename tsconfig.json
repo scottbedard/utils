@@ -16,7 +16,7 @@
     "sourceMap": true,
     "target": "es2015",
     "types": [
-      "jest",
+      "vitest/globals",
       "node"
     ]
   },
