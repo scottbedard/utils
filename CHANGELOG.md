@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.33.0
+
+- [`timeout`](https://github.com/scottbedard/utils#timeout)
+
 # 0.32.0
 
 - [`MaybeArray<T>`](https://github.com/scottbedard/utils#maybearrayt)
