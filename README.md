@@ -103,6 +103,7 @@ Alternatively, the functions maybe be accessed via a CDN. When using the CDN, th
 - [`keys`](#keys)
 - [`parse`](#parse)
 - [`stringify`](#stringify)
+- [`timeout`](#timeout)
 - [`toKeyedObjects`](#toKeyedObjects)
 
 #### `addVectors`
@@ -886,6 +887,18 @@ const obj = parse(json) // { foo: string }
 ```
 
 [View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/json.ts)
+
+#### `timeout`
+
+Resolve a promise after a given duration
+
+```ts
+import { timeout } from '@bedard/utils'
+
+await timeout(100)
+```
+
+[View source &rarr;](https://github.com/scottbedard/utils/blob/main/src/functions/timeout.ts)
 
 #### `stringifyColor`
 
